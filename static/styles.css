@@ -1,3 +1,152 @@
-h1 {
-    color: red;
+@import url('https://fonts.googleapis.com/css?family=JetBrains%20Mono:700|Nunito%20Sans:400');
+
+/* CSS Reset */
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*::before, *::after {
+	box-sizing: inherit;
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+:root {
+	--orange-100: #fde2d2;
+	--orange-200: #fbc5a5;
+	--orange-300: #faa778;
+	--orange-400: #f88a4b;
+	--orange-500: #f66d1e;
+	--orange-600: #dd621b;
+	--orange-700: #944112;
+	--orange-800: #622c0c;
+	--orange-900: #311606;
+
+	--blue-100: #e2f8ff;
+	--blue-200: #a9e9ff;
+	--blue-300: #70dbff;
+	--blue-400: #65c5e6;
+	--blue-500: #5aafcc;
+	--blue-600: #438399;
+	--blue-700: #22424c;
+	--blue-800: #162c33;
+	--blue-900: #0b1619;
+
+	--gray-100: #0f0f0f;
+	--gray-200: #161717;
+	--gray-300: #272727;
+	--gray-400: #2d2f2e;
+	--gray-500: #5a5e5c;
+	--gray-600: #868d89;
+	--gray-700: #b3bcb7;
+	--gray-800: #e0ebe5;
+	--gray-900: #ffffff;
+
+	--text-font: 'Nunito Sans', sans-serif;
+	--heading-font: 'Jetbrains Mono', monospace;
+
+	--text: var(--gray-900);
+	--background: var(--gray-100);
+	--primary: var(--orange-600);
+	--secondary: var(--gray-300);
+	--accent: var(--blue-600);
+
+	--primary-light: var(--orange-400);
+	--primary-dark: var(--orange-800);
+}
+
+
+body {
+  font-family: var(--text-font);
+  font-weight: 400;
+  background-color: var(--background);
+
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+a {
+	text-decoration: none;
+}
+
+/* Nav partial */
+#nav {
+	--bg: var(--gray-300);
+	position: relative;
+
+    background-color: var(--bg);
+	padding-block: 0.5rem;
+
+	font-family: var(--heading-font);
+}
+
+#nav::after {
+	--height: 2rem;
+
+	content: '';
+	position: absolute;
+	z-index: 10;
+
+	background: linear-gradient(to bottom, var(--bg), rgba(0,0,0,0));
+	height: var(--height);
+	
+	bottom: calc( -1 * var(--height) );
+	left: 0;
+	right: 0;
+}
+
+#nav ul {
+	display: flex;
+
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#nav li {
+	list-style: none;
+	margin-block: 0.2rem;
+	margin-inline: 1rem;
+}
+
+#nav a {
+	color: var(--blue-200);
+	transition: 200ms;
+}
+
+#nav a:is( :hover, :focus ) {
+	color: var(--blue-400);
 }
