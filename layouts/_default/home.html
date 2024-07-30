@@ -1,5 +1,16 @@
 {{ define "main" }}
 <main>
+    <div class="image-holder offset-right offset-y">
+        {{- range $i, $rel := .Params.Images }}
+        <img src="{{$rel}}" class="
+            {{- if eq $i 0 -}}
+            visible
+            {{- else -}}
+            invisible
+            {{- end -}}" alt="KFCMan Wave">
+        {{- end }}
+    </div>
+
     <h1>{{ .Params.LandingTitle }}</h1>
     {{ .Content }}
 </main>

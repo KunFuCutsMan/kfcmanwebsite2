@@ -150,3 +150,49 @@ a {
 #nav a:is( :hover, :focus ) {
 	color: var(--blue-400);
 }
+
+/* Image Holder */
+.image-holder {
+	--holder-width: 16rem;
+	--transition-time: 200ms;
+
+	display: grid;
+	width: var(--holder-width, fit-content);
+}
+
+.image-holder img {
+	grid-area: 1 / 1 / 2 / 2;
+	width: inherit;
+	aspect-ratio: inherit;
+	image-rendering: pixelated;
+	transition: var(--transition-time) ease-out;
+}
+
+.image-holder img.invisible { opacity: 0; }
+.image-holder img.visible { opacity: 1; }
+
+/* MAIN CSS */
+
+main {
+	margin-block: 4rem;
+	margin-inline: auto;
+	width: min(60rem,80vw);
+	background-color: greenyellow;
+}
+
+main p {
+	margin-block: 2rem;
+}
+
+.offset-right {
+	--offset-x: -3rem;
+	float: right;
+	position: relative;
+	right: var(--offset-x);
+}
+
+.offset-y {
+	--offset-y: 1rem;
+	position: relative;
+	top: var(--offset-y);
+}

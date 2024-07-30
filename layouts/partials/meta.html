@@ -3,3 +3,6 @@
 <title>{{ .Page.Title }}</title>
 {{ $style := "styles.css" }}
 <link rel="stylesheet" href="{{ $style }}">
+{{ with resources.Get "js/events.js" -}}
+    <script src="{{.RelPermalink}}" defer></script>
+{{- end }}
