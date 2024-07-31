@@ -1,17 +1,20 @@
 {{ define "main" }}
-<main>
-    <div class="image-holder offset-right offset-y">
-        {{- range $i, $rel := .Params.Images }}
-        <img src="{{$rel}}" class="
+<main class="main-frame">
+    <header class="split-content">
+        <div>
+            <h1>{{ .Params.LandingTitle }}</h1>
+            <small>{{ .Params.LandingSubtitle }}</small>
+        </div>
+        <div class="image-holder">
+            {{- range $i, $rel := .Params.Images }}
+            <img src="{{$rel}}" class="
             {{- if eq $i 0 -}}
-            visible
-            {{- else -}}
-            invisible
+                visible {{- else -}} invisible
             {{- end -}}" alt="KFCMan Wave">
-        {{- end }}
-    </div>
+            {{- end }}
+        </div>
+    </header>
 
-    <h1>{{ .Params.LandingTitle }}</h1>
     {{ .Content }}
 </main>
 {{end}}

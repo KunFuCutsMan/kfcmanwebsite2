@@ -1,5 +1,7 @@
 ---
+Title: "KFCMan's Website"
 LandingTitle: "Welcome to KFCMan's Website"
+LandingSubtitle: "Yes it's the one you're currently on"
 Images: ["kfcman wave high 2.png", "kfcman wave low 2.png"]
 ---
 
