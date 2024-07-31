@@ -66,6 +66,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 	--primary-light: var(--orange-400);
 	--primary-dark: var(--orange-800);
+
+	scroll-behavior: smooth;
 }
 
 
@@ -162,6 +164,42 @@ a:visited { color: var(--blue-400); }
 
 #nav a:is( :hover, :focus ) {
 	color: var(--blue-400);
+}
+
+#gotonav {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+
+	background-color: var(--primary-light);
+	border-radius: 50%;
+	width: 4rem;
+	aspect-ratio: 1;
+}
+
+#gotonav svg {
+	position: absolute;
+	fill: var(--background);
+	top: 5%;
+	left: 5%;
+
+	width: 90%;
+	height: 90%;
+
+	transition: 100ms;
+}
+
+#gotonav:is(:hover, :focus, :focus-within) svg {
+	fill: var(--blue-300);
+}
+
+#footer {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+	padding-block: 0.5rem;
+	background-color: var(--gray-300);
 }
 
 /* Image Holder */
