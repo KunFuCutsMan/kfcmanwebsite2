@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ .Page.Title }}</title>
-{{ $style := "styles.css" }}
+{{ $style := "/styles.css" }}
 <link rel="stylesheet" href="{{ $style }}">
 {{ with resources.Get "js/events.js" -}}
     <script src="{{.RelPermalink}}" defer></script>
