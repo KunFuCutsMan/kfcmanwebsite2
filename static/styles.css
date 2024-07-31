@@ -94,13 +94,24 @@ h4 {font-size: 1.777rem; /* 28.48px */}
 
 h5 {font-size: 1.333rem; /* 21.28px */}
 
-p { font-size: 1.1rem; }
+p, li { font-size: 1.1rem; }
 
 small {font-size: 0.750rem; /* 12px */}
 
+li > :is(ul, ol) {
+	display: inline-block;
+	position: relative;
+	max-width: fit-content;
+	left: 1rem;
+}
+
 a {
 	text-decoration: none;
+	font-weight: 600;
+	color: var(--blue-200);
 }
+
+a:visited { color: var(--blue-400); }
 
 /* Nav partial */
 #nav {
