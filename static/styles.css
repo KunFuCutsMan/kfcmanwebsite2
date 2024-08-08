@@ -121,6 +121,24 @@ a {
 
 a:visited { color: var(--blue-400); }
 
+blockquote {
+	background-color: var(--orange-900);
+	border-left: 0.5rem solid var(--primary-light);
+	padding-block: 1rem;
+	padding-inline: 1rem;
+	margin-inline: 1rem;
+	border-radius: 0.5rem;
+}
+
+blockquote > cite:last-child {
+	display: block;
+	margin-top: 2rem;
+	font-size: small;
+	width: fit-content;
+	border-radius: 0.2rem;
+	border-bottom: 0.2rem solid var(--primary-light);
+}
+
 /* Nav partial */
 #nav {
 	--bg: var(--gray-300);
@@ -208,6 +226,35 @@ a:visited { color: var(--blue-400); }
 	background-color: var(--gray-300);
 }
 
+/* Hugo TableOfContents shortcode / partial / method */
+#TableOfContents {
+	background-color: var(--blue-900);
+	padding-block: 1rem;
+	padding-inline: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+#TableOfContents:is( :focus-within, :hover ) {
+	--shadow-offset: 5px;
+}
+
+#TableOfContents ul {
+	--highlight-border: var(--orange-600);
+	border-left: 0.2rem solid var(--highlight-border);
+	padding-inline: 0.5rem;
+	border-radius: 0.2rem;
+
+	transition: 100ms;
+}
+
+#TableOfContents ul:is( :focus-within, :hover ) {
+	--highlight-border: var(--orange-400);
+}
+
+#TableOfContents li {
+	list-style: none;
+}
+
 /* Image Holder */
 .image-holder {
 	--holder-width: 16rem;
@@ -249,8 +296,17 @@ a:visited { color: var(--blue-400); }
 	image-rendering: pixelated;
 }
 
-.main-frame p {
+.main-frame article p {
 	margin-block: 2rem;
+}
+
+.main-frame article h1 {
+	text-align: center;
+}
+
+.main-frame article :is(h1, h2, h3, h4, h5, h6) {
+	margin-block: 1rem;
+	margin-bottom: 2rem;
 }
 
 .main-frame :is(ul, ol) {
