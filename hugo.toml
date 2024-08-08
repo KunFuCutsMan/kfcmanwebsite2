@@ -1,3 +1,6 @@
 baseURL = 'https://kunfucutsman.neocities.org/'
 languageCode = 'en-us'
 title = "KFCMan's Odd Corner of the Internet"
+
+[markup.goldmark.renderer]
+    unsafe = true
