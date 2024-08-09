@@ -1,4 +1,6 @@
-# About Me
+---
+Title: "About Me"
+---
 
 Well, hello! I'm Kun Fu Cuts Man (or KFCMan for short) \
 As of writing this I am an 18 year old from Mexico who wants to be a Mechatronics Engineer.

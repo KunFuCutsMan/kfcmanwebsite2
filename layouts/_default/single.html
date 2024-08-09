@@ -1,6 +1,9 @@
 {{ define "main" }}
     <main class="main-frame">
-        {{ .TableOfContents }}
+        <header>
+            <h1>{{ .Title }}</h1>
+            {{.TableOfContents}}
+        </header>
         <article>
             {{- .Content -}}
         </article>

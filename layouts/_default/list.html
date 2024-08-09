@@ -1,10 +1,35 @@
 {{ define "main" }}
-<p>List template</p>
-{{print .}}
-    {{- range .Pages }}
-    <article>
-        <h2>{{ .Title }}</h2>
-        {{ .Content }}
-    </article>
-    {{- end -}}
+<div class="main-frame">
+    <h1>
+        {{- if eq .Kind "term" -}}Tag: {{ end -}}
+        {{- .Title -}}
+    </h1>
+    {{ .Content }}
+
+    <div class="article-list">
+        {{- range $p := .Pages.ByDate.Reverse }}
+        <article>
+            <header>
+                <h2>
+                    <a href="{{ .RelPermalink }}">{{.Title}}</a>
+                    <small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>
+                </h2>
+            </header>
+            <p>{{ .Summary }}</p>
+
+            {{- with .GetTerms "tags" -}}
+            <b>Tags:</b>
+            <ul>
+                {{- range . }}
+                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                {{ end -}}
+            </ul>
+            {{- end -}}
+
+        </article>
+        {{ else }}
+            <small>You get NOTHING! You loose! Good day sir.</small>
+        {{end}}
+    </div>
+</div>
 {{ end }}

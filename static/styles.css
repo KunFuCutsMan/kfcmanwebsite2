@@ -296,27 +296,23 @@ blockquote > cite:last-child {
 	image-rendering: pixelated;
 }
 
-.main-frame article p {
+.main-frame > article p {
 	margin-block: 2rem;
 }
 
-.main-frame article h1 {
-	text-align: center;
-}
-
-.main-frame article :is(h1, h2, h3, h4, h5, h6) {
+.main-frame > article :is(h1, h2, h3, h4, h5, h6) {
 	margin-block: 1rem;
 	margin-bottom: 2rem;
 }
 
-.main-frame :is(ul, ol) {
+.main-frame > article :is(ul, ol) {
 	--tab-space: 1.5rem;
 	position: relative;
 	width: calc(100% - var(--tab-space));
 	left: var(--tab-space);
 }
 
-.main-frame li {
+.main-frame > article li {
 	margin-block: 0.5rem;
 }
 
@@ -342,4 +338,35 @@ blockquote > cite:last-child {
 		grid-template-columns: 1fr;
 		justify-content: center;
 	}
+}
+
+.article-list {
+	background-color: var(--blue-800);
+	border-radius: 0.5rem;
+	grid-template-columns: 1fr 1fr;
+	padding: 1rem;
+	margin-block: 1rem;
+}
+
+.article-list article {
+	background-color: var(--blue-700);
+	padding: 1rem 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.article-list article:not( :last-child ) {
+	margin-block-end: 1rem;
+}
+
+.article-list article h2 {
+	font-size: xx-large;
+}
+
+.article-list article > ul {
+	display: inline-flex;
+}
+
+.article-list article li {
+	margin-inline: 0.2rem;
+	list-style: none;
 }
