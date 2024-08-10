@@ -1,0 +1,13 @@
+{
+  "name": "kfcmanwebsite2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --noHTTPCache -D",
+    "upload": "hugo & node upload-site.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "neocities": "^0.0.3"
+  }
+}
