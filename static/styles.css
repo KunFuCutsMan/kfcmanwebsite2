@@ -255,6 +255,24 @@ blockquote > cite:last-child {
 	list-style: none;
 }
 
+/* Hugo's code highlight */
+.highlight pre {
+	border-radius: 0.5rem;
+	padding: 1rem;
+	overflow: auto;
+}
+
+.highlight pre::-webkit-scrollbar {
+	scrollbar-width: thin;
+	background-color: var(--blue-900);
+	border-radius: 100vw;
+}
+
+.highlight pre::-webkit-scrollbar-thumb {
+	border-radius: 100vw;
+	background-color: var(--orange-500);
+}
+
 /* Image Holder */
 .image-holder {
 	--holder-width: 16rem;
@@ -367,6 +385,6 @@ blockquote > cite:last-child {
 }
 
 .article-list article li {
-	margin-inline: 0.2rem;
+	margin-inline: 0.5rem;
 	list-style: none;
 }
