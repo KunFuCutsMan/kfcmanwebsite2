@@ -41,12 +41,11 @@ Excelent question! I used a similar methodology to [neonaut](https://neonaut.neo
 Neonaut's method was using a python file that uses Neocities' API to recursively upload the files in the `/public` directory, so I followed suit with this file I made:
 
 ```js
-// upload-site.js
-
 require("dotenv").config();
 
 const NeoCities = require("neocities");
 const fs = require("fs/promises");
+const path = require("path");
 
 const { NEOCITIES_USER, NEOCITIES_PASS } = process.env;
 const nc = new NeoCities(NEOCITIES_USER, NEOCITIES_PASS);
@@ -55,8 +54,8 @@ function neocitiesUploadAsync(files) {
     return new Promise(function (resolve, reject) {
         nc.upload(files, function (resp) {
             if (resp.result != "success") {
-                reject(new Error("Got an error uploading file"));
-            } else resolve();
+                reject(new Error("Got an error uploading file"), resp);
+            } else resolve(resp);
         });
     });
 }
@@ -72,15 +71,32 @@ async function pushDir(dir) {
 
     for await (const entry of directory) {
         if (entry.isFile()) {
-            let fileData = {
-                name: `./${entry.path.replace("public", "")}/${entry.name}`,
-                path: `${entry.path.replace()}/${entry.name}`,
-            };
-            neocitiesUploadAsync([fileData])
-                .then(() => {
-                    console.log(`✅ ${fileData.name} uploaded successfully`);
+            // Path that will be uploaded file to
+            const namePath = path
+                .format({
+                    base: entry.name,
+                    dir: entry.path.replace("public", "/"),
                 })
-                .catch((err) => console.error(`❌ ${fileData.name}`, err));
+                .replaceAll("\\", "/");
+
+            // Relative path in my computer from this file
+            const filePath = path.format({
+                base: entry.name,
+                dir: entry.path,
+            });
+
+            neocitiesUploadAsync([
+                {
+                    name: namePath,
+                    path: filePath,
+                },
+            ])
+                .then((resp) =>
+                    console.log(`✅ ${namePath} uploaded successfully`)
+                )
+                .catch((err, resp) =>
+                    console.error(`❌ ${fileData.name} ${resp}`, err)
+                );
         }
     }
 }
@@ -131,7 +147,7 @@ hugo v0.129.0-e85be29867d71e09ce48d293ad9d1f715bc09bb9+extended windows/amd64 Bu
 
                    | EN
 -------------------+-----
-  Pages            | 10
+  Pages            | 17
   Paginator pages  |  0
   Non-page files   |  0
   Static files     |  4
@@ -139,22 +155,34 @@ hugo v0.129.0-e85be29867d71e09ce48d293ad9d1f715bc09bb9+extended windows/amd64 Bu
   Aliases          |  0
   Cleaned          |  0
 
-Total in 62 ms
-✅ ./\images/kfcman wave high 2.png uploaded successfully
-✅ ./\about-me/index.html uploaded successfully
-✅ ./\js/events.js uploaded successfully
-✅ ./\tags/index.xml uploaded successfully
-✅ ./\tags/index.html uploaded successfully
-✅ ./\categories/index.html uploaded successfully
-✅ ./\categories/index.xml uploaded successfully
-✅ .//sitemap.xml uploaded successfully
-✅ ./\images/pattern.png uploaded successfully
-✅ .//index.xml uploaded successfully
-✅ ./\images/kfcman wave low 2.png uploaded successfully
-✅ .//index.html uploaded successfully
-✅ ./\posts/index.xml uploaded successfully
-✅ ./\posts/index.html uploaded successfully
-✅ .//styles.css uploaded successfully
+Total in 80 ms
+✅ //tags/hugo/index.html uploaded successfully
+✅ //posts/index.html uploaded successfully
+✅ //index.xml uploaded successfully
+✅ //tags/random/index.html uploaded successfully
+✅ //tags/programming/index.html uploaded successfully
+✅ //styles.css uploaded successfully
+✅ //categories/index.html uploaded successfully
+✅ //categories/index.xml uploaded successfully
+✅ //sitemap.xml uploaded successfully
+✅ //tags/pai-sho/index.xml uploaded successfully
+✅ //posts/index.xml uploaded successfully
+✅ //posts/2024/journey-to-creating-a-website/index.html uploaded successfully
+✅ //images/kfcman wave high 2.png uploaded successfully
+✅ //tags/index.xml uploaded successfully
+✅ //tags/neocities/index.xml uploaded successfully
+✅ //images/pattern.png uploaded successfully
+✅ //index.html uploaded successfully
+✅ //tags/pai-sho/index.html uploaded successfully
+✅ //tags/index.html uploaded successfully
+✅ //tags/hugo/index.xml uploaded successfully
+✅ //js/events.js uploaded successfully
+✅ //tags/random/index.xml uploaded successfully
+✅ //tags/programming/index.xml uploaded successfully
+✅ //images/kfcman wave low 2.png uploaded successfully
+✅ //tags/neocities/index.html uploaded successfully
+✅ //posts/test-post/index.html uploaded successfully
+✅ //about-me/index.html uploaded successfully
 ```
 
 And just like that my site is deployed!
@@ -164,3 +192,7 @@ Some stuff will change as I develop my site more, of course. But they this is ho
 ...
 
 ~I don't know how to give this post a clear conclusion~
+
+---
+
+**EDIT 10/AUG/2024:** I had to modify `upload-site.js` because of bad url formatting, should be fixed now and updated
