@@ -371,7 +371,7 @@ blockquote > cite:last-child {
 
 .article-list article {
 	background-color: var(--blue-700);
-	padding: 1rem 0.5rem;
+	padding: 1rem;
 	border-radius: 0.5rem;
 }
 

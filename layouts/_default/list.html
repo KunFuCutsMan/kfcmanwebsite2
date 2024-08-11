@@ -12,10 +12,11 @@
             <header>
                 <h2>
                     <a href="{{ .RelPermalink }}">{{.Title}}</a>
-                    <small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>
+                    {{ if .IsPage -}}<small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>{{- end -}}
                 </h2>
             </header>
-            <p>{{ .Summary }}</p>
+
+            {{ with .Summary }}<p>{{.}}</p>{{end}}
 
             {{- with .GetTerms "tags" -}}
             <b>Tags:</b>
