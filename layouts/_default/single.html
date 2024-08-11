@@ -2,6 +2,19 @@
     <main class="main-frame">
         <header>
             <h1>{{ .Title }}</h1>
+            {{ with .Date }}<time datetime="{{ . }}">{{ . | time.Format ":date_medium" }}</time>{{- end -}}
+
+            {{ with .GetTerms "tags" -}}
+            <div>
+                <b>Tags:</b>
+                <ul class="inline-list">
+                    {{- range . }}
+                    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                    {{ end -}}
+                </ul>
+            </div>
+            {{- end -}}
+
             {{.TableOfContents}}
         </header>
         <article>

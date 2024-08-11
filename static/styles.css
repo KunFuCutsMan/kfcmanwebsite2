@@ -232,6 +232,7 @@ blockquote > cite:last-child {
 	padding-block: 1rem;
 	padding-inline: 0.5rem;
 	border-radius: 0.5rem;
+	margin-block: 2rem;
 }
 
 #TableOfContents:is( :focus-within, :hover ) {
@@ -243,6 +244,7 @@ blockquote > cite:last-child {
 	border-left: 0.2rem solid var(--highlight-border);
 	padding-inline: 0.5rem;
 	border-radius: 0.2rem;
+	margin-left: 1rem;
 
 	transition: 100ms;
 }
@@ -252,6 +254,7 @@ blockquote > cite:last-child {
 }
 
 #TableOfContents li {
+	margin-block: 0.5rem;
 	list-style: none;
 }
 
@@ -385,6 +388,15 @@ blockquote > cite:last-child {
 }
 
 .article-list article li {
+	margin-inline: 0.5rem;
+	list-style: none;
+}
+
+.inline-list {
+	display: inline-flex;
+}
+
+.inline-list li {
 	margin-inline: 0.5rem;
 	list-style: none;
 }

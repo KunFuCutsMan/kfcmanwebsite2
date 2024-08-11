@@ -19,7 +19,7 @@
 
             {{- with .GetTerms "tags" -}}
             <b>Tags:</b>
-            <ul>
+            <ul class="inline-list">
                 {{- range . }}
                 <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
                 {{ end -}}
