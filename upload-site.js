@@ -46,7 +46,7 @@ async function pushDir(dir) {
                 path: filePath,
             }])
             .then( (resp) => console.log(`✅ ${namePath} uploaded successfully`) )
-            .catch( (err, resp) => console.error(`❌ ${fileData.name} ${resp}`, err) )
+            .catch( (err, resp) => console.error(`❌ ${namePath} ${resp}`, err) )
         }
     }
 }
