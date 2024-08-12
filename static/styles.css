@@ -337,6 +337,15 @@ blockquote > cite:last-child {
 	margin-block: 0.5rem;
 }
 
+.main-frame > article img {
+	margin: auto;
+}
+
+.main-frame > article img + small {
+	display: block;
+	text-align: center;
+}
+
 .split-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
