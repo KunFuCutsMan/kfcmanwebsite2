@@ -305,7 +305,7 @@ blockquote > cite:last-child {
 	position: absolute;
 	z-index: 2;
 	flex-direction: column;
-	width: max-content;
+	width: fit-content;
 	background-color: var(--bg);
 
 	box-shadow: 0 1rem 1rem 0 var(--gray-100);
