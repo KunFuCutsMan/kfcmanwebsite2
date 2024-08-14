@@ -15,7 +15,7 @@
             </div>
             {{- end -}}
 
-            {{.TableOfContents}}
+            {{ if .Params.IncludeTOC }}{{.TableOfContents}}{{ end }}
         </header>
         <article>
             {{- .Content -}}

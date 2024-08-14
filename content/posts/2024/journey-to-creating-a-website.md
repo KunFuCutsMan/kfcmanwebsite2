@@ -3,6 +3,7 @@ title = 'The Journey to Creating this Website'
 date = 2024-08-09T16:34:56-06:00
 summary = 'As it turns out its not as simple as "make HTML and hit upload"'
 tags = ['programming', 'neocities', 'hugo']
+includeTOC = true
 draft = false
 +++
 
