@@ -155,7 +155,7 @@ blockquote > cite:last-child {
 
 	content: '';
 	position: absolute;
-	z-index: 10;
+	z-index: 1;
 
 	background: linear-gradient(to bottom, var(--bg), rgba(0,0,0,0));
 	height: var(--height);
@@ -167,8 +167,6 @@ blockquote > cite:last-child {
 
 #nav ul {
 	display: flex;
-
-	flex-direction: row;
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: space-evenly;
@@ -296,6 +294,22 @@ blockquote > cite:last-child {
 
 .image-holder img.invisible { opacity: 0; }
 .image-holder img.visible { opacity: 1; }
+
+.details-popup {
+	position: relative;
+	transition: 500ms;
+}
+
+.details-popup > ul {
+	display: flex;
+	position: absolute;
+	z-index: 2;
+	flex-direction: column;
+	width: max-content;
+	background-color: var(--bg);
+
+	box-shadow: 0 1rem 1rem 0 var(--gray-100);
+}
 
 /* MAIN CSS */
 
