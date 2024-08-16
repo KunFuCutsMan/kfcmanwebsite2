@@ -418,6 +418,7 @@ blockquote > cite:last-child {
 
 .inline-list {
 	display: inline-flex;
+	flex-wrap: wrap;
 }
 
 .inline-list li {
