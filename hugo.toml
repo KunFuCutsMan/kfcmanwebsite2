@@ -12,6 +12,3 @@ title = "KFCMan's Odd Corner of the Internet"
 
 [markup.goldmark.renderer]
     unsafe = true
-
-[services.disqus]
-    shortname = 'kunfucutsman.disqus.com'

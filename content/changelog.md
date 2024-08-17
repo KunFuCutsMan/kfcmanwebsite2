@@ -19,3 +19,4 @@ draft = false
 -   14/Aug/2024: Added changelog.md
 -   16/Aug/2024: Small tweak to the css class `.inline-list` so its children actually wrap
 -   16/Aug/2024: Testing disqus comment box
+-   16/Aug/2024: I did not like it at all. Maybe I'll use something different.
