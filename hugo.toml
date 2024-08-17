@@ -2,5 +2,16 @@ baseURL = 'https://kunfucutsman.neocities.org/'
 languageCode = 'en-us'
 title = "KFCMan's Odd Corner of the Internet"
 
+[taxonomies]
+    tag = 'tags'
+
+[[redirects]]
+    from = '/**'
+    status = 404
+    to = '/not_found.html'
+
 [markup.goldmark.renderer]
     unsafe = true
+
+[services.disqus]
+    shortname = 'kunfucutsman.disqus.com'

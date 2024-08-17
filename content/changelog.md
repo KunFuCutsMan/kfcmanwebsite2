@@ -17,3 +17,5 @@ draft = false
 -   13/Aug/2024: Added 404 page
 -   14/Aug/2024: Modified nav to include other links
 -   14/Aug/2024: Added changelog.md
+-   16/Aug/2024: Small tweak to the css class `.inline-list` so its children actually wrap
+-   16/Aug/2024: Testing disqus comment box

@@ -17,4 +17,9 @@
 
     {{ .Content }}
 </main>
+
+<aside class="main-frame">
+    <h1>Comment Box!</h1>
+    {{ template "_internal/disqus.html" . }}
+</aside>
 {{end}}
