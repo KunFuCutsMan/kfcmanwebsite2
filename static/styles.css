@@ -311,6 +311,11 @@ blockquote > cite:last-child {
 	box-shadow: 0 1rem 1rem 0 var(--gray-100);
 }
 
+#null-ring {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 /* MAIN CSS */
 
 .main-frame {
