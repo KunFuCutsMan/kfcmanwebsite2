@@ -21,3 +21,5 @@ draft = false
 -   16/Aug/2024: Testing disqus comment box
 -   16/Aug/2024: I did not like it at all. Maybe I'll use something different.
 -   16/Aug/2024: Joined the [null webring!](https://nuthead.neocities.org/ring/)
+-   17/Aug/2024: Added Cbox to home page
+-   17/Aug/2024: Changed CSS so now I have a gridded home page, and a normal sized lettering

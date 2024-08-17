@@ -1,27 +1,36 @@
 {{ define "main" }}
-<main class="main-frame">
-    <header class="split-content">
-        <div>
-            <h1>{{ .Params.LandingTitle }}</h1>
-            <small>{{ .Params.LandingSubtitle }}</small>
-        </div>
-        <div class="image-holder">
-            {{- range $i, $rel := .Params.Images }}
-            <img src="{{$rel}}" class="
-            {{- if eq $i 0 -}}
-                visible {{- else -}} invisible
-            {{- end -}}" alt="KFCMan Wave">
-            {{- end }}
-        </div>
-    </header>
+<div class="grid-three-quarters single-margin">
+    <main class="frame main-frame grid-three-quarters-main">
+        <header class="split-content">
+            <div>
+                <h1>{{ .Params.LandingTitle }}</h1>
+                <small>{{ .Params.LandingSubtitle }}</small>
+            </div>
+            <div class="image-holder">
+                {{- range $i, $rel := .Params.Images }}
+                <img src="{{$rel}}" class="
+                {{- if eq $i 0 -}}
+                    visible {{- else -}} invisible
+                {{- end -}}" alt="KFCMan Wave">
+                {{- end }}
+            </div>
+        </header>
+    
+        {{ .Content }}
+    </main>
 
-    {{ .Content }}
-</main>
+    <aside class="frame grid-three-quarters-aside-top">
+        <h2>Other Cool Stuff</h2>
+        <section>
+            <span id="null-ring">
+                <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+            </span>
+        </section>
+    </aside>
 
-<aside class="main-frame">
-    <h1>Other Cool Stuff</h1>
-    <span id="null-ring">
-        <script src="https://nuthead.neocities.org/ring/ring.js"></script>
-    </span>
-</aside>
+    <aside class="frame grid-three-quarters-aside-bottom">
+        <h2>Comment Box!</h2>
+        {{ partial "cbox.html" . }}
+    </aside>
+</div>
 {{end}}

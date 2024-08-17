@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="main-frame">
+<div class="frame main-frame single-margin">
     <h1>
         {{- if eq .Kind "term" -}}Tag: {{ end -}}
         {{- .Title -}}
@@ -12,7 +12,11 @@
             <header>
                 <h2>
                     <a href="{{ .RelPermalink }}">{{.Title}}</a>
-                    {{ if .IsPage -}}<small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>{{- end -}}
+                    {{ if .IsPage -}}
+                    <div>
+                        <small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>
+                    </div>
+                    {{- end -}}
                 </h2>
             </header>
 
