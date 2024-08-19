@@ -23,3 +23,4 @@ draft = false
 -   16/Aug/2024: Joined the [null webring!](https://nuthead.neocities.org/ring/)
 -   17/Aug/2024: Added Cbox to home page
 -   17/Aug/2024: Changed CSS so now I have a gridded home page, and a normal sized lettering
+-   17/Aug/2024: Fighting Type!
