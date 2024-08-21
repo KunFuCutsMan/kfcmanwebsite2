@@ -24,3 +24,4 @@ draft = false
 -   17/Aug/2024: Added Cbox to home page
 -   17/Aug/2024: Changed CSS so now I have a gridded home page, and a normal sized lettering
 -   17/Aug/2024: Fighting Type!
+-   21/Aug/2024: Added latest post section to home page

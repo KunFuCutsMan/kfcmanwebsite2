@@ -1,0 +1,6 @@
+<div>
+{{- with .Site.GetPage "/posts" }}
+    {{ $p := index .RegularPages 0 }}
+    {{ partial "posts/article-card" $p }}
+{{ end -}}
+</div>

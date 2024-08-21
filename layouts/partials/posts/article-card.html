@@ -1,0 +1,22 @@
+<article class="article-card">
+    <header>
+        <h2>
+            <a href="{{ .RelPermalink }}">{{.Title}}</a>
+            <div>
+                <small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>
+            </div>
+        </h2>
+    </header>
+
+    {{ with .Summary }}<p>{{.}}</p>{{end}}
+
+    {{- with .GetTerms "tags" -}}
+    <b>Tags:</b>
+    <ul class="inline-list">
+        {{- range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end -}}
+    </ul>
+    {{- end -}}
+
+</article>

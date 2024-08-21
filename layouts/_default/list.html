@@ -7,31 +7,8 @@
     {{ .Content }}
 
     <div class="article-list">
-        {{- range $p := .Pages.ByDate.Reverse }}
-        <article>
-            <header>
-                <h2>
-                    <a href="{{ .RelPermalink }}">{{.Title}}</a>
-                    {{ if .IsPage -}}
-                    <div>
-                        <small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>
-                    </div>
-                    {{- end -}}
-                </h2>
-            </header>
-
-            {{ with .Summary }}<p>{{.}}</p>{{end}}
-
-            {{- with .GetTerms "tags" -}}
-            <b>Tags:</b>
-            <ul class="inline-list">
-                {{- range . }}
-                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-                {{ end -}}
-            </ul>
-            {{- end -}}
-
-        </article>
+        {{- range $p := .Pages }}
+        {{ partial "posts/article-card" $p }}
         {{ else }}
             <small>You get NOTHING! You loose! Good day sir.</small>
         {{end}}

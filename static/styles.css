@@ -396,25 +396,25 @@ blockquote > cite:last-child {
 	margin-block: 1rem;
 }
 
-.article-list article {
+article.article-card {
 	background-color: var(--blue-700);
 	padding: 1rem;
 	border-radius: 0.5rem;
 }
 
-.article-list article:not( :last-child ) {
+article.article-card:not( :last-child ) {
 	margin-block-end: 1rem;
 }
 
-.article-list article h2 {
+article.article-card h2 {
 	font-size: xx-large;
 }
 
-.article-list article > ul {
+article.article-card > ul {
 	display: inline-flex;
 }
 
-.article-list article li {
+article.article-card li {
 	margin-inline: 0.5rem;
 	list-style: none;
 }
@@ -429,14 +429,39 @@ blockquote > cite:last-child {
 	list-style: none;
 }
 
+.taxonomy-list {
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	background-color: var(--blue-800);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	margin-block: 1rem;
+}
+
+.taxonomy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	background-color: var(--blue-700);
+	border-radius: 0.5rem;
+	padding: 0.3rem;
+	min-width: 5rem;
+
+}
+
 .grid-three-quarters {
 	display: grid;
 	grid-template-areas: 
 		'main aside-top'
-		'main aside-bottom';
+		'main aside-bottom'
+		'bottom bottom';
 	grid-template-columns: 1fr 1fr;
 	justify-content: center;
-	justify-items: center;
+	justify-items: stretch;
 	gap: 4rem;
 }
 
@@ -445,7 +470,8 @@ blockquote > cite:last-child {
 		grid-template-areas:
 			'main'
 			'aside-top'
-			'aside-bottom';
+			'aside-bottom'
+			'bottom';
 		grid-template-columns: 1fr;
 	}
 }
@@ -460,4 +486,8 @@ blockquote > cite:last-child {
 
 .grid-three-quarters-aside-bottom {
 	grid-area: aside-bottom;
+}
+
+.grid-three-quarters-bottom {
+	grid-area: bottom;
 }
