@@ -26,3 +26,4 @@ draft = false
 -   17/Aug/2024: Fighting Type!
 -   21/Aug/2024: Added latest post section to home page
 -   22/Aug/2024: Changed HTML regarding [tags](/tags) taxonomy & term definitions
+-   22/Aug/2024: Which pokemon are you? Quiz
