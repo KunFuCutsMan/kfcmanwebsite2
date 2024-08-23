@@ -1,8 +1,7 @@
-{{ define "main" }}
+{{define "main"}}
 <div class="frame main-frame single-margin">
     <h1>
-        {{- if eq .Kind "term" -}}Tag: {{ end -}}
-        {{- .Title -}}
+        {{- .Data.Singular | inflect.Humanize }}: {{ .Title -}}
     </h1>
     {{ .Content }}
 
@@ -14,4 +13,4 @@
         {{end}}
     </div>
 </div>
-{{ end }}
+{{end}}
