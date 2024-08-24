@@ -141,6 +141,17 @@ blockquote > cite:last-child {
 	border-bottom: 0.2rem solid var(--primary-light);
 }
 
+::-webkit-scrollbar {
+	scrollbar-width: thin;
+	background-color: var(--blue-900);
+	border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 100vw;
+	background-color: var(--orange-500);
+}
+
 /* Nav partial */
 #nav {
 	--bg: var(--gray-300);
@@ -264,17 +275,6 @@ blockquote > cite:last-child {
 	border-radius: 0.5rem;
 	padding: 1rem;
 	overflow: auto;
-}
-
-.highlight pre::-webkit-scrollbar {
-	scrollbar-width: thin;
-	background-color: var(--blue-900);
-	border-radius: 100vw;
-}
-
-.highlight pre::-webkit-scrollbar-thumb {
-	border-radius: 100vw;
-	background-color: var(--orange-500);
 }
 
 /* Image Holder */
@@ -490,4 +490,10 @@ article.article-card li {
 
 .grid-three-quarters-bottom {
 	grid-area: bottom;
+}
+
+.pseudo-iframe {
+	overflow: auto;
+	border: 0.2rem solid var(--orange-900);
+	border-radius: 0.5rem;
 }
