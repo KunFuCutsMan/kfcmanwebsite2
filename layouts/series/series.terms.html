@@ -1,0 +1,19 @@
+{{define "main"}}
+<main class="frame main-frame single-margin">
+    <h1>{{.Title}}</h1>
+    <div class="taxonomy-list">
+        {{- range .Data.Terms }}
+        {{ template "tag-card" . }}
+        {{else}}
+        <small>You get NOTHING! You loose! Good day sir.</small>
+        {{end -}}
+    </div>
+</main>
+{{end}}
+
+{{ define "tag-card" }}
+<section class="taxonomy">
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+    <span>🔢 {{ .Count }}</span>
+</section>
+{{ end }}

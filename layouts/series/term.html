@@ -1,0 +1,17 @@
+{{define "main"}}
+<div class="frame main-frame single-margin">
+    <h1>
+        {{- .Data.Singular | inflect.Humanize }}: {{ .Title -}}
+    </h1>
+
+    {{ .Content }}
+
+    <div class="article-list">
+        {{- range $p := .Pages }}
+        {{ partial "posts/article-card" $p }}
+        {{ else }}
+            <small>You get NOTHING! You loose! Good day sir.</small>
+        {{end}}
+    </div>
+</div>
+{{end}}

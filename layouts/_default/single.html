@@ -4,6 +4,10 @@
             <h1>{{ .Title }}</h1>
             {{ with .Date }}<time datetime="{{ . }}">{{ . | time.Format ":date_medium" }}</time>{{- end -}}
 
+            {{ with .Params.Series -}}
+            <p><b>Series: </b> {{.}}</p>
+            {{- end -}}
+
             {{ with .GetTerms "tags" -}}
             <div>
                 <b>Tags:</b>

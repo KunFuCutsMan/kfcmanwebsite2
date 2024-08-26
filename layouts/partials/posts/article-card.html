@@ -10,13 +10,26 @@
 
     {{ with .Summary }}<p>{{.}}</p>{{end}}
 
+    {{- with .GetTerms "series" -}}
+    <div>
+        <b>Series:</b>
+        <ul class="inline-list">
+            {{- range .}}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end -}}
+        </ul>
+    </div>
+    {{- end -}}
+
     {{- with .GetTerms "tags" -}}
-    <b>Tags:</b>
-    <ul class="inline-list">
-        {{- range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ end -}}
-    </ul>
+    <div>
+        <b>Tags:</b>
+        <ul class="inline-list">
+            {{- range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end -}}
+        </ul>
+    </div>
     {{- end -}}
 
 </article>
