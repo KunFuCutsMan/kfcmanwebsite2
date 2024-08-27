@@ -4,8 +4,15 @@
             <h1>{{ .Title }}</h1>
             {{ with .Date }}<time datetime="{{ . }}">{{ . | time.Format ":date_medium" }}</time>{{- end -}}
 
-            {{ with .Params.Series -}}
-            <p><b>Series: </b> {{.}}</p>
+            {{ with .GetTerms "series" -}}
+            <div>
+                <b>Series: </b>
+                <ul class="inline-list">
+                    {{- range . }}
+                    <li><a href="{{ . }}">{{ .LinkTitle }}</a></li>
+                    {{end -}}
+                </ul>
+            </div>
             {{- end -}}
 
             {{ with .GetTerms "tags" -}}
