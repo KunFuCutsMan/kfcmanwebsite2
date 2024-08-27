@@ -28,3 +28,4 @@ draft = false
 -   22/Aug/2024: Changed HTML regarding [tags](/tags) taxonomy & term definitions
 -   22/Aug/2024: Which pokemon are you? Quiz
 -   23/Aug/2024: Survived the Marquee of Doom and added a `.psuedo-iframe` CSS class
+-   26/Aug/2024: Preparations for a series taxonomy, & mermaid.js render hooks
