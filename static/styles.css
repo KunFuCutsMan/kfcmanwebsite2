@@ -375,6 +375,13 @@ blockquote > cite:last-child {
 	font-size: large;
 }
 
+.main-frame > article details {
+	border-radius: 0.5rem;
+	margin-block: 1rem;
+	padding-block: 0.5rem;
+	background-color: var(--secondary);
+}
+
 .split-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
