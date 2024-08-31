@@ -369,6 +369,12 @@ blockquote > cite:last-child {
 	text-align: center;
 }
 
+.main-frame > article summary {
+	text-align: center;
+	color: var(--blue-400);
+	font-size: large;
+}
+
 .split-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;

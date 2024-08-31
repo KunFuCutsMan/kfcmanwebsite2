@@ -11,5 +11,8 @@ title = "KFCMan's Odd Corner of the Internet"
     status = 404
     to = '/not_found.html'
 
+[markup.tableOfContents]
+    endLevel = 6
+
 [markup.goldmark.renderer]
     unsafe = true
