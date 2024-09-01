@@ -26,3 +26,15 @@ I don't know what to put in here. I suppose I can give you some things about mys
 -   Christian :\)
 
 Futher questioning can be made in the [about me](/about-me) section.
+
+Also here's a button I made:
+
+<a href="https://kunfucutsman.neocities.org/" target="_blank">
+    <img src="/images/88x31 button.png" alt="KFCMan's Website 88x31 Button">
+</a>
+
+```txt
+<a href="https://kunfucutsman.neocities.org/" target="_blank">
+    <img src="/images/88x31 button.png" alt="KFCMan's Website 88x31 Button">
+</a>
+```

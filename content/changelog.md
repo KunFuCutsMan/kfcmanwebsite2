@@ -30,3 +30,4 @@ draft = false
 -   23/Aug/2024: Survived the Marquee of Doom and added a `.psuedo-iframe` CSS class
 -   26/Aug/2024: Preparations for a series taxonomy, & mermaid.js render hooks
 -   30/Aug/2024: New Series Taxonomy! and new post for MPCG (Making a Pai Sho Capture Game)
+-   1/Sep/2024: Added an 88x31 button for the site! Also modified home site to add more stuff

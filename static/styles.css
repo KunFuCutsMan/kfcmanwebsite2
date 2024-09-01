@@ -331,7 +331,6 @@ blockquote.cite > cite:last-child {
 	border-image-outset: var(--border-width);
 	border-image-width: var(--border-width);
 	border-image-repeat: round;
-	image-rendering: pixelated;
 }
 
 .single-margin {
@@ -341,7 +340,7 @@ blockquote.cite > cite:last-child {
 }
 
 .main-frame > article p {
-	margin-block: 2rem;
+	margin-block: 1rem;
 }
 
 .main-frame > article :is(h1, h2, h3, h4, h5, h6) {
