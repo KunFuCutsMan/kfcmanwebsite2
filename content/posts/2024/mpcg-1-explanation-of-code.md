@@ -6,7 +6,7 @@ summary: A (somewhat) thorough explanation of all the code used when playing Pai
 series:
     - Making a Pai Sho Capture Game
 tags:
-    - programmings
+    - programming
     - pai sho
 
 includeTOC: true

@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-html {font-size: 1rem;} /* 16px */
+html {font-size: 1rem;}
 
 h1 {
 	font-size: 4rem;
@@ -93,11 +93,11 @@ h1 {
 	text-wrap: pretty;
 }
 
-h2 {font-size: 2.5rem;}
+h2 {font-size: 3rem;}
 
 h3 {font-size: 2rem;}
 
-h4 {font-size: 1.5rem;}
+h4 {font-size: 1.777rem;}
 
 h5 {font-size: 1.333rem;}
 
@@ -336,52 +336,52 @@ blockquote.cite > cite:last-child {
 .single-margin {
 	margin-block: 4rem;
 	margin-inline: auto;
-	width: min(60rem, 80vw);
+	width: min(60rem, 80%);
 }
 
-.main-frame > article p {
+.content > * {
 	margin-block: 1rem;
 }
 
-.main-frame > article :is(h1, h2, h3, h4, h5, h6) {
+.content :is(h1, h2, h3, h4, h5, h6) {
 	margin-block: 1rem;
 	margin-bottom: 2rem;
 }
 
-.main-frame > article :is(ul, ol) {
+.content :is(ul, ol) {
 	--tab-space: 1.5rem;
 	position: relative;
 	width: calc(100% - var(--tab-space));
 	left: var(--tab-space);
 }
 
-.main-frame > article li {
+.content li {
 	margin-block: 0.5rem;
 }
 
-.main-frame > article img {
+.content > img {
 	margin: auto;
 }
 
-.main-frame > article img + small {
+.content img + small {
 	display: block;
 	text-align: center;
 }
 
-.main-frame > article summary {
+.content summary {
 	text-align: center;
 	color: var(--blue-400);
 	font-size: large;
 }
 
-.main-frame > article details {
+.content details {
 	border-radius: 0.5rem;
 	margin-block: 1rem;
 	padding-block: 0.5rem;
 	background-color: var(--secondary);
 }
 
-.main-frame > article blockquote {
+.content blockquote {
 	background-color: var(--blue-900);
 	border-left: 0.5rem solid var(--accent);
 	padding-block: 1rem;
@@ -391,13 +391,13 @@ blockquote.cite > cite:last-child {
 	border-radius: 0.5rem;
 }
 
-.main-frame > article blockquote p {
+.content blockquote p {
 	margin-block: 0.1rem;
 }
 
 .split-content {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	justify-items: center;
 	align-items: center;
 }
@@ -485,12 +485,24 @@ article.article-card li {
 		'main aside-top'
 		'main aside-bottom'
 		'bottom bottom';
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 70% auto;
 	justify-content: center;
 	justify-items: stretch;
 	gap: 4rem;
 }
 
+/* Medium Screens with coupled grid */
+@media (max-width: 1200px) {
+	.grid-three-quarters {
+		grid-template-areas:
+			'main main'
+			'aside-top aside-bottom'
+			'bottom bottom';
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Mobile 1 column grid */
 @media (max-width: 720px) {
 	.grid-three-quarters {
 		grid-template-areas:
@@ -498,7 +510,7 @@ article.article-card li {
 			'aside-top'
 			'aside-bottom'
 			'bottom';
-		grid-template-columns: 1fr;
+		grid-template-columns: 100%;
 	}
 }
 

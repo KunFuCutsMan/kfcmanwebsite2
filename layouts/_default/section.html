@@ -3,7 +3,8 @@
     <h1>
         {{- .Title -}}
     </h1>
-    {{ .Content }}
+
+    <article class="content">{{ .Content }}</article>
 
     <div class="article-list">
         {{- range $p := .Pages }}
