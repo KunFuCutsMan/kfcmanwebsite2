@@ -1,8 +1,12 @@
-+++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-date = {{ .Date }}
-summary = 'Summarize all of this article in one sentence or two'
-tags = ['tag 1', 'tag 2']
-includeTOC = false
-draft = true
-+++
+---
+title: '{{ replace .File.ContentBaseName "-" " " | title }}'
+date: "{{ .Date }}"
+summary: Summarize all of this article in one sentence or two
+
+tags:
+    - Tag 1
+    - Tag 2
+
+includeTOC: true
+draft: true
+---
