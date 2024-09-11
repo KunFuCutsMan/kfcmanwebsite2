@@ -38,5 +38,3 @@ Also here's a button I made:
     <img src="/images/88x31 button.png" alt="KFCMan's Website 88x31 Button">
 </a>
 ```
-
-(This paragraph is a test to check github actions, make sure to ignore it)

@@ -302,12 +302,13 @@ blockquote.cite > cite:last-child {
 	transition: 500ms;
 }
 
-.details-popup > ul {
+.details-popup > *:last-child {
 	display: flex;
 	position: absolute;
 	z-index: 2;
 	flex-direction: column;
 	width: fit-content;
+	text-align: center;
 	background-color: var(--bg);
 
 	box-shadow: 0 1rem 1rem 0 var(--gray-100);
