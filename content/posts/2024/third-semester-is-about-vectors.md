@@ -7,7 +7,7 @@ tags:
     - Right Now
 
 includeTOC: false
-draft: true
+draft: false
 ---
 
 Hello!
