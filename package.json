@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "hugo server --noHTTPCache -D",
     "upload": "hugo & node upload-site.js",
-    "new:post": "hugo new content content/posts/%npm_config_path%",
-    "new:series": "hugo new content --kind series content/posts/%npm_config_path%"
+    "new:post": "hugo new content content/posts/%npm_config_path%.md",
+    "new:series": "hugo new content --kind series content/posts/%npm_config_path%.md"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
