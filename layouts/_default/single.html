@@ -2,29 +2,8 @@
     <main class="frame main-frame single-margin">
         <header>
             <h1>{{ .Title }}</h1>
-            {{ with .Date }}<time datetime="{{ . }}">{{ . | time.Format ":date_medium" }}</time>{{- end -}}
 
-            {{ with .GetTerms "series" -}}
-            <div>
-                <b>Series: </b>
-                <ul class="inline-list">
-                    {{- range . }}
-                    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-                    {{end -}}
-                </ul>
-            </div>
-            {{- end -}}
-
-            {{ with .GetTerms "tags" -}}
-            <div>
-                <b>Tags:</b>
-                <ul class="inline-list">
-                    {{- range . }}
-                    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-                    {{ end -}}
-                </ul>
-            </div>
-            {{- end -}}
+            {{ template "article-data" . }}
 
             {{ if .Params.IncludeTOC }}{{.TableOfContents}}{{ end }}
         </header>
@@ -43,3 +22,35 @@
     </script>
     {{end}}
 {{ end }}
+
+{{define "article-data" }}
+<div class="article-data">
+    {{ $page := . }}
+    <div>
+        {{ with $page.Date }}
+        <p><b>Date:</b> <time datetime="{{ . }}">{{ . | time.Format ":date_medium" }}</time></p>
+        {{- end -}}
+
+        {{ with $page.GetTerms "tags" -}}
+        <p><b>Tags:</b> {{ partial "posts/inline-list-links" . }}</p>
+        {{- end -}}
+    </div>
+
+    {{ with $page.GetTerms "series" }}
+    <div>
+        <p><b>Series:</b></p>
+
+        {{- range . }}
+        <div class="series-data">
+            {{ $entries := .Pages.ByDate.Reverse }}
+            <a href="{{ .RelPermalink }}" class="series-name">{{ .LinkTitle }}</a>
+            {{ with $entries.Prev $page }}<a href="{{.RelPermalink}}" class="prev">Prev</a>{{end}}
+            {{ with $entries.Next $page }}<a href="{{.RelPermalink}}" class="next">Next</a>{{end}}
+        </div>
+        {{end}}
+    </div>
+    {{- end -}}
+
+    
+</div>
+{{end}}

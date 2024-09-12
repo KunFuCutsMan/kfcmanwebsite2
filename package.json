@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "hugo server --noHTTPCache -D",
-    "upload": "hugo & node upload-site.js",
+    "preview": "hugo server",
     "new:post": "hugo new content content/posts/%npm_config_path%.md",
     "new:series": "hugo new content --kind series content/posts/%npm_config_path%.md"
   },
