@@ -31,6 +31,6 @@ You're going to need some things:
 
 From now on I'll be assuming you have knowledge in all of these things. Any questions you may have can be found easily on youtube, some channels I recommend are [Awesome](https://www.youtube.com/@awesome-coding), [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) and [Fireship](https://www.youtube.com/@Fireship).
 
-You got everything installed? Good, next up...
+{{< small >}}You got everything installed? Good, next up...{{< /small >}}
 
 ## Getting a copy of the code

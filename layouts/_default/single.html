@@ -3,7 +3,7 @@
         <header>
             <h1>{{ .Title }}</h1>
 
-            {{ template "article-data" . }}
+            {{ if ne .Params.ExcludeArticleData true }}{{ template "article-data" . }}{{end}}
 
             {{ if .Params.IncludeTOC }}{{.TableOfContents}}{{ end }}
         </header>

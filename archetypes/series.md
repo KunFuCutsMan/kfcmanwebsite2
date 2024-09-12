@@ -10,6 +10,7 @@ tags:
     - Tag 2
 
 includeTOC: true
+excludeArticleData: false
 draft: true
 ---
 

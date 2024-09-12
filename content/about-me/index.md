@@ -1,6 +1,7 @@
 ---
 Title: "About Me"
 IncludeTOC: true
+ExcludeArticleData: true
 ---
 
 Well, hello! I'm Kun Fu Cuts Man (or KFCMan for short) \
