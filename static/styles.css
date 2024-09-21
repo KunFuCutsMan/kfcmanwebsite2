@@ -322,6 +322,13 @@ blockquote.cite > cite:last-child {
 	flex-wrap: wrap;
 }
 
+.column-with-space {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
 /* MAIN CSS */
 
 .frame {
