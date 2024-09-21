@@ -7,8 +7,5 @@
     "preview": "hugo server",
     "new:post": "hugo new content content/posts/%npm_config_path%.md",
     "new:series": "hugo new content --kind series content/posts/%npm_config_path%.md"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5"
   }
 }
