@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "hugo server --noHTTPCache -D",
     "preview": "hugo server",
-    "new:post": "hugo new content content/posts/%npm_config_path%.md",
-    "new:series": "hugo new content --kind series content/posts/%npm_config_path%.md"
+    "new:post": "hugo new content content/posts/%npm_config_path%/index.md",
+    "new:series": "hugo new content --kind series content/posts/%npm_config_path%/index.md"
   }
 }
