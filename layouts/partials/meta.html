@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#ffffff">
 
 {{ with resources.Get "js/events.js" -}}
-    {{- $time := time.Now }}
+    {{- $time := time.Now | time.AsTime }}
     {{- $human := printf "%s %s, %s"
         ($time | time.Format "Jan")
         ( humanize $time.Day )

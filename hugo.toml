@@ -1,6 +1,7 @@
 baseURL = 'https://kunfucutsman.neocities.org/'
 languageCode = 'en-us'
 title = "KFCMan's Odd Corner of the Internet"
+timeZone = 'America/Mexico_City'
 
 [taxonomies]
     tag = 'tags'
