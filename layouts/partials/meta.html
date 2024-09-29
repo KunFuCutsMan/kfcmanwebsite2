@@ -12,6 +12,22 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+
 {{ with resources.Get "js/events.js" -}}
-    <script src="{{.RelPermalink}}" defer></script>
+    {{- $time := time.Now }}
+    {{- $human := printf "%s %s, %s"
+        ($time | time.Format "Jan")
+        ( humanize $time.Day )
+        ($time | time.Format "2006")
+    -}}
+
+    {{- $string := printf
+        "var LAST_UPDATED_DATE = '%s'; var LAST_UPDATED_HUMAN = '%s';"
+        ($time | time.Format "2006-01-02") $human
+    -}}
+
+    {{- $vars := $string | resources.FromString "js/vars.js" -}}
+
+<script src="{{$vars.Permalink}}?t={{$time.Unix}}" async></script>
+<script src="{{.RelPermalink}}" defer></script>
 {{- end }}

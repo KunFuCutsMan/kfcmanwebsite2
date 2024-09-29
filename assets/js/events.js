@@ -2,6 +2,8 @@
 window.addEventListener("load", () => {
     document.querySelectorAll(".image-holder")
     .forEach( imageSwapper )
+
+    changeUpdateTime( document.querySelector("#last-updated") )
 } )
 
 /**
@@ -28,4 +30,14 @@ function imageSwapper(element) {
             }
         })
     }, INTERVAL_TIMER_MS)
+}
+
+/**
+ * 
+ * @param {HTMLTimeElement} timeElement 
+ * @returns 
+ */
+function changeUpdateTime( timeElement ) {
+    timeElement.dateTime = LAST_UPDATED_DATE
+    timeElement.innerText = LAST_UPDATED_HUMAN
 }
