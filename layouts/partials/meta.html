@@ -13,21 +13,14 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+{{ with .GitInfo -}}
+{{ $stringy := printf "%+v" .CommitDate }}
+{{ $url := $stringy | resources.FromString "assets/lastmod.txt" }}
+    <script>
+        var LAST_MOD_URL = '{{$url.Permalink}}'
+    </script>
+{{- end }}
+
 {{ with resources.Get "js/events.js" -}}
-    {{- $time := time.AsTime time.Now.Unix }}
-    {{- $human := printf "%s %s, %s"
-        ($time | time.Format "Jan")
-        ( humanize $time.Day )
-        ($time | time.Format "2006")
-    -}}
-
-    {{- $string := printf
-        "var LAST_UPDATED_DATE = '%s'; var LAST_UPDATED_HUMAN = '%s';"
-        ($time | time.Format "2006-01-02") $human
-    -}}
-
-    {{- $vars := $string | resources.FromString "js/vars.js" -}}
-
-<script src="{{$vars.Permalink}}?t={{$time.Unix}}" async></script>
 <script src="{{.RelPermalink}}" defer></script>
 {{- end }}

@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     document.querySelectorAll(".image-holder")
     .forEach( imageSwapper )
 
-    changeUpdateTime( document.querySelector("#last-updated") )
+    changeUpdateTime()
 } )
 
 /**
@@ -32,12 +32,20 @@ function imageSwapper(element) {
     }, INTERVAL_TIMER_MS)
 }
 
-/**
- * 
- * @param {HTMLTimeElement} timeElement 
- * @returns 
- */
+
 function changeUpdateTime( timeElement ) {
-    timeElement.dateTime = LAST_UPDATED_DATE
-    timeElement.innerText = LAST_UPDATED_HUMAN
+    fetch( LAST_MOD_URL, {
+        method: 'GET',
+        cache: "no-cache",
+    })
+    .then( r => r.text()
+        .then( t => {
+            let date = new Date(t)
+            let day = new Date( date.getFullYear(), date.getMonth(), date.getDate() )
+            /** @type {HTMLTimeElement} */
+            let timeElement = document.querySelector("#last-updated")
+            timeElement.dateTime = `${day.getFullYear()}-${day.getMonth()}-${day.getDate()}`
+            timeElement.innerText = `${day.getDate()}/${day.getMonth()}/${day.getFullYear()}`
+        } )
+    )
 }
