@@ -1,40 +1,60 @@
 {{ define "main" }}
-<div class="grid-three-quarters single-margin">
-    <main class="frame main-frame grid-three-quarters-main">
+<div class="grid-home single-margin">
+    <header data-area="top" class="frame">
         <header class="split-content">
             <div>
                 <h1>{{ .Params.LandingTitle }}</h1>
                 <small>{{ .Params.LandingSubtitle }}</small>
             </div>
             <div class="image-holder">
-                {{- range $i, $rel := .Params.Images }}
-                <img src="{{$rel}}" class="
-                {{- if eq $i 0 -}}
-                    visible {{- else -}} invisible
-                {{- end -}}" alt="KFCMan Wave">
-                {{- end }}
+                <img src="/images/kfcman wave.png" alt="">
             </div>
         </header>
+    </header>
 
-        <article class="content">
-            {{ .Content }}
-        </article>
+    <main data-area="content" class="frame content">
+        {{ .Content }}
     </main>
 
-    <aside class="frame grid-three-quarters-aside-top">
-        <h2>Other Cool Stuff</h2>
-        <section class="pseudo-iframe column-with-space" style="height: 20rem;">
-        {{ partial "home/cool-stuff.html" . }}
+    <!--
+        <aside data-area="aside-top" class="frame column-with-space">
+            <h2>Other Cool Stuff</h2>
+            <section class="pseudo-iframe column-with-space" style="height: 20rem;">
+                {{ partial "home/cool-stuff.html" . }}
+            </section>
+        </aside>
+    -->
+
+    <aside data-area="aside-top" class="frame column-with-space">
+        <h2>Cool Stuff</h2>
+
+        <section class="pseudo-iframe column-with-space">
+            {{ partial "home/webrings.html" . }}
         </section>
-        <section style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">{{ partial "home/cool-buttons.html" . }}</section>
+
+        <section style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+            {{ partial "home/cool-buttons.html" . }}
+        </section>
+
+        <section style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+            {{ partial "home/fanlists.html" . }}
+        </section>
     </aside>
 
-    <aside class="frame grid-three-quarters-aside-bottom">
+    <aside data-area="aside-mid" class="frame column-with-space">
+        <h2>Link me!</h2>
+
+        <a href="https://kunfucutsman.neocities.org/" target="_blank">
+            <img src="/images/88x31 button.png" alt="KFCMan's Website 88x31 Button">
+        </a>
+    </aside>
+
+    <aside data-area="aside-bottom" class="frame">
         <h2>Comment Box!</h2>
         {{ partial "cbox.html" . }}
     </aside>
 
-    <section class="frame grid-three-quarters-bottom">
+    <section data-area="bottom" class="frame">
         <h2>Latest Blog Post!</h2>
         {{ partial "home/latest-post.html" . }}
     </section>
