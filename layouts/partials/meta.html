@@ -13,7 +13,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-{{ with .Site.Lastmod -}}
+{{ with time.Now | time.Format "2006-01-02T03:04:05-07:00" -}}
 {{ $stringy := printf "%+v" . }}
 {{ $url := $stringy | resources.FromString "assets/lastmod.txt" }}
     <script>
