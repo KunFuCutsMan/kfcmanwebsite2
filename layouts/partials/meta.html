@@ -13,8 +13,8 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-{{ with .GitInfo -}}
-{{ $stringy := printf "%+v" .CommitDate }}
+{{ with .Site.Lastmod -}}
+{{ $stringy := printf "%+v" . }}
 {{ $url := $stringy | resources.FromString "assets/lastmod.txt" }}
     <script>
         var LAST_MOD_URL = '{{$url.Permalink}}'
