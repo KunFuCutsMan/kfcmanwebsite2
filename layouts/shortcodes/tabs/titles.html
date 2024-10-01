@@ -1,0 +1,19 @@
+{{- $name_param := .Params.Name -}}
+{{- $tabsList := strings.Split .InnerDeindent "\n" -}}
+{{- $titles := collections.Slice -}}
+{{- range $tabList := $tabsList -}}
+    {{- if strings.HasPrefix $tabList "<li>" -}}
+        {{- $tabList = strings.Substr $tabList 4 -5 -}}
+        {{- $titles = $titles | append $tabList -}}
+    {{- end -}}
+{{- end -}}
+<ul class="tab-titles inline-list">
+{{- range $i, $line := $titles }}
+    <li>
+        <label>
+        <input type="radio" name="{{$name_param}}" value="{{$i}}" {{ if eq $i 0 }}checked{{end}}>
+        <span>{{$line}}</span>
+        </label>
+    </li>
+{{end -}}
+</ul>
