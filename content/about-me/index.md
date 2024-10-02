@@ -32,7 +32,7 @@ Enjoy this CSS/HTML only tab window that I made in 2 days, this information was 
 ...and other stuff:
 
 {{% details "Personality Quiz Results" %}}
-{{% partial "home/cool-stuff.html" %}}
+<div class="inline-list">{{% partial "home/cool-stuff.html" %}}</div>
 {{% /details %}}
 
 {{% /tabs/tab %}}
