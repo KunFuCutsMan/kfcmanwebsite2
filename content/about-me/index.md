@@ -199,10 +199,3 @@ It's been one funky journey ever since, but that's outside of the scope of this 
 {{% /tabs/tab %}}
 
 {{< /tabs/wrapper >}}
-<<<<<<< HEAD
-
-{{% /tabs/tab %}}
-
-# {{< /tabs/wrapper >}}
-
-> > > > > > > d8a2d7cdf8674a0d1387a1e57a7cd18cfeffa2fe
