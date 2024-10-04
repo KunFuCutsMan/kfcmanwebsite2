@@ -160,6 +160,12 @@ After watching a [video](https://youtu.be/Sv3pS_0vFjA?si=R0LA-JsLQKYu2Te_) from 
 
 ## Why are you christian?
 
+{{% /tabs/tab %}}
+
+{{% tabs/tab %}}
+
+## Why are you christian?
+
 Ok so get ready for some backstory:
 
 I went to a catholic elementary school from 4th to 9th grade (due to economic reasons they were the cheapest we could afford at the moment; they were part of a pious school system whose vision was to provide education to poor families, so thanks catholism!). I didn't really engaged in the church gatherings they would do about every 6 months _(and it was always about Job 1!)_; I more or less felt agnostic about the whole religion thing.
@@ -183,6 +189,10 @@ For a 50 minute summary of archealogical evidence for the ressurrection of Chris
 About six months later I finally got the courage to accept Christ, I still remember the day I did, as I was sitting in the right section of my church when the calling for salvation got called.
 
 It's been one funky journey ever since, but that's outside of the scope of this QnA
+
+{{% /tabs/tab %}}
+
+{{< /tabs/wrapper >}}
 
 {{% /tabs/tab %}}
 
