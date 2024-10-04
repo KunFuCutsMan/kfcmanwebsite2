@@ -32,7 +32,10 @@ Enjoy this CSS/HTML only tab window that I made in 2 days, this information was 
 ...and other stuff:
 
 {{% details "Personality Quiz Results" %}}
+<<<<<<< HEAD
 
+=======
+>>>>>>> d8a2d7cdf8674a0d1387a1e57a7cd18cfeffa2fe
 <div class="inline-list">{{% partial "home/cool-stuff.html" %}}</div>
 {{% /details %}}
 
@@ -159,12 +162,15 @@ After watching a [video](https://youtu.be/Sv3pS_0vFjA?si=R0LA-JsLQKYu2Te_) from 
 {{% tabs/tab %}}
 
 ## Why are you christian?
+<<<<<<< HEAD
 
 {{% /tabs/tab %}}
 
 {{% tabs/tab %}}
 
 ## Why are you christian?
+=======
+>>>>>>> d8a2d7cdf8674a0d1387a1e57a7cd18cfeffa2fe
 
 Ok so get ready for some backstory:
 
@@ -193,7 +199,10 @@ It's been one funky journey ever since, but that's outside of the scope of this 
 {{% /tabs/tab %}}
 
 {{< /tabs/wrapper >}}
+<<<<<<< HEAD
 
 {{% /tabs/tab %}}
 
 {{< /tabs/wrapper >}}
+=======
+>>>>>>> d8a2d7cdf8674a0d1387a1e57a7cd18cfeffa2fe
