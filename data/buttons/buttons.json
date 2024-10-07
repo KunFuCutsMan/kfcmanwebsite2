@@ -38,5 +38,10 @@
         "link": "https://milk-tea.neocities.org",
         "image": "milk-tea-button.gif",
         "site": "Milk Tea"
+    },
+    {
+        "link": "https://nyanfiles.neocities.org/",
+        "image": "nyanfiles.gif",
+        "site": "NyanFiles"
     }
 ]

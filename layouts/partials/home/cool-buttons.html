@@ -1,5 +1,5 @@
 {{ range $button := .Site.Data.buttons.buttons }}
 <a href="{{$button.link}}" target="_blank">
-    <img src="/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy">
+    <img src="/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy" width="88px" height="31px">
 </a>
 {{- end }}
