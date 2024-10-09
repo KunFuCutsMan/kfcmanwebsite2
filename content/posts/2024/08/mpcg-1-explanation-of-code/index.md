@@ -381,7 +381,7 @@ These are the methods that I find most important for you to understand:
 
 This is what host's tile library looks like, for example:
 
-![Host Tile Library](/images/mpcg/i-explanation-of-code/Host-Tile-Library.png)
+![Host Tile Library](./Host-Tile-Library.png)
 
 And the HTML that is used to structure said library:
 
@@ -415,7 +415,7 @@ Don't worry about not understanding what exactly this does, we'll get there even
 
 Throught all the code base, you'll see in other classes that sometimes the code is called to "actuate", you may be wandering, what does this do? Well they call this class' `actuate()` method! The porpuse of the `Actuator` class is to update the board that is displayed to the user according to the state of board or any actions the player has done.
 
-![Godai Board State](/images/mpcg/i-explanation-of-code/godai-board-state.png "A normal Godai board state being displayed, with available moves for Host's Water Tile")
+![Godai Board State](./godai-board-state.png "A normal Godai board state being displayed, with available moves for Host's Water Tile")
 
 The `actuate()` method actually calls another method, which is called `htmlify()`! This is the method that actually _updates_ everything, starting with marks and arrows made by the user, then empties and refills the tiles in the libraries and then the ones that were captured. Your implementation of this method _may_ vary depending on what your game is like.
 
