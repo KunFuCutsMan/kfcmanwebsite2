@@ -49,7 +49,7 @@ You also need to get a local copy in your computer so you can test everything, s
 
 In the end, you should have _somewhere_ on your computer a directory like the following:
 
-```
+```txt
 └─ .
    ├─ .eslintignore
    ├─ .eslintrc.json

@@ -16,5 +16,8 @@ enableGitInfo = true
 [markup.tableOfContents]
     endLevel = 6
 
+[markup.highlight]
+    style = 'fruity'
+
 [markup.goldmark.renderer]
     unsafe = true

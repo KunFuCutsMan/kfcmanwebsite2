@@ -274,10 +274,32 @@ blockquote.cite > cite:last-child {
 }
 
 /* Hugo's code highlight */
-.highlight pre {
+.highlight {
+	position: relative;
+}
+
+.highlight > pre {
 	border-radius: 0.5rem;
 	padding: 1rem;
 	overflow: auto;
+}
+
+.highlight > button {
+	position: absolute;	
+	right: 1rem;
+	top: 1rem;
+	cursor: copy;
+	background-color: transparent;
+	border: 0;
+}
+
+.highlight > button svg {
+	fill: var(--gray-600);
+	transition: 100ms;
+}
+
+.highlight > button:is( :hover, :focus ) svg {
+	fill: var(--blue-300);
 }
 
 /* Image Holder */
