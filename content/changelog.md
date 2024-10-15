@@ -34,3 +34,4 @@ draft = false
 -   6/Sep/2024: Fixed some CSS overflow bugs that happened for small devices. Also Media Query'd the home page.
 -   (Everything september): Way too many little things
 -   30/Sep/2024: Changed grid design of home page
+-   15/Oct/2024: Changed codeblocks to "fruity" color scheme and added a "copy code" button to them
