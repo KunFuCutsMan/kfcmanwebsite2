@@ -43,5 +43,15 @@
         "link": "https://nyanfiles.neocities.org/",
         "image": "nyanfiles.gif",
         "site": "NyanFiles"
+    },
+    {
+        "link": "https://zelkova.neocities.org/",
+        "image": "aster_banner.gif",
+        "site": "Zelkova"
+    },
+    {
+        "link": "https://nomnomnami.com/",
+        "image": "nomnomnami_button.gif",
+        "site": "NomNomNami"
     }
 ]
