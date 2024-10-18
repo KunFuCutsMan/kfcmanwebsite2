@@ -1,0 +1,24 @@
+{{- $home := .Site.GetPage "/" -}}
+{{- $tags := .Site.GetPage "/tags" -}}
+{{- $series := .Site.GetPage "/series" -}}
+
+<ul>
+    {{ range slice $home $tags $series }}
+    <li>{{ template "page-link" . }}</li>
+    {{end}}
+</ul>
+
+{{ define "page-link" }}
+    {{- $page := . -}}
+    <p><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></p>
+
+    {{ if ne $page.Kind "term" -}}
+        {{- with $page.Pages }}
+        <ul>
+            {{- range . }}
+            <li>{{ template "page-link" . }}</li>
+            {{- end}}
+        </ul>
+        {{end}}
+    {{end}}
+{{ end }}

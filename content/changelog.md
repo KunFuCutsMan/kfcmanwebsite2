@@ -1,7 +1,10 @@
-+++
-title = 'Change Log'
-draft = false
-+++
+---
+title: "Change Log"
+draft: false
+
+IncludeTOC: false
+ExcludeArticleData: true
+---
 
 -   25/Jul/2024: Initial Commit
 -   30/Jul/2024: Working on homepage
@@ -35,3 +38,4 @@ draft = false
 -   (Everything september): Way too many little things
 -   30/Sep/2024: Changed grid design of home page
 -   15/Oct/2024: Changed codeblocks to "fruity" color scheme and added a "copy code" button to them
+-   17/Oct/2024: Finally added a normal sitemap

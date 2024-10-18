@@ -17,7 +17,7 @@ I don't know what to put in here. I suppose I can give you some things about mys
 
 ### TLDR:
 
--   As of Jun **[[30th, 2024]]**, I am 18 years old
+-   As of **[[Oct 5th, 2024]]**, I am 19 years old
 -   I'm from Mexico and proud to be a [jarocho](<https://en.wikipedia.org/wiki/Veracruz_(city)>)
 -   I learnt English from _way too many_ Minecraft parody songs
     -   I do mean, _way too many_
@@ -27,3 +27,5 @@ I don't know what to put in here. I suppose I can give you some things about mys
     -   **NOT A METHODIST** unlike what the personality quiz says. I'm evangelical.
 
 Futher questioning can be made in the [about me](/about-me) section.
+
+I also do my best to update this site frencuently, either from new blog posts or small fixes and tweaks I make, so enjoy my odd corner of the internet!
