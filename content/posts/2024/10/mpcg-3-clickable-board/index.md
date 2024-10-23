@@ -175,6 +175,15 @@ This function is the key for the site gaining access to your game. Remember the 
 And inside make a class skeleton like the following:
 
 ```js
+import { GodaiActuator } from "./GodaiActuator";
+import { GodaiGameManager } from "./GodaiGameManager";
+import { GodaiGameNotation } from "./GodaiNotation";
+import { GodaiBoardPoint } from "./GodaiBoardPoint";
+import { isAnimationsOn } from "../PaiShoMain";
+import { GodaiNotationBuilder } from "./GodaiNotation";
+import { rerunAll } from "../PaiShoMain";
+import { GUEST, HOST } from "../CommonNotationObjects";
+
 export class GodaiController {
     /** @type {GodaiActuator}          */ actuator;
     /** @type {GodaiGameManager}       */ theGame;
@@ -200,46 +209,49 @@ export class GodaiController {
     }
 
     getGameTypeID() {
-        return GameType.GodaiPaiSho.id
+        return GameType.GodaiPaiSho.id;
     }
 
     completeSetup() {
-        rerunAll()
-        this.callActuate()
+        rerunAll();
+        this.callActuate();
     }
 
     resetGameManager() {
-        this.theGame = new GodaiGameManager(this.actuator)
+        this.theGame = new GodaiGameManager(this.actuator);
     }
 
     resetNotationBuilder() {
-        this.notationBuilder = new GodaiNotationBuilder()
+        this.notationBuilder = new GodaiNotationBuilder();
     }
 
     resetGameNotation() {
-        this.gameNotation = this.getNewGameNotation()
+        this.gameNotation = this.getNewGameNotation();
     }
 
     getNewGameNotation() {
-        return new GodaiGameNotation()
+        return new GodaiGameNotation();
     }
 
     callActuate() {
-        this.theGame.actuate()
+        this.theGame.actuate();
     }
     resetMove() {
         if (this.notationBuilder.status === BRAND_NEW) {
-            this.gameNotation.removeLastMove()
+            this.gameNotation.removeLastMove();
         }
-        rerunAll()
+        rerunAll();
     }
-    cleanup()
-    isSolitaire() { return false }
-    getAiList() { return [] }
+    cleanup() {}
+    isSolitaire() {
+        return false;
+    }
+    getAiList() {
+        return [];
+    }
     getCurrentPlayer() {
-        if (this.gameNotation.moves.length % 2 == 0)
-            return GUEST
-        return HOST
+        if (this.gameNotation.moves.length % 2 == 0) return GUEST;
+        return HOST;
     }
 
     /** @param {HTMLDivElement} tileDiv */
@@ -271,10 +283,10 @@ export class GodaiController {
      * @returns {{heading: string, message: Array<string>}} Message of the tile, given by `getTheMessage(tile, ownerName)`
      */
     getTileMessage(tileDiv) {
-        let divName = tileDiv.getAttribute("name")
-        let tile = new GodaiTile(divName.substring(1), divName.charAt(0))
-        let ownerName = divName.startsWith('G') ? GUEST : HOST
-        return this.getTheMessage(tile, ownerName)
+        let divName = tileDiv.getAttribute("name");
+        let tile = new GodaiTile(divName.substring(1), divName.charAt(0));
+        let ownerName = divName.startsWith("G") ? GUEST : HOST;
+        return this.getTheMessage(tile, ownerName);
     }
 
     /**
@@ -310,12 +322,18 @@ Here are the skeletons of the classes you need to do, name them accordingly and 
 -   [Variant]Notation.js
 -   [Variant]Board.js
 -   [Variant]BoardPoint.js
+-   [Variant]TileManager.js
+-   [Variant]Tile.js
 
 {{% /tabs/titles %}}
 
 {{% tabs/tab title="[Variant]Actuator.js" %}}
 
 ```js
+import { setupPaiShoBoard } from "../ActuatorHelp.js";
+import { GodaiController } from "./GodaiController.js";
+import { GodaiTileManager } from "./GodaiTileManager.js";
+
 export class GodaiActuator {
     /** @type {HTMLDivElement} */ gameContainer;
     /** @type {boolean}        */ isMobile;
@@ -627,6 +645,12 @@ export class GodaiActuator {
 {{% tabs/tab title="[Variant]GameManager.js" %}}
 
 ```js
+import { GodaiActuator } from "./GodaiActuator";
+import { GodaiTileManager } from "./GodaiTileManager";
+import { GodaiBoard } from "./GodaiBoard";
+import { PaiShoMarkingManager } from "../pai-sho-common/PaiShoMarkingManager";
+import { setGameLogText } from "../PaiShoMain";
+
 export class GodaiGameManager {
     /** @type {string}               */ gameLogText;
     /** @type {boolean}              */ isCopy;
@@ -732,6 +756,7 @@ export class GodaiGameManager {
 
 ```js
 // NOTE: There are three classes here, they're all related so here's where they are all located
+import { BRAND_NEW } from "../PaiShoMain.js";
 
 export class GodaiNotationMove {
     fullMoveText = "";
@@ -964,6 +989,9 @@ export class GodaiNotationBuilder {
 Mind you, this class will get even bigger by the end of this, _you've been warned._
 
 ```js
+import { RowAndColumn } from "../CommonNotationObjects";
+import { GodaiBoardPoint } from "./GodaiBoardPoint";
+
 export class GodaiBoard {
     /** @type {RowAndColumn} */ size;
     /** @type {Array<Array<GodaiBoardPoint>>} */ cells;
@@ -1219,6 +1247,177 @@ export class GodaiBoardPoint {
         let point = new GodaiBoardPoint();
         point.addType(GATE);
         return point;
+    }
+}
+```
+
+{{% /tabs/tab %}}
+
+{{% tabs/tab title="[Variant]TileManager.js" %}}
+
+```js
+import { GUEST, HOST } from "../CommonNotationObjects";
+import { debug } from "../GameData";
+import { GodaiTile } from "./GodaiTile";
+
+export class GodaiTileManager {
+    /** @type {Array<GodaiTile>} */ hostTiles;
+    /** @type {Array<GodaiTile>} */ guestTiles;
+    /** @type {Array<GodaiTile>} */ capturedHostTiles;
+    /** @type {Array<GodaiTile>} */ capturedGuestTiles;
+
+    constructor() {
+        this.hostTiles = this.loadTileSet("H");
+        this.guestTiles = this.loadTileSet("G");
+
+        this.capturedHostTiles = [];
+        this.capturedGuestTiles = [];
+    }
+
+    /**
+     * NOTE: We'll check this out later
+     * @param {'G' | 'H'} tileCode
+     * @returns {Array<GodaiTile>} array of tiles
+     */
+    loadTileSet(ownerCode) {
+        let tiles = [];
+        return tiles;
+    }
+
+    /**
+     * Grabs a tile from the corresponding tile and returns it.
+     * @param {string} player HOST or GUEST
+     * @param {string} tileCode tilecode
+     * @returns {GodaiTile | null}
+     */
+    grabTile(player, tileCode) {
+        let tilePile = player == HOST ? this.hostTiles : this.guestTiles;
+
+        /** @type {GodaiTile} */
+        let tile;
+        for (var i = 0; i < tilePile.length; i++) {
+            if (tilePile[i].code === tileCode) {
+                var newTileArr = tilePile.splice(i, 1);
+                tile = newTileArr[0];
+                break;
+            }
+        }
+
+        if (!tile) {
+            debug(
+                "And we didn't get any tiles from params: " +
+                    player +
+                    " " +
+                    tileCode
+            );
+        }
+
+        return tile;
+    }
+
+    peekTile(player, tileCode, tileId) {
+        let tilePile = player === HOST ? this.hostTiles : this.guestTiles;
+
+        if (tileId) {
+            for (let i = 0; i < tilePile.length; i++) {
+                if (tilePile[i].id === tileId) {
+                    return tilePile[i];
+                }
+            }
+        }
+
+        for (let i = 0; i < tilePile.length; i++) {
+            if (tilePile[i].code === tileCode) {
+                return tilePile[i];
+            }
+        }
+    }
+
+    /**
+     *
+     * @param {GodaiTile} tile
+     * @param {string} playerCode GUEST or HOST
+     */
+    addToCapturedTiles(tile, playerCode) {
+        if (playerCode === GUEST) {
+            this.capturedGuestTiles.push(tile);
+        } else if (playerCode === HOST) {
+            this.capturedHostTiles.push(tile);
+        }
+    }
+
+    removeSelectedTileFlags() {
+        this.hostTiles.forEach((tile) => (tile.selectedFromPile = false));
+        this.guestTiles.forEach((tile) => (tile.selectedFromPile = false));
+    }
+}
+```
+
+{{% /tabs/tab %}}
+
+{{% tabs/tab title="[Variant]Tile.js" %}}
+
+```js
+import { GUEST, HOST } from "../CommonNotationObjects";
+import { debug } from "../GameData";
+import { tileIdIncrement } from "../skud-pai-sho/SkudPaiShoTile";
+
+// NOTE: Here you'll define your tile type constants for easy use and identification
+// This will be done on a later post
+
+export class GodaiTile {
+    /** @type {string}  */ code;
+    /** @type {string}  */ ownerCode;
+    /** @type {string}  */ ownerName;
+    /** @type {number}  */ id;
+    /** @type {boolean} */ selectedFromPile;
+
+    /**
+     * @param {string} code Identifies the tile
+     * @param {'G'|'H'} ownerCode Identifies the player who owns the tile.
+     */
+    constructor(code, ownerCode) {
+        this.code = code;
+        this.ownerCode = ownerCode;
+
+        if (this.ownerCode === "G") {
+            this.ownerName = GUEST;
+        } else if (this.ownerCode === "H") {
+            this.ownerName = HOST;
+        } else {
+            debug("INCORRECT OWNER CODE");
+        }
+
+        this.id = tileIdIncrement();
+    }
+
+    /**
+     * Calculates the moving distance of a tile based on the sorrounding board points.
+     *
+     * NOTE: This method may vary on your use, for now lets just return an arbitrary number so the code is happy.
+     *
+     * NOTE: If your game has complex interactions based on the tile's sorroundings, this method will grow. A lot.
+     * @returns {number} Moving distance based on its sorrounding conditions
+     */
+    getMoveDistance(sorroundingBPs, isInGate) {
+        return 3;
+    }
+
+    getImageName() {
+        return this.ownerCode + "" + this.code;
+    }
+
+    getCopy() {
+        return new GodaiTile(this.code, this.ownerCode);
+    }
+
+    static getTileName(tileCode) {
+        let name = "";
+
+        // NOTE: At a later post this method will use the tile type constants I've mentioned earlier.
+        // For now, your tiles without an identity
+
+        return name;
     }
 }
 ```
