@@ -363,7 +363,7 @@ blockquote.cite > cite:last-child {
 .single-margin {
 	margin-block: 4rem;
 	margin-inline: auto;
-	width: min(60rem, 80%);
+	width: min(60rem, 80vw);
 }
 
 .article-data {
@@ -540,7 +540,7 @@ article.article-card li {
 }
 
 .inline-list {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
 }
 
@@ -576,10 +576,11 @@ article.article-card li {
 .grid-home {
 	display: grid;
 	grid-template-areas: 
-		'top aside-top'
-		'content aside-mid'
-		'content aside-bottom'
-		'bottom bottom';
+		'banner buttons'
+		'content webrings'
+		'content cbox'
+		'link-me cbox'
+		'latest-post latest-post';
 	gap: 4rem;
 	grid-template-columns: auto 30%;
 	grid-auto-rows: minmax(10rem, auto);
@@ -594,15 +595,12 @@ article.article-card li {
 @media (max-width: 1200px) {
 	.grid-home {
 		grid-template-areas:
-			'top top top'
-			'content content aside-top'
-			'content content aside-mid'
-			'aside-bottom bottom bottom';
-		grid-template-columns: 2fr 1fr 30%;
-	}
-
-	.grid-home > [data-area="aside-mid"] {
-		height: fit-content;
+			'banner banner banner banner'
+			'buttons buttons webrings webrings'
+			'link-me content content content'
+			'cbox content content content'
+			'latest-post latest-post latest-post latest-post';
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -610,27 +608,23 @@ article.article-card li {
 @media (max-width: 720px) {
 	.grid-home {
 		grid-template-areas:
-			'top top'
-			'content content'
-			'aside-top aside-top'
-			'aside-mid aside-mid'
-			'aside-bottom aside-bottom'
-			'bottom bottom';
-		grid-template-columns: 1fr 1fr;
-		align-items: baseline;
-	}
-
-	.grid-home > [data-area="aside-mid"] {
-		height: 100%;
+			'banner'
+			'buttons'
+			'webrings'
+			'link-me'
+			'content'
+			'latest-post'
+			'cbox';
+		grid-template-columns: auto;
 	}
 }
 
-.grid-home > [data-area="top"] { grid-area: top; }
+.grid-home > [data-area="banner"] { grid-area: banner; }
+.grid-home > [data-area="webrings"] { grid-area: webrings; }
+.grid-home > [data-area="buttons"] { grid-area: buttons; }
 .grid-home > [data-area="content"] { grid-area: content; }
-.grid-home > [data-area="aside-top"] { grid-area: aside-top; }
-.grid-home > [data-area="aside-mid"] { grid-area: aside-mid; }
-.grid-home > [data-area="aside-bottom"] { grid-area: aside-bottom; }
-.grid-home > [data-area="bottom"] { grid-area: bottom; }
+.grid-home > [data-area="cbox"] { grid-area: cbox; }
+.grid-home > [data-area="latest-post"] { grid-area: latest-post; }
 
 .pseudo-iframe {
 	overflow: auto;

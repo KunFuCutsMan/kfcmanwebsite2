@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="grid-home single-margin">
-    <header data-area="top" class="frame">
+    <header data-area="banner" class="frame">
         <header class="split-content">
             <div>
                 <h1>{{ .Params.LandingTitle }}</h1>
@@ -16,23 +16,23 @@
         {{ .Content }}
     </main>
 
-    <aside data-area="aside-top" class="frame column-with-space">
-        <h2>Cool Stuff</h2>
+    <section  data-area="webrings" class="frame column-with-space">
+        <h2>Webrings!</h2>
+        {{ partial "home/webrings.html" . }}
+    </section>
 
-        <section class="pseudo-iframe column-with-space">
-            {{ partial "home/webrings.html" . }}
-        </section>
+    <aside data-area="buttons" class="frame column-with-space" style="align-items: stretch;">
+        {{ partial "home/cool-buttons.html" . }}
 
-        <section class="column-with-space">
-            {{ partial "home/cool-buttons.html" . }}
-        </section>
-
-        <section class="inline-list">
-            {{ partial "home/fanlists.html" . }}
-        </section>
+        <div>
+            <b>Fanlists:</b>
+            <div class="inline-list" style="justify-content: space-evenly;">
+                {{ partial "home/fanlists.html" . }}
+            </div>
+        </div>
     </aside>
 
-    <aside data-area="aside-mid" class="frame column-with-space">
+    <aside data-area="link-me" class="frame column-with-space">
         <h2>Link me!</h2>
 
         <a href="https://kunfucutsman.neocities.org/" target="_blank" class="image-holder">
@@ -40,12 +40,12 @@
         </a>
     </aside>
 
-    <aside data-area="aside-bottom" class="frame">
-        <h2>Comment Box!</h2>
+    <aside data-area="cbox" class="frame">
+        <h2>CBox!</h2>
         {{ partial "cbox.html" . }}
     </aside>
 
-    <section data-area="bottom" class="frame">
+    <section data-area="latest-post" class="frame">
         <h2>Latest Blog Post!</h2>
         {{ partial "home/latest-post.html" . }}
     </section>
