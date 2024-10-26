@@ -1,5 +1,26 @@
-{{ range $button := .Site.Data.buttons.buttons }}
-<a href="{{$button.link}}" target="_blank">
-    <img src="/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy" width="88px" height="31px">
-</a>
+<div>
+    <b>Neighbors:</b>
+
+    <div class="inline-list" style="justify-content: space-evenly;">
+        {{ template "button-range" .Site.Data.buttons.neighbors }}
+    </div>
+</div>
+
+<div>
+    <b>Cool Sites:</b>
+    <div class="inline-list" style="justify-content: space-evenly;">
+        {{ template "button-range" .Site.Data.buttons.sites }}
+    </div>
+</div>
+
+{{- define "button-range" }}
+{{ range $button := . }}
+    <a href="{{$button.link}}" target="_blank">
+    {{ with $button.image }}
+        <img src="/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy" width="88px" height="31px">
+    {{ else }}
+        {{$button.site}}
+    {{ end }}
+    </a>
+{{- end }}
 {{- end }}

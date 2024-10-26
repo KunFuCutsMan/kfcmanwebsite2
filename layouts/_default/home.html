@@ -16,15 +16,6 @@
         {{ .Content }}
     </main>
 
-    <!--
-        <aside data-area="aside-top" class="frame column-with-space">
-            <h2>Other Cool Stuff</h2>
-            <section class="pseudo-iframe column-with-space" style="height: 20rem;">
-                {{ partial "home/cool-stuff.html" . }}
-            </section>
-        </aside>
-    -->
-
     <aside data-area="aside-top" class="frame column-with-space">
         <h2>Cool Stuff</h2>
 
@@ -32,11 +23,11 @@
             {{ partial "home/webrings.html" . }}
         </section>
 
-        <section style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+        <section class="column-with-space">
             {{ partial "home/cool-buttons.html" . }}
         </section>
 
-        <section style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+        <section class="inline-list">
             {{ partial "home/fanlists.html" . }}
         </section>
     </aside>
