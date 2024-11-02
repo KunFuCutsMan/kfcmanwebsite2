@@ -1,0 +1,6 @@
+{{- $url := .Get 0 -}}
+{{- $format := .Get 1 -}}
+<video width="90%" style="margin-inline: auto;" controls>
+    <source src="{{$url}}" type="video/{{$format}}">
+    Your browser does not support videos. Somehow.
+</video>

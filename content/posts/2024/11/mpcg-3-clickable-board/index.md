@@ -1,24 +1,23 @@
 ---
 title: "MPCG 3: Making a Clickable Board"
-date: "2024-10-13T20:40:41-06:00"
+date: "2024-11-01T07:29:17-06:00"
 summary: A pai sho board is not what you think it is.
 
 series:
     - Making a Pai Sho Capture Game
 tags:
-    - programming
-    - pai sho
+    - Programming
+    - Pai Sho
+    - Written Too Slowly
 
 includeTOC: true
 excludeArticleData: false
-draft: true
+draft: false
 ---
-
-{{% small %}}Oh boy another _multi day post..._{{% /small %}}
 
 Greetings! As promised in this part of the series we'll make a clickable board for you to play in. This is what we expect to be our end result:
 
-[[TODO: Add a gif of the expected result]]
+{{< video "https://i.imgur.com/BRLPDPz.mp4" "mp4" >}}
 
 But to reach that we need to modify some files so that the website registers that there is a new pai sho variant in town, so let's start with that first.
 
@@ -182,7 +181,7 @@ import { GodaiBoardPoint } from "./GodaiBoardPoint";
 import { isAnimationsOn } from "../PaiShoMain";
 import { GodaiNotationBuilder } from "./GodaiNotation";
 import { rerunAll } from "../PaiShoMain";
-import { GUEST, HOST } from "../CommonNotationObjects";
+import { GUEST, HOST, NotationPoint } from "../CommonNotationObjects";
 
 export class GodaiController {
     /** @type {GodaiActuator}          */ actuator;
@@ -307,9 +306,9 @@ export class GodaiController {
 
 ## Spooky Scary Skeleton Files
 
-If you've copied the code then you must have realised that there are tons of imports for you to do, right now you only need to take care of building the classes for your `Actuator`, `GameManager`, `NotationBuilder`, `Board`, and `BoardPoint`, along with importing the functions that are located on `PaiShoMain.js`.
+If you copied the code for the controller class, then you realised that there are some imports you need to handle, and _those_ classes _also_ need their own imports {{% small %}}(see [MPGC-1]({{< ref "posts/2024/08/mpcg-1-explanation-of-code/#class-diagram-of-a-pai-sho-game" >}}) for reference){{% /small %}}, so let's get those out of the way.
 
-Here are the skeletons of the classes you need to do, name them accordingly and on the same folder as your controller class:
+This is around 50% of the code you'll need to run a pai sho variant, be sure to copy these files on the same folder as your controller:
 
 > NOTE: I've added some comments that were not originally in the source code for Godai, you can check them under the label that is in quote space. Search for them as `NOTE: [note here]`
 
@@ -330,7 +329,23 @@ Here are the skeletons of the classes you need to do, name them accordingly and 
 {{% tabs/tab title="[Variant]Actuator.js" %}}
 
 ```js
-import { setupPaiShoBoard } from "../ActuatorHelp.js";
+import {
+    createBoardArrow,
+    createBoardPointDiv,
+    setupPaiShoBoard,
+} from "../ActuatorHelp.js";
+import {
+    clearMessage,
+    pointClicked,
+    RmbDown,
+    RmbUp,
+    showPointMessage,
+} from "../PaiShoMain.js";
+import {
+    MARKED,
+    NON_PLAYABLE,
+    POSSIBLE_MOVE,
+} from "../skud-pai-sho/SkudPaiShoBoardPoint.js";
 import { GodaiController } from "./GodaiController.js";
 import { GodaiTileManager } from "./GodaiTileManager.js";
 
@@ -991,6 +1006,7 @@ Mind you, this class will get even bigger by the end of this, _you've been warne
 ```js
 import { RowAndColumn } from "../CommonNotationObjects";
 import { GodaiBoardPoint } from "./GodaiBoardPoint";
+import { NON_PLAYABLE } from "../skud-pai-sho/SkudPaiShoBoardPoint";
 
 export class GodaiBoard {
     /** @type {RowAndColumn} */ size;
@@ -1426,4 +1442,450 @@ export class GodaiTile {
 
 {{< /tabs/wrapper >}}
 
+{{< small >}}Now that files are out of the way, we can continue{{< /small >}}
+
 ## There's a board on your lawn
+
+Now if you copied everything correctly you should get the following result:
+
+{{< video "https://i.imgur.com/YYLu8Ok.mp4" "mp4" >}}
+
+And if somehow cannot see the video, then this is what's happening:
+
+1. When we click on the "New" Button we get the selection of the games available as defined by the `GameType` object, and when we click on the game of our choice, the current controller is replaced by a new one, and is referenced throught the website.
+2. When the code reaches for the parts of the side board and help tab, it returns undefined since we haven't really defined those stuff yet. We'll fix that later.
+3. The board image and the HTML used for clicking the intersections are different! If you inspect the board then you'll notice its a background image made with CSS, and that the div with class `.pointContainer` is empty.
+
+Of course we cannot work on our game if _there is no board to play it on_, so lets {{< small >}}(finally){{< /small >}} add a board to our variant.
+
+> NOTE: Since this guide is using a game that plays on intersections as an example, I won't provide the steps if you want to play on intersections _yet_. You can check out how its done in the Adevar and Key board classes if you want, the process should be similar to the one I'll describe.
+
+Go ahead and look into any `Board` Class that's already implemented (say, the `SkudPaiShoBoard` one) and look at the `brandNew()` method:
+
+```js
+SkudPaiShoBoard.prototype.brandNew = function () {
+    var cells = [];
+
+    cells[0] = this.newRow(9, [
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.gate(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+    ]);
+
+    cells[1] = this.newRow(11, [
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.redWhiteNeutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+    ]);
+
+    cells[2] = this.newRow(13, [
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.whiteNeutral(),
+        SkudPaiShoBoardPoint.redWhite(),
+        SkudPaiShoBoardPoint.redNeutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+    ]);
+
+    cells[3] = this.newRow(15, [
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.whiteNeutral(),
+        SkudPaiShoBoardPoint.white(),
+        SkudPaiShoBoardPoint.redWhite(),
+        SkudPaiShoBoardPoint.red(),
+        SkudPaiShoBoardPoint.redNeutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+    ]);
+
+    cells[4] = this.newRow(17, [
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.whiteNeutral(),
+        SkudPaiShoBoardPoint.white(),
+        SkudPaiShoBoardPoint.white(),
+        SkudPaiShoBoardPoint.redWhite(),
+        SkudPaiShoBoardPoint.red(),
+        SkudPaiShoBoardPoint.red(),
+        SkudPaiShoBoardPoint.redNeutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+        SkudPaiShoBoardPoint.neutral(),
+    ]);
+
+    // ...
+    // This goes on and on until we reach index 16 of the cells variable
+
+    for (var row = 0; row < cells.length; row++) {
+        for (var col = 0; col < cells[row].length; col++) {
+            cells[row][col].row = row;
+            cells[row][col].col = col;
+        }
+    }
+
+    return cells;
+};
+```
+
+The function that does all the heavy lifting is `newRow()`, which if you copied the skeleton files earlier then you already have it implemented :D
+
+That method will fill make an array of points, align them to the center and fill them with whatever is provided in the second argument. Any other spaces are then filled with NON_PLAYABLE board points. You can guess what those do :) \
+If you look at the method then you'll notice the size of the row that is used depends on the `RowAndColumn` object that defines the board size, so you don't have to worry about the board size.
+
+If the board isn't rotated, then the board points you see on screen will have the same arrangement as what is declared on the code. Here's an ilustrated example using a small 9 x 9 board:
+
+```txt
+Index                this.newRow( numColumns, points )
+ [0]  ( )( )( )[N][G][N]( )( )( )     3     , [ N, G, N ]
+ [1]  ( )( )[N][N][m][N][N]( )( )     5     , [N, N, m, N, N]
+ [2]  ( )[N][N][w][m][r][N][N]( )     7     , [N, N, w, m, r, N, N]
+ [3]  [N][N][w][w][m][r][r][N][N]     9     , [N, N, w, w, m, r, r, N, N]
+ [4]  [G][m][m][m][m][m][m][m][G]     9     , [G, m, m, m, m, m, m, m, G]
+ [5]  [N][N][r][r][m][w][w][N][N]     9     , [N, N, r, r, m, w, w, N, N]
+ [6]  ( )[N][N][r][m][w][N][N]( )     7     , [N, N, r, m, w, N, N]
+ [7]  ( )( )[N][N][m][N][N]( )( )     5     , [N, N, m, N, N]
+ [8]  ( )( )( )[N][G][N]( )( )( )     3     , [N, G, N]
+```
+
+For each row, starting from the top, you assign the row using the `newRow()` method as shown, you first insert the number of points you're going to insert, then in the next argument the board points in question in the order they appear in from left to right. It's quite simple, isn't?
+
+Surprisingly, it is, but we won't be personally making a new board point especifically for our board points {{< small >}}because that would be tedious{{< /small >}}, instead we'll make some constructors for our different types of board points.
+
+Remember the note I left on `[Variant]BoardPoint.js`? The one located above some static methods? Those are our board point constructors! Here's again the ones ones I used in Godai:
+
+```js
+export class GodaiBoardPoint {
+    // ...
+
+    // ...
+
+    static neutral() {
+        let point = new GodaiBoardPoint();
+        point.addType(NEUTRAL);
+        return point;
+    }
+
+    static gate() {
+        let point = new GodaiBoardPoint();
+        point.addType(GATE);
+        return point;
+    }
+
+    // Extending a gate board point so its a certain type,
+    // since tiles can only be deployed in their colored gate
+    static blackGate() {
+        let p = GodaiBoardPoint.gate();
+        p.addType(BLACK_GATE);
+        return p;
+    }
+
+    static greenGate() {
+        let p = GodaiBoardPoint.gate();
+        p.addType(GREEN_GATE);
+        return p;
+    }
+
+    static redGate() {
+        let p = GodaiBoardPoint.gate();
+        p.addType(RED_GATE);
+        return p;
+    }
+
+    static whiteGate() {
+        let p = GodaiBoardPoint.gate();
+        p.addType(WHITE_GATE);
+        return p;
+    }
+
+    static yellowGate() {
+        let p = GodaiBoardPoint.gate();
+        p.addType(YELLOW_GATE);
+        return p;
+    }
+
+    // Rivers are the garden borders
+    static river() {
+        let p = new GodaiBoardPoint();
+        p.addType(RIVER_TILE);
+        return p;
+    }
+
+    static riverDownLeft() {
+        let p = GodaiBoardPoint.river();
+        p.addType(RIVER_DL_TILE);
+        return p;
+    }
+
+    static riverDownRight() {
+        let p = GodaiBoardPoint.river();
+        p.addType(RIVER_DR_TILE);
+        return p;
+    }
+
+    static mountain() {
+        let p = new GodaiBoardPoint();
+        p.addType(MOUNTAIN_TILE);
+        return p;
+    }
+
+    static mountainEntrance() {
+        let p = new GodaiBoardPoint();
+        p.addType(MOUNTAIN_ENTRANCE);
+        return p;
+    }
+
+    static mountainEntranceWithRiver() {
+        let p = GodaiBoardPoint.mountainEntrance();
+        p.addType(RIVER_TILE);
+        return p;
+    }
+
+    static mountainEntranceWithRiverDL() {
+        let p = GodaiBoardPoint.mountainEntranceWithRiver();
+        p.addType(RIVER_DL_TILE);
+        return p;
+    }
+
+    static mountainEntranceWithRiverDR() {
+        let p = GodaiBoardPoint.mountainEntranceWithRiver();
+        p.addType(RIVER_DR_TILE);
+        return p;
+    }
+
+    /**
+     * Adds the `WESTERN_RIVER` type to `p`
+     * @param {GodaiBoardPoint} p
+     * @returns {GodaiBoardPoint}
+     */
+    static western(p) {
+        p.addType(WESTERN_RIVER);
+        return p;
+    }
+
+    /**
+     * Adds the `EASTERN_RIVER` type to `p`
+     * @param {GodaiBoardPoint} p
+     * @returns {GodaiBoardPoint}
+     */
+    static eastern(p) {
+        p.addType(EASTERN_RIVER);
+        return p;
+    }
+}
+```
+
+Now that I look back on my code, I could have saved some lines by a constructor method that simply returns the board point with the new types added, something like this:
+
+```js
+class GodaiBoardPoint {
+
+    static with( boardPoint, ...attributes ) {
+        for ( const attribute of attributes ) {
+            boardPoint.addType(attribute)
+        }¿
+        return boardPoint
+    }
+}
+
+// The implementation of the board point that is located next to the eastern gate,
+// since it is both a mountain entrance AND part of the eastern river
+let boardPoint = GodaiBoardPoint.with( GodaiBoardPoint.mountainEntrance(), RIVER_TILE, RIVER_DL_TILE, EASTERN )
+```
+
+The types of board points you will use will vary with your variant's rules. If you're playing with a standard board then you can copy the code located on `SkudPaiShoBoard.js` or `VagabondBoard.js`. In the case for godai, I've had to modify this method several times as I implemented features (most prominently, when adding the logic for board zones and rivers).
+
+I highly recommend that if your game has an option regarding special effects that occur when a tile is located on _some_ part of the board, you define said type of board point as a default, then handle the logic when interacting with your tiles.
+
+### Great, but where do I define the board point types?
+
+Excelent question! If you've noticed then we're using some constants to define the different board point types. Set those up just above your `[Variant]BoardPoint` class, like so:
+
+```js
+import { GATE, NEUTRAL } from "../skud-pai-sho/SkudPaiShoBoardPoint";
+
+export let BLACK_GATE = "Black Gate";
+export let GREEN_GATE = "Green Gate";
+export let RED_GATE = "Red Gate";
+export let WHITE_GATE = "White Gate";
+export let YELLOW_GATE = "Yellow Gate";
+export let RIVER_TILE = "River Tile";
+export let RIVER_DL_TILE = "River (Down-Left) Tile";
+export let RIVER_DR_TILE = "River (Down-Right) Tile";
+export let MOUNTAIN_TILE = "Mountain Tile";
+export let MOUNTAIN_ENTRANCE = "Mountain Entrance";
+export let WESTERN_RIVER = "Western River";
+export let EASTERN_RIVER = "Eastern River";
+export let IS_DAMMED_RIVER = "RIVER IS DAMMED";
+
+export class GodaiBoardPoint {
+    // ...
+}
+```
+
+There's no need to get crazy on what your constants have to be, but I reccomend you follow what is done on the rest of the code base and save them as strings with the name of whatever the constant represents. A touch I added personally is typing those constants in snake case so they stand out from normal variables.
+
+At last, if you coded everything correctly, when you click play new game and your controller is loaded, then...
+
+{{< video "https://i.imgur.com/y2NC26l.mp4" "mp4" >}}
+
+The div elements now appear and contain their coordenates. Also, if you hover over them you can see that while the intersection is displayed, nothing changes on the sidebar. That's because we haven't defined any behaviour in the `Controller.RmbDown()`, `Controller.RmbUp()`, `Controller.PointClicked()` and `Controller.getPointMessage()` methods. Those will be taken care of in a future time, but if you've opened up your devtools you may have noticed the following error:
+
+![Uncaught error because there is no tile library](./uncaught-error.png)
+
+Let's fix that uncaught error first. Go to line 127 of your actuator class and you'll see the following snippet of code:
+
+```js
+// Don't forget the deleted tiles!
+this.clearContainer(
+    this.hostTilesContainer.querySelector("span.tileLibrary") // <-- Where the error happens
+);
+this.clearContainer(this.guestTilesContainer.querySelector("span.tileLibrary"));
+```
+
+We're trying to look for a span which is the tile library, but that doesn't exist since the methods we've provided for making _said html_ only returns an empty string.
+
+Go to your `Controller` class and modify the `get[Player]TilesContainerDivs` static methods to return some HTML like the following:
+
+```js
+/** @returns {string} */
+static getHostTilesContainerDivs() {
+    return '' +
+        '<span>~Host\'s Tile Library~</span>' +
+        '<br>' +
+        '<div class="HWO"></div>' +
+        '<div class="HEA"></div>' +
+        '<div class="HWA"></div>' +
+        '<div class="HFI"></div>' +
+        '<div class="HME"></div>' +
+        '<br class="clear">' +
+        '<div class="HEM"></div>' +
+        '<br class="clear">' +
+        '<span>~Host\'s Captured Tiles~</span>' +
+        '<span class="tileLibrary"></span>'
+}
+
+/** @returns {string} */
+static getGuestTilesContainerDivs() {
+    return '' +
+        '<span>~Guest\'s Tile Library~</span>' +
+        '<br>' +
+        '<div class="GWO"></div>' +
+        '<div class="GEA"></div>' +
+        '<div class="GWA"></div>' +
+        '<div class="GFI"></div>' +
+        '<div class="GME"></div>' +
+        '<br class="clear">' +
+        '<div class="GEM"></div>' +
+        '<br class="clear">' +
+        '<span>~Guest\'s Captured Tiles~</span>' +
+        '<span class="tileLibrary"></span>'
+}
+```
+
+And after you've implemented those tags, everything should be running smoothly and without errors. Here's what the HTML does:
+
+-   **\<span\>** tags are used for titles of the sections.
+-   **<br>** tags are used to create a new line
+-   The **\<div\>** tags with classes after the first br are used for later use for showing the amount of tiles each player has of a certain type. The class they have is the same as the code of that tile.
+    -   For Godai that means there are five divs for the five elemental tiles, then another div below them to signify the optional empty Tile. If a match is played without an empty tile then it is left empty and doesn't occupy any space.
+    -   These divs will align their tiles in a column, so keep that in mind if you want a specific layout.
+-   The **\<span\>** with the `tileLibrary` class is being used for displaying captured tiles.
+    -   Span tags will display the tiles they contain in a row, making a new line when necesary.
+
+You should check out what other layouts other variants use, and If you cannot find a static method in the controller class, then the HTML may be hardcoded in the `Actuator.htmlify()` method like it is in Fire Pai Sho.
+
+## There are arrows everywhere
+
+So that's everything right? **Wrong!** There is one tiny detail we need to add before we call it a day. All the pai sho variants give you the ability to draw arrows over the board and erase them after clicking away. And that is handled by the `Controller` class and its `RmpUp()`, `RmbDown()` and `pointClicked()` methods. Thankfully they're easy to implement so just copy the following snippets:
+
+```js
+/**
+ * Called whenever the player draws an arrow.
+ *
+ * Taken from VagabondController.js
+ * @param {HTMLDivElement} htmlPoint
+ */
+RmbDown(htmlPoint) {
+    let npText = htmlPoint.getAttribute("name")
+    let notationPoint = new NotationPoint(npText)
+    let rowCol = notationPoint.rowAndColumn
+    this.mouseStartPoint = this.theGame.board.cells[rowCol.row][rowCol.col]
+}
+
+/**
+ * Called whenever the player draws an arrow.
+ *
+ * Taken from VagabondController.js
+ * @param {HTMLDivElement} htmlPoint
+ */
+RmbUp(htmlPoint) {
+    let npText = htmlPoint.getAttribute("name")
+    let notationPoint = new NotationPoint(npText)
+    let rowCol = notationPoint.rowAndColumn
+    let mouseEndPoint = this.theGame.board.cells[rowCol.row][rowCol.col]
+
+    if (mouseEndPoint == this.mouseStartPoint) {
+        this.theGame.markingManager.toggleMarkedPoint(mouseEndPoint)
+    }
+    else if (this.mouseStartPoint) {
+        this.theGame.markingManager.toggleMarkedArrow(this.mouseStartPoint, mouseEndPoint)
+    }
+
+    this.mouseStartPoint = null
+    this.callActuate()
+}
+
+/** @param {HTMLDivElement} htmlPoint */
+pointClicked(htmlPoint) {
+    this.theGame.markingManager.clearMarkings()
+    this.callActuate()
+
+    // The rest of the method will be implemented later
+}
+```
+
+The `Controller.pointClicked()` method will grow on later, but right now that's everything we need to do there.
+
+## That's everything, folks!
+
+I originally wanted to publish this part of the series in october, but thanks to homework I had to deal with in real life I couldn't work on writing this at the time. Also have you noticed I basically had to give you like 9 skeleton classes first beforing going over _the actual contents of this part of this guide?_
+
+I also had to make a tab display component as to not extend the length of this page in to oblivion, it's already long enough as it is.
+I am still doing my best to keep these guides on a monthly basis, though as this month has proven quite hefty, and we're nearing the end of the semester so my workload _may_ increase.
+
+Aside from that, that's everything for... _this month._
+
+See you in December! Where we'll tackle everything regarding tiles and displaying them for the player!
