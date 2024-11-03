@@ -24,6 +24,11 @@
             "link": "https://onlytrichromatic.neocities.org",
             "image": "onlytrichromaticbutton.gif",
             "site": "Only Trichromatic Eyes"
+        }, 
+        {
+            "link": "https://roboticoperatingbuddy.neocities.org",
+            "image": "robbutton.jpeg",
+            "site": "roboticoperatingbuddy"
         }
     ],
     "sites": [
@@ -61,6 +66,11 @@
             "link": "https://nomnomnami.com/",
             "image": "nomnomnami_button.gif",
             "site": "NomNomNami"
+        },
+        {
+            "link": "https://marea.neocities.org/",
+            "image": "marea88x31_v1.gif",
+            "site": "Marea"
         }
     ]
 }
