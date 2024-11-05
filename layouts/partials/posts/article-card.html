@@ -2,10 +2,8 @@
     <header>
         <h2>
             <a href="{{ .RelPermalink }}">{{.Title}}</a>
-            <div>
-                <small><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></small>
-            </div>
         </h2>
+        <p><time datetime="{{ .Date }}">{{ .Date | time.Format ":date_medium" }}</time></p>
     </header>
 
     {{ with .Summary }}<p>{{.}}</p>{{end}}

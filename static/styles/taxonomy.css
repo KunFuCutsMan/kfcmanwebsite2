@@ -1,9 +1,42 @@
-.article-list {
-	background-color: var(--blue-800);
-	border-radius: 0.5rem;
-	grid-template-columns: 1fr 1fr;
+/* Article Listings */
+article.article-card {
+	background-color: var(--blue-700);
 	padding: 1rem;
-	margin-block: 1rem;
+	border-radius: 0.5rem;
+
+	box-shadow: 0.5rem 0.5rem var(--blue-900);
+}
+
+article.article-card > header h2 {
+	font-size: xx-large;
+	color: var(--primary);
+}
+
+article.article-card > header p {
+	color: var(--primary);
+}
+
+article.article-card:not( :last-child ) {
+	margin-block-end: 1rem;
+}
+
+article.article-card > ul {
+	display: inline-flex;
+}
+
+article.article-card li {
+	margin-inline: 0.5rem;
+	list-style: none;
+}
+
+.article-list {
+	display: grid;
+	background-color: var(--blue-800);
+	box-shadow: 0.5rem 0.5rem var(--blue-900);
+	border-radius: 0.5rem;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	padding: 1rem;
 }
 
 .taxonomy-list {
