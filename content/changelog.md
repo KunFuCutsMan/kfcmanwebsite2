@@ -44,3 +44,4 @@ ExcludeArticleData: true
 -   30/Sep/2024: Changed grid design of home page
 -   15/Oct/2024: Changed codeblocks to "fruity" color scheme and added a "copy code" button to them
 -   17/Oct/2024: Finally added a normal sitemap
+-   4/Nov/2024: CSS was split from a single stylesheet to multiple referenced across the site
