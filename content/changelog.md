@@ -2,6 +2,11 @@
 title: "Change Log"
 draft: false
 
+Params:
+    Stylesheets:
+        - content.css
+        - taxonomy.css
+
 IncludeTOC: false
 ExcludeArticleData: true
 ---

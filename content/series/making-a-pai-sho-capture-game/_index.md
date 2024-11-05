@@ -1,8 +1,11 @@
 ---
 title: "Making a Pai Sho Capture Game"
 
-params:
+Params:
     godaiRules: https://tinyurl.com/65frxu6h
+    Stylesheets:
+        - content.css
+        - taxonomy.css
 ---
 
 Some months ago I coded a Pai Sho variant in to the [Skud Pai Sho website](https://skudpaisho.com/) (as of writing it's on the PR wall), so I've wanted to share my journey in to what it actually took to develop [Godai Pai Sho!]({{< param godaiRules >}})

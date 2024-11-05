@@ -1,5 +1,10 @@
 ---
 Title: "About Me"
+
+Params:
+    Stylesheets:
+        - content.css
+
 IncludeTOC: false
 ExcludeArticleData: true
 ---
