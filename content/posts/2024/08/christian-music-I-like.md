@@ -1,11 +1,18 @@
-+++
-title = 'Christian Music I Like'
-date = 2024-08-21T10:19:14-06:00
-summary = "And that you probably would too. At least it's not Hillsong"
-tags = ['christianity']
-includeTOC = true
-draft = false
-+++
+---
+Title: Christian Music I Like
+Date: 2024-08-21T10:19:14-06:00
+Summary: And that you probably would too. At least it's not Hillsong
+
+Tags:
+    - Christianity
+
+Params:
+    Stylesheets:
+        - content.css
+
+includeTOC: true
+draft: false
+---
 
 Greetings! Today I wanted to share a small post with you, as other topics that I'd like to eventually cover in posts need to have a concrete idea first before I write about them.
 

@@ -1,11 +1,20 @@
-+++
-title = 'The Journey to Creating this Website'
-date = 2024-08-09T16:34:56-06:00
-summary = 'As it turns out its not as simple as "make HTML and hit upload"'
-tags = ['programming', 'neocities', 'hugo']
-includeTOC = true
-draft = false
-+++
+---
+Title: The Journey to Creating this Website
+Date: 2024-08-09T16:34:56-06:00
+Summary: 'As it turns out its not as simple as "make HTML and hit upload"'
+
+Tags:
+    - Programming
+    - Neocities
+    - Hugo
+
+Params:
+    Stylesheets:
+        - content.css
+
+includeTOC: true
+draft: false
+---
 
 For a while now I've been meaning to make my own website. In other ocasions I've designed what my "ideal website" would look like but I've never taken it in to _actually_ uploading my site to the internet.
 

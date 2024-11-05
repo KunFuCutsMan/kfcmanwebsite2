@@ -6,6 +6,10 @@ summary: And tons of cross-knowledge regarding vectorial calculus, statics and e
 tags:
     - Right Now
 
+Params:
+    Stylesheets:
+        - content.css
+
 includeTOC: false
 draft: false
 ---

@@ -8,6 +8,10 @@ tags:
     - Personal
     - Written too quickly
 
+Params:
+    Stylesheets:
+        - content.css
+
 includeTOC: false
 excludeArticleData: false
 draft: false

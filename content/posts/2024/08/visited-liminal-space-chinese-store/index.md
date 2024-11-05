@@ -1,11 +1,18 @@
-+++
-title = 'I Visited a Liminal Space Chinese Store'
-date = 2024-08-11T20:21:23-06:00
-summary = "At least that's how my sister described it. It was really crammed actually."
-tags = ['Story-Time', '']
-includeTOC = true
-draft = false
-+++
+---
+Title: I Visited a Liminal Space Chinese Store
+Date: 2024-08-11T20:21:23-06:00
+Summary: At least that's how my sister described it. It was really crammed actually.
+
+Tags:
+    - Story Time
+
+Params:
+    Stylesheets:
+        - content.css
+
+includeTOC: true
+draft: false
+---
 
 ## Shopping misadventures
 

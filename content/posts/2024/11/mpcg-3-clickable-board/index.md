@@ -10,6 +10,10 @@ tags:
     - Pai Sho
     - Written Too Slowly
 
+Params:
+    Stylesheets:
+        - content.css
+
 includeTOC: true
 excludeArticleData: false
 draft: false

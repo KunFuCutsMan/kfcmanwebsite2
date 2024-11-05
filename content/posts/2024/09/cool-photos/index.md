@@ -6,6 +6,10 @@ summary: Some cool photos I collected over last week
 tags:
     - Right Now
 
+Params:
+    Stylesheets:
+        - content.css
+
 includeTOC: false
 excludeArticleData: false
 draft: false

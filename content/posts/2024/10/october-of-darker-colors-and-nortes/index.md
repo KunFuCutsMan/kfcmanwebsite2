@@ -9,6 +9,10 @@ tags:
     - Personal
     - Story Time
 
+Params:
+    Stylesheets:
+        - content.css
+
 includeTOC: false
 excludeArticleData: false
 draft: false

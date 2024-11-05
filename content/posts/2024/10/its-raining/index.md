@@ -7,6 +7,10 @@ tags:
     - Right Now
     - Written Too Quickly
 
+Params:
+    Stylesheets:
+        - content.css
+
 includeTOC: false
 excludeArticleData: false
 draft: false

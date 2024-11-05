@@ -6,8 +6,12 @@ summary: Because I've realised you need to setup your coding enviroment first ðŸ
 series:
     - Making a Pai Sho Capture Game
 tags:
-    - programming
-    - pai sho
+    - Programming
+    - Pai Sho
+
+Params:
+    Stylesheets:
+        - content.css
 
 includeTOC: true
 draft: false
