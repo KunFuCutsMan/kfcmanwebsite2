@@ -3,7 +3,10 @@
 <title>{{ .Site.Title }}</title>
 
 {{- $styles := slice "common.css" -}}
-{{- $styles := collections.Append .Page.Params.Stylesheets $styles -}}
+{{- $styles = collections.Append .Page.Params.Stylesheets $styles -}}
+{{- if eq .Page.Kind "term" -}}
+    {{- $styles = collections.Append "content.css" "taxonomy.css" $styles -}}
+{{- end -}}
 {{- range $stylesheet := $styles }}
 <link rel="stylesheet" href="/styles/{{ $stylesheet }}">
 {{- end }}
