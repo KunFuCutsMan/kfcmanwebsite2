@@ -1,0 +1,18 @@
+{{define "main"}}
+<div class="single-margin grid-posts">
+    <header data-area="header" class="frame">
+        <h1>{{.Title}}</h1>
+        <p><b>Count:</b> {{.Pages.Len}} posts</p>
+    </header>
+
+    <main data-area="posts" class="article-list">
+        {{range $p := .Pages}}
+        {{ partial "posts/article-card" $p }}
+        {{end}}
+    </main>
+
+    <aside data-area="aside" class="sticky frame content">
+        {{.Content}}
+    </aside>
+</div>
+{{end}}

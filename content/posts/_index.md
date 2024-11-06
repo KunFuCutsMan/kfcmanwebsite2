@@ -5,8 +5,11 @@ Params:
     Stylesheets:
         - content.css
         - taxonomy.css
+        - posts.css
 ---
 
-This is what I've written so far:
+Welcome to my blog posts! Here I write anything I want, whenever I want, because I can.
 
-{{% small %}}(You can also search by [tags](/tags) or search any [series](/series) I have){{% /small %}}
+This page includes everything arranged in a nice column, but you can also search by [tags](/tags) or by any [series](/series) I've written.
+
+![KFCMan doing CRUD operations](./kfcman-crud-operations.png)

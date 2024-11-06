@@ -45,3 +45,4 @@ ExcludeArticleData: true
 -   15/Oct/2024: Changed codeblocks to "fruity" color scheme and added a "copy code" button to them
 -   17/Oct/2024: Finally added a normal sitemap
 -   4/Nov/2024: CSS was split from a single stylesheet to multiple referenced across the site
+-   6/Nov/2024: Changed [posts](/posts) page to it isn't a default list page

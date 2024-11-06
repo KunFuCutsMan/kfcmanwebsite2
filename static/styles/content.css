@@ -19,7 +19,7 @@
 	margin-block: 0.5rem;
 }
 
-.content > img {
+.content img {
 	margin: auto;
 }
 
@@ -139,29 +139,6 @@ blockquote.cite > cite:last-child {
 .series-data a:not(.series-name):is( :focus, :hover ) {
 	padding-inline: 20%;
 	border-inline: 0.2rem solid var(--gray-900);
-}
-
-article.article-card {
-	background-color: var(--blue-700);
-	padding: 1rem;
-	border-radius: 0.5rem;
-}
-
-article.article-card:not( :last-child ) {
-	margin-block-end: 1rem;
-}
-
-article.article-card h2 {
-	font-size: xx-large;
-}
-
-article.article-card > ul {
-	display: inline-flex;
-}
-
-article.article-card li {
-	margin-inline: 0.5rem;
-	list-style: none;
 }
 
 /* Hugo TableOfContents shortcode */
