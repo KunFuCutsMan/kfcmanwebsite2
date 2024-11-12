@@ -29,6 +29,12 @@
     </script>
 {{- end }}
 
-{{ with resources.Get "js/events.js" -}}
+{{ range $script := .Page.Params.Scripts }}
+{{ with resources.Get (printf "js/%s" $script) -}}
+<script src="{{.RelPermalink}}" defer></script>
+{{- end }}
+{{- end }}
+
+{{- with resources.Get "js/events.js" -}}
 <script src="{{.RelPermalink}}" defer></script>
 {{- end }}
