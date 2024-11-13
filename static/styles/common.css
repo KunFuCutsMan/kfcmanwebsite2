@@ -303,3 +303,8 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
 	border-radius: 0.5rem;
 	width: 100%;
 }
+
+.sticky {
+    position: sticky;
+    top: 2rem;
+}

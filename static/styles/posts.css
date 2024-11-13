@@ -37,11 +37,6 @@
 .grid-posts > [data-area="posts"] { grid-area: posts; }
 .grid-posts > [data-area="aside"] { grid-area: aside; }
 
-.sticky {
-    position: sticky;
-    top: 2rem;
-}
-
 @media (max-width: 720px) {
     .sticky {
         position: static;
