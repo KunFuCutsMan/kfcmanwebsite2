@@ -1,0 +1,34 @@
+{{define "main" }}
+<div class="single-margin grid-about">
+    <header class="frame" data-area="header">
+        <h1>About Myself</h1>
+        <p>This is where I talk about the webmaster, Parrapa</p>
+        <p>Also this website uses Javascript for the tabbed panels, so be sure to activate that</p>
+    </header>
+
+    <nav data-area="menu">
+        <ul>
+        {{- range $i, $entry := .Params.MenuEntries }}
+            <li class="button-wrapper">
+                <button
+                    type="menu" data-tab="{{$entry.Tab}}"
+                    aria-selected="{{if eq $i 0}}true{{else}}false{{end}}"
+                    class="button-chooser ic-{{$entry.Icon}}">
+                    {{$entry.Title}}
+                </button>
+                </label>
+            </li>
+        {{- end}}
+        </ul>
+    </nav>
+
+    <main class="frame" data-area="tabber">
+        {{.Content}}
+    </main>
+
+    <aside class="frame" data-area="playlist">
+        asasas
+    </aside>
+</div>
+{{end}}
+

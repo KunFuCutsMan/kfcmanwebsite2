@@ -1,0 +1,13 @@
+{{ $type := .Get "type" }}
+{{ $class := .Get "class" }}
+{{ $content := .Inner }}
+
+{{ if eq $type "section" }}
+<section class="{{$class}}">{{$content}}</section>
+{{ else if eq $type "article" }}
+<article class="{{$class}}">{{$content}}</article>
+{{ else if eq $type "aside" }}
+<aside class="{{$class}}">{{$content}}</aside>
+{{else}}
+<div class="{{$class}}">{{$content}}</div>
+{{end}}

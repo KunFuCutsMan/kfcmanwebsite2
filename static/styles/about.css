@@ -1,0 +1,91 @@
+.grid-about {
+    display: grid;
+    gap: 4rem;
+    align-items: start;
+
+    grid-template-columns: auto 30%;
+    grid-template-areas: 
+        'header menu'
+        'tabber playlist'
+        'tabber playlist';
+}
+
+.grid-about > [data-area="menu"] { grid-area: menu; }
+.grid-about > [data-area="tabber"] { grid-area: tabber; }
+.grid-about > [data-area="header"] { grid-area: header; }
+.grid-about > [data-area="playlist"] { grid-area: playlist; }
+
+[data-area="tabber"] > :not(.active) {
+    display: none;
+}
+
+.button-wrapper {
+    margin-block: 0.5rem;
+    list-style: none;
+}
+
+.button-chooser {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+
+    width: 100%;
+    height: 32px;
+    padding-inline-start: 2.5rem;
+    border: 0;
+
+    text-align: left;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: var(--text);
+    font-family: var(--heading-font);
+
+    transition: 200ms;
+}
+
+.button-chooser::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    aspect-ratio: 1;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 200ms;
+}
+
+.button-chooser[aria-selected="false"] {
+    color: var(--blue-600);
+}
+
+.button-chooser:is( :hover, :focus ) {
+    color: var(--text);
+}
+
+.button-chooser[aria-selected="false"]::before {
+    filter: saturate(20%);
+}
+
+.button-chooser.ic-buster::before   { background-image: url('/icons/buster.png'); }
+.button-chooser.ic-crystal::before  { background-image: url('/icons/crystal.png'); }
+.button-chooser.ic-scissor::before  { background-image: url('/icons/scissor.png'); }
+.button-chooser.ic-cross::before    { background-image: url('/icons/cross.png'); }
+.button-chooser.ic-notebook::before { background-image: url('/icons/notebook.png'); }
+
+.quiz-list {
+    width: 100%;
+}
+
+.quiz-list > * {
+    max-width: 90%;
+}
+
+.quiz-card {
+    background-color: var(--blue-700);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}

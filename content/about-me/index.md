@@ -4,27 +4,37 @@ Title: "About Me"
 Params:
     Stylesheets:
         - content.css
+        - about.css
+
+    Scripts:
+        - about-me-tabber.js
+
+    MenuEntries:
+        - Title: About Me
+          Tab: general-info
+          Icon: buster
+        - Title: My Interests
+          Tab: interests
+          Icon: crystal
+        - Title: Why KunFuCutsMan
+          Tab: funny-name
+          Icon: scissor
+        - Title: Why Christian
+          Tab: christian
+          Icon: cross
+        - Title: Personality Tests
+          Tab: quizzes
+          Icon: notebook
+
+type: about
 
 IncludeTOC: false
 ExcludeArticleData: true
 ---
 
-Enjoy this CSS/HTML only tab window that I made in 2 days, this information was made on Oct 2st
+{{% div type="section" class="content general-info active" %}}
 
-{{< tabs/wrapper >}}
-
-{{% tabs/titles Name="Information" %}}
-
--   General Info
--   My interests
--   Why KunFuCutsMan?
--   Christian Backstory
-
-{{% /tabs/titles %}}
-
-{{% tabs/tab title="General Info" %}}
-
-### General Info
+## General Info
 
 | Fact        | Fact              |
 | :---------- | :---------------- |
@@ -34,18 +44,9 @@ Enjoy this CSS/HTML only tab window that I made in 2 days, this information was 
 | Interests   | See the next tab  |
 | MBTI        | INTJ (Apparently) |
 
-...and other stuff:
+{{% /div %}}
 
-{{% details "Personality Quiz Results" %}}
-
-I would be very glad to do the do the personality quizzes you have :p
-
-<div class="inline-list">{{% partial "home/cool-stuff.html" %}}</div>
-{{% /details %}}
-
-{{% /tabs/tab %}}
-
-{{% tabs/tab title="My Interests" %}}
+{{% div type="section" class="content interests" %}}
 
 ## What are my interests?
 
@@ -145,9 +146,9 @@ I've also enjoyed been enjoying some facfiction/indie-reads {{< small >}}(is tha
 
 {{< small >}}I may have noticed a pattern with those... Oops{{< /small >}}
 
-{{% /tabs/tab %}}
+{{% /div %}}
 
-{{% tabs/tab %}}
+{{% div type="section" class="content funny-name" %}}
 
 ## Why are you Kun Fu Cuts Man?
 
@@ -161,9 +162,9 @@ After watching a [video](https://youtu.be/Sv3pS_0vFjA?si=R0LA-JsLQKYu2Te_) from 
 
 ...Also the short version of my username is KFCMan. The association with the food brand was not intentional and it was only noticed thanks to someone on the community.
 
-{{% /tabs/tab %}}
+{{% /div %}}
 
-{{% tabs/tab %}}
+{{% div type="section" class="content christian" %}}
 
 ## Why are you christian?
 
@@ -189,8 +190,18 @@ For a 50 minute summary of archealogical evidence for the ressurrection of Chris
 
 About six months later I finally got the courage to accept Christ, I still remember the day I did, as I was sitting in the right section of my church when the calling for salvation got called.
 
-It's been one funky journey ever since, but that's outside of the scope of this QnA
+It's been one funky journey ever since, but that's outside of the scope of this page and possibly a post
 
-{{% /tabs/tab %}}
+{{% /div %}}
 
-{{< /tabs/wrapper >}}
+{{% div type="section" class="content quizzes" %}}
+
+## Personality Quizzes
+
+I would be very glad to do the do the personality quizzes you have :p
+
+{{% div class="column-with-space quiz-list" %}}
+{{< partial "home/cool-stuff.html" >}}
+{{% /div %}}
+
+{{% /div %}}
