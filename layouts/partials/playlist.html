@@ -1,0 +1,10 @@
+{{- $playlist := .Site.Data.playlist -}}
+
+<div id="playlist-container">
+
+    <select size="5" id="select-song">
+        {{ range $i, $song := $playlist.songs }}
+        <option value="{{$song.ID}}" {{with $song.start}}data-start="{{.}}"{{end}} {{if eq $i 0}} selected{{end}}>{{$song.author}} - {{$song.name}}</option>
+        {{end}}
+    </select>
+</div>

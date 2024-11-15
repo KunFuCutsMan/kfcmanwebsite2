@@ -8,6 +8,7 @@ Params:
 
     Scripts:
         - about-me-tabber.js
+        - music-player.js
 
     MenuEntries:
         - Title: About Me
