@@ -76,6 +76,10 @@
 	background-color: var(--blue-900);
 }
 
+.content hr {
+	border: 1px solid var(--orange-600);
+}
+
 blockquote.cite {
 	background-color: var(--orange-900);
 	border-left: 0.5rem solid var(--primary-light);
