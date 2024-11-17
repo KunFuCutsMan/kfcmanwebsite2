@@ -5,6 +5,7 @@ Params:
     Stylesheets:
         - content.css
         - about.css
+        - playlist.css
 
     Scripts:
         - about-me-tabber.js

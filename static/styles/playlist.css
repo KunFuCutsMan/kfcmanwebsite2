@@ -1,0 +1,24 @@
+#playlist-container {
+    padding: 0.5rem;
+    background-color: var(--orange-900);
+    border-radius: 0.5rem;
+}
+
+#playlist-container > * {
+    max-width: 100%;
+}
+
+#playlist-container select {
+    width: 100%;
+    background-color: var(--blue-900);
+}
+
+#playlist-container option {
+    color: var(--orange-600);
+    font-family: var(--heading-font);
+}
+
+
+#playlist-container option {
+    width: 100%;
+}

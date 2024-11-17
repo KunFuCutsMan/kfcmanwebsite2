@@ -1,6 +1,6 @@
 {{- $playlist := .Site.Data.playlist -}}
 
-<div id="playlist-container">
+<div id="playlist-container" class="column-with-space">
 
     <select size="5" id="select-song">
         {{ range $i, $song := $playlist.songs }}
