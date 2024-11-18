@@ -33,6 +33,29 @@
         {
             "link": "https://astralily.neocities.org/",
             "site": "AstraLily"
+        },
+        {
+            "link": "https://nyanfiles.neocities.org/",
+            "image": "nyanfiles.gif",
+            "site": "NyanFiles"
+        },
+        {
+            "link": "https://catbyte.site/",
+            "image": "catbytebutton.png",
+            "site": "SoukWuiro"
+        },
+        {
+            "link": "https://inpieces.rip/",
+            "image": "thanksvhs.gif",
+            "site": "Didn't Ask"
+        },
+        {
+            "link": "https://moheb-rofail.neocities.org/",
+            "site": "Moheb Rofail"
+        },
+        {
+            "link": "https://flying-with-quills.neocities.org/",
+            "site": "Flying With Quills"
         }
     ],
     "sites": [
@@ -52,16 +75,6 @@
             "site": "nenrikido"
         },
         {
-            "link": "https://catbyte.site/",
-            "image": "catbytebutton.png",
-            "site": "SoukWuiro"
-        },
-        {
-            "link": "https://nyanfiles.neocities.org/",
-            "image": "nyanfiles.gif",
-            "site": "NyanFiles"
-        },
-        {
             "link": "https://zelkova.neocities.org/",
             "image": "aster_banner.gif",
             "site": "Zelkova"
@@ -75,6 +88,30 @@
             "link": "https://marea.neocities.org/",
             "image": "marea88x31_v1.gif",
             "site": "Marea"
+        },
+        {
+            "link": "https://mycorrhiza.space/",
+            "image": "mycorrhiza_linkback_button.png",
+            "site": "MyCorriza"
+        },
+        {
+            "link": "https://angelnetcast.neocities.org/",
+            "site": "AngelNetCast"
+        },
+        {
+            "link": "https://dinpixels.neocities.org/",
+            "image": "dinbtn0.gif",
+            "site": "DinPixels"
+        },
+        {
+            "link": "https://ectobe.ing/",
+            "image": "ecto-city.png",
+            "site": "EctoBeing"
+        },
+        {
+            "link": "https://ltkaru.com/",
+            "image": "karu-badge.png",
+            "site": "ItKaru"
         }
     ]
 }

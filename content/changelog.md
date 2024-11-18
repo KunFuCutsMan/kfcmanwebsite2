@@ -47,3 +47,4 @@ ExcludeArticleData: true
 -   4/Nov/2024: CSS was split from a single stylesheet to multiple referenced across the site
 -   6/Nov/2024: Changed [posts](/posts) page to it isn't a default list page
 -   16/Nov/2024: Reworked the [about me](/about-me) page and a music player to it!
+-   18/Nov/2024: Added even more neighbors & cool sites link, and those who don't have a button will only have their name displayed instead.

@@ -14,7 +14,8 @@
 </div>
 
 {{- define "button-range" }}
-{{ range $button := . }}
+{{- $params := dict "key" "image" "slice" . -}}
+{{ range $button := partial "slice-of-maps-with-existent-key-first" $params }}
     <a href="{{$button.link}}" target="_blank">
     {{ with $button.image }}
         <img src="/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy" width="88px" height="31px">
@@ -24,3 +25,20 @@
     </a>
 {{- end }}
 {{- end }}
+
+{{ define "partials/slice-of-maps-with-existent-key-first" }}
+{{ $keyToFind := .key }}
+{{ $sliceOfMaps := .slice }}
+{{ $sliceWithKey := slice }}
+{{ $sliceKeyless := slice }}
+
+{{ range $map := $sliceOfMaps }}
+    {{ if ne ( index $map $keyToFind ) nil }}
+        {{ $sliceWithKey = $sliceWithKey | append $map }}
+    {{else}}
+        {{ $sliceKeyless = $sliceKeyless | append $map }}
+    {{ end }}
+{{end}}
+
+{{return append $sliceKeyless $sliceWithKey }}
+{{end}}
