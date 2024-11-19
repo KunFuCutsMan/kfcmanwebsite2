@@ -70,20 +70,27 @@ window.addEventListener("message", (e) => {
 
 function parseYoutubeData(data) {
 	const { playerState } = data.info
-	if (playerState === 0) { // Video ended
-		handleVideoEnd()
-	}
-	else if (playerState === 1) {
-		BTN_PAUSE_PLAY.dataset.playing = true
-		BTN_PAUSE_PLAY.innerText = "Pause"
+
+	switch (playerState) {
+		case 0: // Video ended
+			handleVideoEnd()
+			break;
+		case 1: // Video is playing
+			BTN_PAUSE_PLAY.dataset.playing = true
+			BTN_PAUSE_PLAY.ariaLabel = "Pause Video"
+			break
+		case 2: // Video is paused
+			BTN_PAUSE_PLAY.dataset.playing = false
+			BTN_PAUSE_PLAY.ariaLabel = "Play Video"
+			break
+	
+		default:
+			break;
 	}
 }
 
 /**
- * @param {HTMLSelectElement} SELECT_SONG 
- * @param {HTMLIFrameElement} IFRAME 
- * @param {string} VIDEO_PREFIX 
- * @param {boolean} autoplay 
+ * @param {boolean} autoplay If set to `false` then the song won't play once loaded
  */
 function changeMusic(autoplay = true) {
 	let videoSrc = VIDEO_PREFIX + SELECT_SONG.value + "?enablejsapi=1"
@@ -145,12 +152,12 @@ function pauseOrPlay() {
 	if ( BTN_PAUSE_PLAY.dataset.playing == "true" ) {
 		event.func = "pauseVideo"
 		BTN_PAUSE_PLAY.dataset.playing = false
-		BTN_PAUSE_PLAY.textContent = "Play"
+		BTN_PAUSE_PLAY.ariaLabel = "Play Video"
 	}
 	else {
 		event.func = "playVideo"
 		BTN_PAUSE_PLAY.dataset.playing = true
-		BTN_PAUSE_PLAY.textContent = "Pause"
+		BTN_PAUSE_PLAY.ariaLabel = "Pause Video"
 	}
 
 	IFRAME.contentWindow.postMessage(JSON.stringify(event), "*")
