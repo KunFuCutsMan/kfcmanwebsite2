@@ -35,27 +35,23 @@ function createYouTubePlayer() {
 
 	changeMusic(false)
 
-	// Set default volume
+	// Things we need to let the API know
 	IFRAME.addEventListener("load", function () {
+		// Turn up the volume
 		this.contentWindow.postMessage(
 			JSON.stringify({
 				event: "command",
 				func: "setVolume",
 				args: [50],
-			}),
-			"*"
+			}),	"*"
 		);
 
-		this.contentWindow.postMessage(
-			JSON.stringify({
-				event: "listening"
-			}),
-			"*"
-		)
+		// And send feedback on everything
+		this.contentWindow.postMessage( JSON.stringify({ event: "listening" }), "*" )
 	})
 
-	BTN_PREV.addEventListener("click", () => changeSelectionTo(-1) )
-	BTN_NEXT.addEventListener("click", () => changeSelectionTo(1) )
+	BTN_PREV.addEventListener("click", () => handleNextPrev(-1) )
+	BTN_NEXT.addEventListener("click", () => handleNextPrev(1) )
 	BTN_PAUSE_PLAY.addEventListener("click", () => pauseOrPlay() )
 
 	// Where it appears
@@ -74,8 +70,12 @@ window.addEventListener("message", (e) => {
 
 function parseYoutubeData(data) {
 	const { playerState } = data.info
-	if (playerState === 0) {
+	if (playerState === 0) { // Video ended
 		handleVideoEnd()
+	}
+	else if (playerState === 1) {
+		BTN_PAUSE_PLAY.dataset.playing = true
+		BTN_PAUSE_PLAY.innerText = "Pause"
 	}
 }
 
@@ -102,7 +102,7 @@ function changeMusic(autoplay = true) {
 }
 
 /**
- * @param {number} offset Go to the next or previous selection, must be +1 or -1
+ * @param {number} offset Go to the next or previous selection, must be +1, 0, -1
  */
 function changeSelectionTo(offset) {
 	let index = SELECT_SONG.selectedIndex
@@ -120,6 +120,22 @@ function changeSelectionTo(offset) {
 	changeMusic()
 }
 
+function chooseRandomSong() {
+	let optionsLength = SELECT_SONG.length
+	
+	SELECT_SONG.selectedIndex = Math.round( Math.random() * optionsLength )
+	changeMusic()
+}
+
+function handleNextPrev( offset ) {
+	if (SELECT_PLAYING_MODE.value == "RANDOM") {
+		chooseRandomSong()
+		return
+	}
+
+	changeSelectionTo(offset)
+}
+
 function pauseOrPlay() {
 	let event = {
 		event: "command",
@@ -129,22 +145,33 @@ function pauseOrPlay() {
 	if ( BTN_PAUSE_PLAY.dataset.playing == "true" ) {
 		event.func = "pauseVideo"
 		BTN_PAUSE_PLAY.dataset.playing = false
-		BTN_PAUSE_PLAY.textContent = "Pause"
+		BTN_PAUSE_PLAY.textContent = "Play"
 	}
 	else {
 		event.func = "playVideo"
 		BTN_PAUSE_PLAY.dataset.playing = true
-		BTN_PAUSE_PLAY.textContent = "Play"
+		BTN_PAUSE_PLAY.textContent = "Pause"
 	}
 
-	IFRAME.contentWindow.postMessage(
-		JSON.stringify(event),
-		"*"
-	)
+	IFRAME.contentWindow.postMessage(JSON.stringify(event), "*")
 }
 
 function handleVideoEnd() {
-	console.log("Video Ended lol")
+	const playingMode = SELECT_PLAYING_MODE.value
+
+	switch (playingMode) {
+		case "PLAYLIST":
+			// Go to the next song
+			changeSelectionTo(1)
+			break;
+		case "LOOP":
+			// Repeat it
+			changeSelectionTo(0)
+			break
+		case "RANDOM":
+			chooseRandomSong()
+			// Choose a random song
+	}
 }
 
 createYouTubePlayer();
