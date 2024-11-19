@@ -2,6 +2,17 @@
 
 <div id="playlist-container" class="column-with-space">
 
+    <div class="inline-list">
+        <button type="button" id="btn-prev">Prev</button>
+        <button type="button" data-playing="false" id="btn-pause-play">Pause</button>
+        <button type="button" id="btn-next">Next</button>
+        <select title="Playing Mode" id="playing-mode">
+            <option value="PLAYLIST" selected>Playlist</option>
+            <option value="LOOP">Loop Song</option>
+            <option value="RANDOM">Random</option>
+        </select>
+    </div>
+
     <select size="5" id="select-song">
         {{ range $i, $song := $playlist.songs }}
         <option value="{{$song.ID}}" {{with $song.start}}data-start="{{.}}"{{end}} {{if eq $i 0}} selected{{end}}>{{$song.author}} - {{$song.name}}</option>

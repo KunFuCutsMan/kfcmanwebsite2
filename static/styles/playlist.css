@@ -9,16 +9,16 @@
 }
 
 #playlist-container select {
-    width: 100%;
     background-color: var(--blue-900);
+    color: var(--gray-800);
 }
 
-#playlist-container option {
+#select-song option {
     color: var(--orange-600);
     font-family: var(--heading-font);
+    width: 100%;
 }
 
-
-#playlist-container option {
-    width: 100%;
+#playlist-container .inline-list > * {
+    margin-inline: 0.5rem;
 }
