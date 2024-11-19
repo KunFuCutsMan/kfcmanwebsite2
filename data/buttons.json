@@ -51,6 +51,7 @@
         },
         {
             "link": "https://moheb-rofail.neocities.org/",
+            "image": "moheb-button.png",
             "site": "Moheb Rofail"
         },
         {
@@ -112,6 +113,11 @@
             "link": "https://ltkaru.com/",
             "image": "karu-badge.png",
             "site": "ItKaru"
+        },
+        {
+            "link": "https://doritochan001.neocities.org/",
+            "image": "doritochan001coolbuttonhehe.gif",
+            "site": "DoritoChan001"
         }
     ]
 }
