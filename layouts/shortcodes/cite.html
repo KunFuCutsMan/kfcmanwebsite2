@@ -1,4 +1,4 @@
 <blockquote tabindex="0" class="cite">
     {{ .Inner | markdownify }}
-    <cite>{{ .Get 0 }}</cite>
+    <cite>{{ .Get 0 | markdownify }}</cite>
 </blockquote>
