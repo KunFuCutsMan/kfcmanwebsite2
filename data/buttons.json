@@ -59,6 +59,10 @@
             "site": "Flying With Quills"
         },
         {
+            "link": "https://angelnetcast.neocities.org/",
+            "site": "AngelNetCast"
+        },
+        {
             "link": "https://16bitlemonade.neocities.org/",
             "site": "16BitLemonade"
         }
@@ -98,10 +102,6 @@
             "link": "https://mycorrhiza.space/",
             "image": "mycorrhiza_linkback_button.png",
             "site": "MyCorriza"
-        },
-        {
-            "link": "https://angelnetcast.neocities.org/",
-            "site": "AngelNetCast"
         },
         {
             "link": "https://dinpixels.neocities.org/",
