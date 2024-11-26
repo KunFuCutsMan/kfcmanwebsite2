@@ -102,7 +102,7 @@ When I have the money I want to buy these games:
 
 I listen to mostly spanish pop, electro-pop, romantic, and rock. Pretty much everything that is from 1980s-2010s is welcome to my ears (except reguetón and banda).
 
-I also have a playlist on youtube if you'd like to hear it [right here](https://youtube.com/playlist?list=PLxvKdwCZ7zIr7EAmtZM9n0vTtg8x_YVnY&si=VFUy9cKawVsaYRoO)
+I also have a playlist on youtube if you'd like to hear it [right here](https://youtube.com/playlist?list=PLxvKdwCZ7zIr7EAmtZM9n0vTtg8x_YVnY&si=VFUy9cKawVsaYRoO), or you can hear a slightly different sample from the music player
 
 Also spanish christian music is WAY better than whatever Bethel throws at you. Check some bands out!
 
@@ -160,7 +160,7 @@ I wanted to have a username that would be a pun on whatever avatar I would use, 
 
 After watching a [video](https://youtu.be/Sv3pS_0vFjA?si=R0LA-JsLQKYu2Te_) from Vinesauce, I got the idea of my current username: **Kun Fu Cuts Man!**
 
-![asas](https://i.imgur.com/0uArQAJ.jpg "My first avatar as KunFuCutsMan. I didn't even bother editing this.")
+![My first avatar was actually a cropped image of the Kun Fu Cut Man clip from the ruby spears cartoon](https://i.imgur.com/0uArQAJ.jpg "My first avatar as KunFuCutsMan. I didn't even bother editing this.")
 
 ...Also the short version of my username is KFCMan. The association with the food brand was not intentional and it was only noticed thanks to someone on the community.
 
@@ -201,6 +201,8 @@ It's been one funky journey ever since, but that's outside of the scope of this 
 ## Personality Quizzes
 
 I would be very glad to do the do the personality quizzes you have :p
+
+{{< small >}}Please send more I enjoy taking them too much{{< /small >}}
 
 {{% div class="column-with-space quiz-list" %}}
 {{< partial "home/cool-stuff.html" >}}
