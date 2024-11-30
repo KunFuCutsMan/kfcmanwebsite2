@@ -1,0 +1,60 @@
+:root {
+    /* Christmas scheme it is */
+	--orange-100: #fad1d5;
+	--orange-200: #f6a2ab;
+	--orange-300: #f17480;
+	--orange-400: #ed4556;
+	--orange-500: #E4162B;
+	--orange-600: #ba1223;
+	--orange-700: #8b0e1a;
+	--orange-800: #5d0912;
+	--orange-900: #2e0509;
+
+	--blue-100: #e5f6d5;
+	--blue-200: #cbecac;
+	--blue-300: #b1e382;
+	--blue-400: #97d959;
+	--blue-500: #7dd02f;
+	--blue-600: #6CB328;
+	--blue-700: #4b7d1c;
+	--blue-800: #325313;
+	--blue-900: #192a09;
+
+	--gray-100: #ffffff;
+	--gray-200: #e0ebe5;
+	--gray-300: #b3bcb7;
+	--gray-400: #868d89;
+	--gray-500: #5a5e5c;
+	--gray-600: #2d2f2e;
+	--gray-700: #272727;
+	--gray-800: #161717;
+	--gray-900: #0f0f0f;
+
+	--text: var(--gray-900);
+	--background: var(--gray-100);
+	--primary: var(--orange-600);
+	--secondary: var(--gray-300);
+	--accent: var(--blue-600);
+
+	--primary-light: var(--orange-400);
+	--primary-dark: var(--orange-800);
+}
+
+a {	color: var(--blue-800); }
+a:visited { color: var(--blue-900); }
+a:is( :hover, :focus ) { color: var(--blue-600); }
+
+#nav a { color: var(--blue-600); }
+#nav a:is( :hover, :focus ) { color: var(--blue-700); }
+
+:is( article.article-card, .taxonomy ) a:is( :hover, :focus ) { color: var(--blue-400); }
+
+.frame {
+	background-color: var(--gray-300);
+	border-image-source: url('/images/pattern_xmas.png');
+	border-image-slice: calc( 1/5 * 100% );
+}
+
+table {
+	color: var(--gray-100);
+}
