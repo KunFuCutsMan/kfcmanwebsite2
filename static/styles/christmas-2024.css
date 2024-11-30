@@ -58,3 +58,10 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
 table {
 	color: var(--gray-100);
 }
+
+#xmas-music {
+	margin-inline: auto;
+	width: min-content;
+}
+
+#TableOfContents a { color: var(--blue-600); }

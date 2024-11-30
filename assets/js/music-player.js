@@ -130,7 +130,7 @@ function changeSelectionTo(offset) {
 function chooseRandomSong() {
 	let optionsLength = SELECT_SONG.length
 	
-	SELECT_SONG.selectedIndex = Math.round( Math.random() * optionsLength )
+	SELECT_SONG.selectedIndex = Math.floor( Math.random() * optionsLength )
 	changeMusic()
 }
 
@@ -181,4 +181,4 @@ function handleVideoEnd() {
 	}
 }
 
-createYouTubePlayer();
+window.addEventListener("load", () => createYouTubePlayer())
