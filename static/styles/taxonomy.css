@@ -61,3 +61,22 @@ article.article-card li {
 	padding: 0.3rem;
 	min-width: 5rem;
 }
+
+.taxonomy-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.taxonomy-header :first-child {
+	flex-grow: 1;
+}
+
+.taxonomy-header :last-child {
+	margin-left: auto;
+}
+
+.taxonomy-header .rss-button img {
+	width: 2rem;
+	height: 2rem;
+}

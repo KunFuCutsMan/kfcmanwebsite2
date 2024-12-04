@@ -6,6 +6,12 @@ enableGitInfo = true
 
 disableKinds = ['sitemap']
 
+[outputs]
+  home = ['html']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html']
+
 [taxonomies]
     tag = 'tags'
     series = 'series'

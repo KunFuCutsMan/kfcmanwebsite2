@@ -1,0 +1,4 @@
+{{ $page := . }}
+{{ $couldHaveChildren := collections.In ( slice "section" "taxonomy" ) $page.Kind }}
+{{ $isSeries := (.Site.GetPage "/series").IsAncestor $page }}
+{{ return or $couldHaveChildren $isSeries }}

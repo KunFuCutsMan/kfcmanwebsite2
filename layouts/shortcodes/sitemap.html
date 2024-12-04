@@ -10,11 +10,15 @@
 
 {{ define "page-link" }}
     {{- $page := . -}}
-    <p><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></p>
+    {{- $hasFeed := partial "hasRSSFeed.html" $page -}}
+    <p>
+        <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+        {{ if $hasFeed }}{{ partial "rssFeedButton.html" $page }}{{end}}
+    </p>
 
     {{ if ne $page.Kind "term" -}}
         {{- with $page.Pages }}
-        <ul>
+        <ul{{if $hasFeed }} class="inline-list"{{- end -}}>
             {{- range . }}
             <li>{{ template "page-link" . }}</li>
             {{- end}}

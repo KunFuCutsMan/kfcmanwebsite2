@@ -1,8 +1,9 @@
 {{define "main"}}
 <div class="frame main-frame single-margin">
-    <h1>
-        {{- .Data.Singular | inflect.Humanize }}: {{ .Title -}}
-    </h1>
+    <header class="taxonomy-header">
+        <h1>{{- .Data.Singular | inflect.Humanize }}: {{ .Title -}}</h1>
+        <span>{{ partial "rssFeedButton.html" . }}</span>
+    </header>
 
     <article class="content">{{ .Content }}</article>
 

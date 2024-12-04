@@ -1,6 +1,9 @@
 {{define "main"}}
 <main class="frame main-frame single-margin">
-    <h1>{{.Title}}</h1>
+    <header class="taxonomy-header">
+        <h1>{{.Title}}</h1>
+        <span>{{ partial "rssFeedButton.html" . }}</span>
+    </header>
     <div class="taxonomy-list">
         {{- range .Data.Terms }}
         {{ template "tag-card" . }}

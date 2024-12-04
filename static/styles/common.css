@@ -308,3 +308,13 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
     position: sticky;
     top: 2rem;
 }
+
+.rss-button {
+	display: inline-block;
+}
+
+.rss-button img {
+	display: inline;
+	width: 1rem;
+	height: 1rem;
+}

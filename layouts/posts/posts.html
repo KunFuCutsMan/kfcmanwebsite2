@@ -3,6 +3,7 @@
     <header data-area="header" class="frame">
         <h1>{{.Title}}</h1>
         <p><b>Count:</b> {{.Pages.Len}} posts</p>
+        {{partial "rssFeedButton.html" .}}
     </header>
 
     <main data-area="posts" class="article-list">

@@ -48,3 +48,7 @@ ExcludeArticleData: true
 -   6/Nov/2024: Changed [posts](/posts) page to it isn't a default list page
 -   16/Nov/2024: Reworked the [about me](/about-me) page and a music player to it!
 -   18/Nov/2024: Added even more neighbors & cool sites link, and those who don't have a button will only have their name displayed instead.
+-   30/Nov/2024: Changed website's color scheme for christmas
+-   30/Nov/2024: Added Luis Miguel and Valle del Coral music on EVERY PAGE. You can only turn it off by manually clicking the iframe on the bottom of the page. Good luck :)
+-   1/Dic/2024: Forgot to update changelog, oops
+-   4/Dic/2024: Added RSS buttons where needed
