@@ -73,6 +73,12 @@ TODO:
 
 TODO:
 
+-   GodaiActuator:
+
+    -   modify getTileImageSourceDir() so it gets the localstorage name of the folder
+        -   under the name of some key
+    -   setup that key somewhere
+
 -   Add tile IDs in `Tile.js`
     -   Modify `getImageName()`
     -   Modify `Tile.getTileName()`
