@@ -1,5 +1,5 @@
 <aside id="xmas-music">
-    {{ with resources.Get (printf "js/%s" "start-xmas-music.js") -}}
+    {{ with resources.Get (printf "assets/js/%s" "start-xmas-music.js") -}}
     <script src="{{.RelPermalink}}" defer></script>
     {{- end }}
 </aside>

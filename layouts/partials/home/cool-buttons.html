@@ -18,7 +18,7 @@
 {{ range $button := partial "slice-of-maps-with-existent-key-first" $params }}
     <a href="{{$button.link}}" target="_blank">
     {{ with $button.image }}
-        <img src="/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy" width="88px" height="31px">
+        <img src="/assets/images/buttons/{{$button.image}}" alt="{{$button.site}}" loading="lazy" width="88px" height="31px">
     {{ else }}
         {{$button.site}}
     {{ end }}

@@ -52,3 +52,4 @@ ExcludeArticleData: true
 -   30/Nov/2024: Added Luis Miguel and Valle del Coral music on EVERY PAGE. You can only turn it off by manually clicking the iframe on the bottom of the page. Good luck :)
 -   1/Dic/2024: Forgot to update changelog, oops
 -   4/Dic/2024: Added RSS buttons where needed
+-   26/Dic/2024: Moved all assets to a `/assets` folder where everything can sit there nicely

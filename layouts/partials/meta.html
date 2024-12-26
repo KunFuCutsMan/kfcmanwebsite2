@@ -8,35 +8,35 @@
     {{- $styles = collections.Append "content.css" "taxonomy.css" $styles -}}
 {{- end -}}
 {{- range $stylesheet := $styles }}
-<link rel="stylesheet" href="/styles/{{ $stylesheet }}">
+<link rel="stylesheet" href="/assets/styles/{{ $stylesheet }}">
 {{- end }}
 
-<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-<link rel="manifest" href="/icons/site.webmanifest">
-<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/icons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 {{ with time.Now | time.Format "2006-01-02T03:04:05-07:00" -}}
 {{ $stringy := printf "%+v" . }}
-{{ $url := $stringy | resources.FromString "assets/lastmod.txt" }}
+{{ $url := $stringy | resources.FromString "/assets/lastmod.txt" }}
     <script>
         var LAST_MOD_URL = '{{$url.Permalink}}'
     </script>
 {{- end }}
 
 {{ range $script := .Page.Params.Scripts }}
-{{ with resources.Get (printf "js/%s" $script) -}}
+{{ with resources.Get (printf "/assets/js/%s" $script) -}}
 <script src="{{.RelPermalink}}" defer></script>
 {{- end }}
 {{- end }}
 
-{{- with resources.Get "js/events.js" -}}
+{{- with resources.Get "/assets/js/events.js" -}}
 <script src="{{.RelPermalink}}" defer></script>
 {{- end }}
 
-<link rel="stylesheet" href="/styles/christmas-2024.css">
+<link rel="stylesheet" href="/assets/styles/christmas-2024.css">

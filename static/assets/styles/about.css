@@ -100,11 +100,11 @@
     filter: saturate(20%);
 }
 
-.button-chooser.ic-buster::before   { background-image: url('/icons/buster.png'); }
-.button-chooser.ic-crystal::before  { background-image: url('/icons/crystal.png'); }
-.button-chooser.ic-scissor::before  { background-image: url('/icons/scissor.png'); }
-.button-chooser.ic-cross::before    { background-image: url('/icons/cross.png'); }
-.button-chooser.ic-notebook::before { background-image: url('/icons/notebook.png'); }
+.button-chooser.ic-buster::before   { background-image: url('/assets/icons/buster.png'); }
+.button-chooser.ic-crystal::before  { background-image: url('/assets/icons/crystal.png'); }
+.button-chooser.ic-scissor::before  { background-image: url('/assets/icons/scissor.png'); }
+.button-chooser.ic-cross::before    { background-image: url('/assets/icons/cross.png'); }
+.button-chooser.ic-notebook::before { background-image: url('/assets/icons/notebook.png'); }
 
 .quiz-list {
     width: 100%;

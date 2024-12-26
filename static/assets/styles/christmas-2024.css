@@ -51,7 +51,7 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
 
 .frame {
 	background-color: var(--gray-300);
-	border-image-source: url('/images/pattern_xmas.png');
+	border-image-source: url('/assets/images/pattern_xmas.png');
 	border-image-slice: calc( 1/5 * 100% );
 }
 
