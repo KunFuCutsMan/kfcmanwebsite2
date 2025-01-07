@@ -10,8 +10,12 @@ Params:
         - taxonomy.css
 ---
 
-Hello! \
-This is my website! \
+Hello!
+
+This is my website!
+
+**ITS DECEMBER SO ENJOY THIS BRAND NEW COLOR SCHEME I TOTALLY DIDN'T MAKE IN 30 MINUTES!**
+
 Also...
 
 ## Now what.
@@ -27,7 +31,7 @@ I don't know what to put in here. I suppose I can give you some things about mys
         -   So much so that my youtube feed is permanently english flavored.
 -   Mega Man nerd (only for classic & Battle Network saga tho)
 -   Christian :\)
-    -   I'm evangelical.
+    -   **NOT A METHODIST** unlike what the personality quiz says. I'm evangelical.
 
 Futher questioning can be made in the [about me](/about-me) section.
 
