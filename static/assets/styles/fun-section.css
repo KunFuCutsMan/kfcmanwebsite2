@@ -1,0 +1,15 @@
+
+.glass-tube {
+    --green: #6CB328;
+    --green-light: #AFE356;
+    --green-dark: #38741A;
+
+    background-color: var(--green-light);
+
+    padding: 2rem;
+    margin-left: 4rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    color: black;
+}

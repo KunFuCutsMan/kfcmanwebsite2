@@ -1,0 +1,22 @@
+{{define "main"}}
+<div class="single-margin column-with-spacce">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    <main>
+        {{.Content}}
+    </main>
+
+    <div>{{ range $page := .Pages.ByTitle }}
+        <article class="glass-tube">
+            <header>
+                <h2>{{.Title}}</h2>
+                <p>{{.Summary}}</p>
+            </header>
+            <img src="" alt="">
+        </article>
+        {{end}}
+    </div>
+</div>
+{{end}}
