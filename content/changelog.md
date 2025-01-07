@@ -53,3 +53,4 @@ ExcludeArticleData: true
 -   1/Dic/2024: Forgot to update changelog, oops
 -   4/Dic/2024: Added RSS buttons where needed
 -   26/Dic/2024: Moved all assets to a `/assets` folder where everything can sit there nicely
+-   7/Dic/2024: Removed christmas decorations & music player
