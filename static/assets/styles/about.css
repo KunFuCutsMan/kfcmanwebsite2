@@ -27,7 +27,7 @@
 /* Small Screens */
 @media (max-width: 720px) {
     .grid-about {
-        grid-template-columns: auto;
+        grid-template-columns: 100%;
         grid-template-areas:
             'header'
             'playlist'
