@@ -1,5 +1,5 @@
 {{define "main"}}
-<div class="single-margin column-with-spacce">
+<div class="column-with-space" style="margin-top: 4rem;">
     <header>
         <h1>{{ .Title }}</h1>
     </header>
@@ -8,14 +8,16 @@
         {{.Content}}
     </main>
 
-    <div class="column-with-spacce">{{ range $page := .Pages.ByTitle }}
+    <div class="tube-holder">{{ range $page := .Pages.ByTitle }}
         <article class="glass-tube">
             <header>
-                <h2>{{.Title}}</h2>
-                <p>{{.Summary}}</p>
-                <a href="{{.RelPermalink}}">Go to experiment</a>
+                <h2>{{$page.Title}}</h2>
+                <p>{{$page.Summary}}</p>
+                <a href="{{$page.RelPermalink}}">Go to experiment</a>
             </header>
-            <img src="" alt="">
+            {{ with $page.Params.Thumbnail }}
+            <img src="./{{ . }}" {{- with $page.Params.ThumbnailDesc }} alt="{{.}}"{{end}}>
+            {{end}}
         </article>
         {{end}}
     </div>
