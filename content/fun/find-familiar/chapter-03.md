@@ -11,7 +11,7 @@ Params:
         - content.css
         - writing-entry.css
 
-draft: true
+draft: false
 ---
 
 The ocean pushed and pulled to the concave opening of Lodron Pral and its hen bay, the bells rang and ships departed as the usual routine everyone was used to. They followed the carpet of the sea out into the unknown and the farthest reaches of the plane. The trail of ships sailed through their usual path: from the coast it was an organized mess that structured itself the moment they left your sight, the vessels that returned came in a middle row, while the ones that departed covered the flanks of the route.
