@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="single-margin">
+    <header>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Summary }}</p>
+    </header>
+
+    <nav class="nav-line">
+        {{ with .PrevInSection }}<a href="{{.RelPermalink}}">Previous Chapter</a>{{end}}
+        {{ with .NextInSection }}<a href="{{.RelPermalink}}">Next Chapter</a>{{end}}
+    </nav>
+
+    <article class="writing-entry content">
+        {{ .Content }}
+    </article>
+    
+    <nav class="nav-line">
+        {{ with .PrevInSection }}<a href="{{.RelPermalink}}">Previous Chapter</a>{{end}}
+        {{ with .NextInSection }}<a href="{{.RelPermalink}}">Next Chapter</a>{{end}}
+    </nav>
+</main>
+{{end}}

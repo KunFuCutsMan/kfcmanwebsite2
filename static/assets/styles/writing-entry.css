@@ -1,0 +1,41 @@
+/* CSS for a writing entry */
+
+.single-margin > header {
+    margin-block: 2rem;
+}
+
+.nav-line {
+    --cover-dark: hsl(10, 50%, 26%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--cover-dark);
+}
+
+.content {
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+.writing-entry {
+    --cover-main: hsl(10, 50%, 37%);
+    --cover-dark: hsl(10, 50%, 26%);
+    --line-color: hsl(10, 50%, 15%);
+    --page-color: hsl(40, 100%, 75%);
+    --page-color-dark: hsl(40, 35%, 45%);
+
+    border-block: 0.5rem solid var(--line-color);
+    border-inline: 1rem solid var(--line-color);
+    background-image: linear-gradient( to bottom,
+    var(--page-color-dark),
+    var(--page-color) 1%,
+    var(--page-color) 99%,
+    var(--page-color-dark)
+    );
+    color: black;
+
+    padding: 1rem;
+}
