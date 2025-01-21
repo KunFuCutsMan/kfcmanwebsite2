@@ -3,6 +3,7 @@ title: KFCMan's Experiments
 
 Params:
     Stylesheets:
+        - content.css
         - fun-section.css
 ---
 
