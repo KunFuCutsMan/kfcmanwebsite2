@@ -63,7 +63,6 @@
 /* Find Familiar's book stacks */
 
 .book-pile {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -91,6 +90,7 @@
     --cover-dark: hsl(10, 50%, 26%);
     --line-color: hsl(10, 50%, 15%);
     --page-color: hsl(40, 100%, 75%);
+    --page-color-dark: hsl(40, 35%, 45%);
     --swew-angle: 26.6666deg;
     position: relative;
     z-index: calc( -1 * var(--child-number) );
@@ -102,12 +102,10 @@
 
     background-color: var(--cover-main);
 
-    /*
     transform:
         skew( 0deg, var(--swew-angle) )
         scaleX(0.5)
         translateX(-50%);
-    */
 }
 
 .book::before {
@@ -131,19 +129,41 @@
     content: '';
     position: absolute;
 
-    top: calc( -100% - 0.75rem );
-    right: calc( -100% + 1.55rem );
+    top: calc( -100% - 0.55rem );
+    right: calc( -100% + 2.5rem );
 
-    width: 93%;
+    width: 90%;
     height: calc( 100% + 1rem );
-    background-color: var(--page-color);
+    background-image: linear-gradient( to bottom,
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark),
+        var(--page-color), var(--page-color-dark)
+    );
 
     border-block: 0.5rem solid var(--line-color);
     border-inline-start: 1rem solid var(--line-color);
-    border-inline-end: 1rem solid var(--background);
+    border-inline-end: 1rem solid transparent;
 
     transform:
         skewY( calc( -1 * var(--swew-angle) ) );
+}
+
+.book a {
+    color: var(--text);
+	font-weight: 400;
+}
+
+.book h2 {
+    font-size: x-large;
+    text-align: center;
 }
 
 @container (max-width: 600px) {
@@ -155,4 +175,9 @@
     .book h2 {
         font-size: larger;
     }
+
+    .book a {
+        font-size: small;
+    }
 }
+
