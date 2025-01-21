@@ -1,6 +1,7 @@
 ---
 title: "Chapter 03"
 date: "2025-01-20T21:24:07-06:00"
+layout: writing-entry
 
 summary: A nightmare haunts Ellice but that won't deter her from being fine and dandy. ...Right? Also her father came back :D
 publishDate: "2021-08-04"
@@ -8,6 +9,7 @@ publishDate: "2021-08-04"
 Params:
     Stylesheets:
         - content.css
+        - writing-entry.css
 
 draft: true
 ---
