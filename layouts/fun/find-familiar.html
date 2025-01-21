@@ -14,6 +14,7 @@
             <a href="{{ $page.RelPermalink }}">
                 <h2>{{ $page.Title }}</h2>
                 <p>{{ $page.Summary }}</p>
+                <p>Published on <time datetime="{{ .PublishDate }}">{{.PublishDate | time.Format "02 / Jan / 2006" }}</time></p>
             </a>
         </article>
         {{end}}

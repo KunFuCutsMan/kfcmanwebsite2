@@ -2,6 +2,9 @@
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 date: "{{ .Date }}"
 
+summary: '{{ replace .File.ContentBaseName "-" " " | title }}'
+publishDate: '{{ .Date | time.Format "2/Jan/2006" }}'
+
 Params:
     Stylesheets:
         - content.css
