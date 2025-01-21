@@ -1,6 +1,19 @@
 {{define "main"}}
-Find Familiar me
+<div class="single-margin">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
 
-{{ .Type }}
-{{ .Pages }}
+    <section class="content">
+        {{ .Content }}
+    </section>
+
+    <main class="book-pile">
+        {{ range $page := .Pages.Reverse }}
+        <article class="book">
+            <h2>{{ $page.Title }}</h2>
+        </article>
+        {{end}}
+    </main>
+</div>
 {{end}}

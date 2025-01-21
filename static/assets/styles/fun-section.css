@@ -59,3 +59,100 @@
 
     margin-bottom: 4rem;
 }
+
+/* Find Familiar's book stacks */
+
+.book-pile {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: 15rem;
+
+    isolation: isolate;
+    align-items: center;
+
+    container-type: inline-size;
+}
+
+.book-pile > *:nth-child(1) { --child-number: 1 }
+.book-pile > *:nth-child(2) { --child-number: 2 }
+.book-pile > *:nth-child(3) { --child-number: 3 }
+.book-pile > *:nth-child(4) { --child-number: 4 }
+.book-pile > *:nth-child(5) { --child-number: 5 }
+.book-pile > *:nth-child(6) { --child-number: 6 }
+.book-pile > *:nth-child(7) { --child-number: 7 }
+.book-pile > *:nth-child(8) { --child-number: 8 }
+.book-pile > *:nth-child(9) { --child-number: 9 }
+
+.book {
+    --cover-main: hsl(10, 50%, 37%);
+    --cover-dark: hsl(10, 50%, 26%);
+    --line-color: hsl(10, 50%, 15%);
+    --page-color: hsl(40, 100%, 75%);
+    --swew-angle: 26.6666deg;
+    position: relative;
+    z-index: calc( -1 * var(--child-number) );
+
+    width: 30rem;
+    height: 7.5rem;
+    padding: 1rem;
+    border: 0.5rem solid var(--line-color);
+
+    background-color: var(--cover-main);
+
+    /*
+    transform:
+        skew( 0deg, var(--swew-angle) )
+        scaleX(0.5)
+        translateX(-50%);
+    */
+}
+
+.book::before {
+    content: '';
+    position: absolute;
+
+    top: calc( -200% - 0.5rem );
+    left: calc( 50% - 2rem );
+    width: calc( 100% + 1rem );
+    height: 200%;
+
+    background-color: var(--cover-dark);
+    border-block: 0.5rem solid var(--line-color);
+    border-inline: 1rem solid var(--line-color);
+
+    transform:
+        skewX( calc( 90deg + var(--swew-angle) ) );
+}
+
+.book::after {
+    content: '';
+    position: absolute;
+
+    top: calc( -100% - 0.75rem );
+    right: calc( -100% + 1.55rem );
+
+    width: 93%;
+    height: calc( 100% + 1rem );
+    background-color: var(--page-color);
+
+    border-block: 0.5rem solid var(--line-color);
+    border-inline-start: 1rem solid var(--line-color);
+    border-inline-end: 1rem solid var(--background);
+
+    transform:
+        skewY( calc( -1 * var(--swew-angle) ) );
+}
+
+@container (max-width: 600px) {
+    .book {
+        width: 20rem;
+        height: 5rem;
+    }
+
+    .book h2 {
+        font-size: larger;
+    }
+}
