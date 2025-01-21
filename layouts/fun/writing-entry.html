@@ -3,6 +3,7 @@
     <header>
         <h1>{{ .Title }}</h1>
         <p>{{ .Summary }}</p>
+        <p>Published on <time datetime="{{ .PublishDate }}">{{.PublishDate | time.Format "02 / Jan / 2006" }}</time></p>
     </header>
 
     <nav class="nav-line">
