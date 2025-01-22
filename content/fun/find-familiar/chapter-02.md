@@ -11,7 +11,7 @@ Params:
         - content.css
         - writing-entry.css
 
-draft: true
+draft: false
 ---
 
 I sputter a single name for him: "Ki-Ki-Kindle?” And then I pass out. My head dropped itself towards my back, I expect the worst—but I don’t feel the hard surface of the floor; I feel a leathery pillow softening my landing before my mind goes to an unknown place. It must have been hours because when I woke up from what felt like an eternity, it was already midday, the bells had already sung, the ships had departed, crates unloaded, and I... I-... don’t have anything to do.
