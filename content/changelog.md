@@ -55,3 +55,5 @@ ExcludeArticleData: true
 -   26/Dic/2024: Moved all assets to a `/assets` folder where everything can sit there nicely
 -   7/Jan/2025: Removed christmas decorations & music player
 -   14/Jan/2025: Fixed rendering error in the about me page after I upgrated hugo. Should be fine now
+-   21/Jan/2025: Added a [fun](/fun) section where I add anything that is not related to a post
+-   21/Jan/2025: Added old stories I made for a roblox library on the fun section
