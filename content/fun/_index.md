@@ -6,4 +6,6 @@ Params:
         - fun-section.css
 ---
 
-Experiments I made
+Experiments I made and can be displayed in a browser may be placed here.
+
+Anything goes really.
