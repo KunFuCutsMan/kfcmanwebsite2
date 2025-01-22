@@ -11,7 +11,10 @@
     <main class="book-pile">
         {{ range $page := .Pages.Reverse }}
         <article class="book">
-            <h2>{{ $page.Title }}</h2>
+            <a href="{{ $page.RelPermalink }}">
+                <h2>{{ $page.Title }}</h2>
+                <p>{{ $page.Summary }}</p>
+            </a>
         </article>
         {{end}}
     </main>
