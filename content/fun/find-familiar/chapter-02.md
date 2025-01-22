@@ -1,6 +1,7 @@
 ---
 title: "Chapter 02"
 date: "2025-01-20T21:24:03-06:00"
+layout: writing-entry
 
 summary: It's the weekend and Ellice is bored. And she DOES NOT like being bored.
 publishDate: "2021-05-03"
@@ -8,6 +9,7 @@ publishDate: "2021-05-03"
 Params:
     Stylesheets:
         - content.css
+        - writing-entry.css
 
 draft: true
 ---

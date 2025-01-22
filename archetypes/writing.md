@@ -1,6 +1,7 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 date: "{{ .Date }}"
+layout: writing-entry.css
 
 summary: '{{ replace .File.ContentBaseName "-" " " | title }}'
 publishDate: '{{ .Date | time.Format "2/Jan/2006" }}'
@@ -8,6 +9,7 @@ publishDate: '{{ .Date | time.Format "2/Jan/2006" }}'
 Params:
     Stylesheets:
         - content.css
+        - writing-entry.css
 
 draft: false
 ---

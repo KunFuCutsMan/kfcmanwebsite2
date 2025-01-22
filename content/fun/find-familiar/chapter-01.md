@@ -1,6 +1,7 @@
 ---
 title: "Chapter 01"
 date: "2025-01-20T21:21:36-06:00"
+layout: writing-entry
 
 summary: For a school assignment, Ellice Dalzedi decides to cast a ritual named "Find Familiar", but things don't go the way she expected.
 publishDate: "2021-02-21"
@@ -8,6 +9,7 @@ publishDate: "2021-02-21"
 Params:
     Stylesheets:
         - content.css
+        - writing-entry.css
 
 draft: false
 ---
