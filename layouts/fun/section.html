@@ -8,11 +8,12 @@
         {{.Content}}
     </main>
 
-    <div>{{ range $page := .Pages.ByTitle }}
+    <div class="column-with-spacce">{{ range $page := .Pages.ByTitle }}
         <article class="glass-tube">
             <header>
                 <h2>{{.Title}}</h2>
                 <p>{{.Summary}}</p>
+                <a href="{{.RelPermalink}}">Go to experiment</a>
             </header>
             <img src="" alt="">
         </article>

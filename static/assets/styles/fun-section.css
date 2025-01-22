@@ -4,12 +4,34 @@
     --green-light: #AFE356;
     --green-dark: #38741A;
 
+    --_margin-left: 4rem;
+
     background-color: var(--green-light);
+    box-shadow:
+        -0.5rem -1rem inset var(--green),
+        0rem 0.2rem inset var(--green-dark);
 
     padding: 2rem;
-    margin-left: 4rem;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    margin-left: var(--_margin-left);
+    border-top-right-radius: 100vw;
+    border-bottom-right-radius: 100vw;
 
     color: black;
+
+    position: relative;
 }
+
+.glass-tube::before {
+    content: '';
+    position: absolute;
+
+    background-color: red;
+    width: var(--_margin-left);
+
+    top: 0;
+    left: calc( var(--_margin-left) * -1 );
+    bottom: 0;
+}
+
+.glass-tube a { color: var(--green-dark); }
+.glass-tube a:is( :hover, :focus ) { color: var(--green); }
