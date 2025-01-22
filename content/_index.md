@@ -14,9 +14,9 @@ Hello!
 
 This is my website!
 
-**ITS DECEMBER SO ENJOY THIS BRAND NEW COLOR SCHEME I TOTALLY DIDN'T MAKE IN 30 MINUTES!**
-
 Also...
+
+**CHECK OUT THE NEW FUN SECTION! YOU CAN FIND RIGHT [HERE](/fun)** (temporary link)
 
 ## Now what.
 
