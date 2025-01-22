@@ -7,6 +7,8 @@ summary: '{{ replace .File.ContentBaseName "-" " " | title }}'
 publishDate: '{{ .Date | time.Format "2/Jan/2006" }}'
 
 Params:
+    thumbnail: my-important-icon-here.png
+    thumbnailDesc: Description of the thumbnail
     Stylesheets:
         - content.css
         - writing-entry.css
