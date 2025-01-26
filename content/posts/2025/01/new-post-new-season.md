@@ -13,7 +13,7 @@ Params:
 
 includeTOC: false
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Greetings! Haven't seen you since last year! I know it's a terrible joke, but I like its simplicity. It's even funnier when it is said after two weeks of New Year's Eve.
