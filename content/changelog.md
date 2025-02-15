@@ -58,3 +58,4 @@ ExcludeArticleData: true
 -   21/Jan/2025: Added a [fun](/fun) section where I add anything that is not related to a post
 -   21/Jan/2025: Added old stories I made for a roblox library on the fun section
 -   24/Jan/2025: Modified nav to include fun section
+-   15/Feb/2025: Changed images from content boxes to figures
