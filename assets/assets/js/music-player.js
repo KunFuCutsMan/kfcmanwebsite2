@@ -20,7 +20,7 @@ const BTN_NEXT = document.querySelector("button#btn-next")
 const SELECT_PLAYING_MODE = document.querySelector("select#playing-mode")
 
 // Create Music Player
-function createYouTubePlayer() {
+async function createYouTubePlayer() {
 	IFRAME.setAttribute("src", "");
 	IFRAME.setAttribute("frameborder", "0");
 	IFRAME.setAttribute("allowfullscreen", "");
