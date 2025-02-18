@@ -1,10 +1,10 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 date: "{{ .Date }}"
-layout: writing-entry.css
+layout: writing-entry
 
 summary: '{{ replace .File.ContentBaseName "-" " " | title }}'
-publishDate: '{{ .Date | time.Format "2/Jan/2006" }}'
+publishDate: '{{ .Date | time.Format "2006-01-02" }}'
 
 Params:
     thumbnail: my-important-icon-here.png
@@ -15,8 +15,6 @@ Params:
 
 draft: false
 ---
-
-# Chapter 1
 
 Irure eiusmod eiusmod reprehenderit velit. Non eiusmod amet sunt occaecat officia est magna nisi est nostrud sint esse. Duis aliqua dolor aliquip tempor exercitation aliqua consectetur. Enim officia excepteur commodo eiusmod minim fugiat nostrud velit eu deserunt. Ex consequat laboris velit velit. Nostrud id dolore ea aliquip in id qui enim sit nisi.
 
