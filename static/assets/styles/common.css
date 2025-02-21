@@ -225,9 +225,8 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
 
 /* Image Holder */
 .image-holder {
-	--holder-width: 15rem;
 	display: grid;
-	width: var(--holder-width, fit-content);
+	width: min(100%, 10rem);
 	image-rendering: pixelated;
 }
 
@@ -284,7 +283,7 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
 .single-margin {
 	margin-block: 4rem;
 	margin-inline: auto;
-	width: min(60rem, 80vw);
+	width: max(10rem, 80dvw);
 }
 
 .inline-list {

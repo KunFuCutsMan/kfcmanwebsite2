@@ -59,3 +59,4 @@ ExcludeArticleData: true
 -   21/Jan/2025: Added old stories I made for a roblox library on the fun section
 -   24/Jan/2025: Modified nav to include fun section
 -   15/Feb/2025: Changed images from content boxes to figures
+-   20/Feb/2025: Home page no longer breaks since I used container queries

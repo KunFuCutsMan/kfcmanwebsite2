@@ -3,13 +3,18 @@
 	display: grid;
 	grid-template-areas: 
 		'banner buttons'
+		'content buttons'
 		'content webrings'
-		'content cbox'
 		'link-me cbox'
-		'latest-post latest-post';
-	gap: 4rem;
-	grid-template-columns: auto 30%;
+		'latest-post cbox';
+	row-gap: 4rem;
+	grid-template-columns: 70% 30%;
 	grid-auto-rows: minmax(10rem, auto);
+}
+
+.grid-home > * {
+	margin-inline: 2rem;
+	max-width: 100%;
 }
 
 .grid-home > :not([data-area="content"]) > h2 {
@@ -17,22 +22,57 @@
 	text-align: center;
 }
 
+body:has( > .grid-home ) {
+	container-name: body;
+	container-type: inline-size;
+}
+
+.split-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+
+}
+
+.split-content > * { width: clamp(0rem, 100%, 15rem); }
+
+.split-content h1 {	font-size: clamp(3rem, 100%, 6rem); }
+
+.split-content img {
+	width: inherit;
+	aspect-ratio: inherit;
+	image-rendering: pixelated;
+}
+
+.split-content small {
+	display: block;
+	text-align: center;
+}
+
 /* Medium Screens with coupled grid */
-@media (max-width: 1200px) {
+@container body (max-width: calc(70rem - 8rem)) {
 	.grid-home {
+		grid-template-columns: inherit;
 		grid-template-areas:
-			'banner banner banner banner'
-			'buttons buttons webrings webrings'
-			'link-me content content content'
-			'cbox content content content'
-			'latest-post latest-post latest-post latest-post';
-		grid-template-columns: 1fr;
+			'banner banner'
+			'buttons webrings'
+			'buttons content'
+			'link-me content'
+			'cbox content'
+			'latest-post latest-post';
+	}
+
+	.split-content {
+		grid-template-columns: 50% 50%;
+		justify-content: center;
 	}
 }
 
 /* Mobile 1 column grid */
-@media (max-width: 720px) {
+@container body (max-width: calc(50rem - 8rem)) {
 	.grid-home {
+		grid-template-columns: auto;
 		grid-template-areas:
 			'banner'
 			'buttons'
@@ -41,7 +81,16 @@
 			'content'
 			'latest-post'
 			'cbox';
-		grid-template-columns: auto;
+	}
+
+	.split-content {
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+
+	.grid-home > * {
+		margin-inline: 0;
+		max-width: 100cqw;
 	}
 }
 
@@ -51,22 +100,3 @@
 .grid-home > [data-area="content"] { grid-area: content; }
 .grid-home > [data-area="cbox"] { grid-area: cbox; }
 .grid-home > [data-area="latest-post"] { grid-area: latest-post; }
-
-.split-content {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	justify-items: center;
-	align-items: center;
-}
-
-.split-content small {
-	display: block;
-	text-align: center;
-}
-
-@media (max-width: 720px) {
-	.split-content {
-		grid-template-columns: 1fr;
-		justify-content: center;
-	}
-}
