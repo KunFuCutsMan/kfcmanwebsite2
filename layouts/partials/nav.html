@@ -1,27 +1,29 @@
 <nav id="nav">
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about-me">About Me</a></li>
-        <li><a href="/fun">Experiments & Stuff</a></li>
-        <li>
-            <details class="details-popup">
-                <summary>Blog Posts</summary>
+        <li class="nav-link"><a href="/">Home</a></li>
+        <li class="nav-link"><a href="/about-me">About Me</a></li>
+        <li class="nav-link"><a href="/fun">Experiments & Stuff</a></li>
+        <li class="nav-link">
+            <div class="discoverable-list">
+                <input type="checkbox" id="toggle-posts-list" role="navigation" aria-roledescription="Check to open 'Posts' navigation list">
+                <label for="toggle-posts-list" title="Click the hidden checkbox to open this list">Posts</label>
                 <ul>
                     <li><a href="/posts">Posts</a></li>
                     <li><a href="/tags">By Tags</a></li>
                     <li><a href="/series">By Series</a></li>
                 </ul>
-            </details>
+            </div>
         </li>
-        <li>
-            <details class="details-popup">
-                <summary>Others</summary>
+        <li class="nav-link">
+            <div class="discoverable-list">
+                <input type="checkbox" id="toggle-other-stuff-list" role="navigation" aria-roledescription="Check to open 'Other Stuff' navigation list">
+                <label for="toggle-other-stuff-list" title="Click the hidden checkbox to open this list">Other Stuff</label>
                 <ul>
                     <li><a href="https://neocities.org/site/kunfucutsman">Neocities Profile</a></li>
                     <li><a href="/sitemap">Site Map</a></li>
                     <li><a href="/changelog">Change Log</a></li>
                 </ul>
-            </details>
+            </div>
         </li>
     </ul>
 </nav>
