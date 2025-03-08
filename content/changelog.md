@@ -61,3 +61,4 @@ ExcludeArticleData: true
 -   15/Feb/2025: Changed images from content boxes to figures
 -   20/Feb/2025: Home page no longer breaks since I used container queries. Home page layout changes.
 -   08/Mar/2025: Changed navbar so it isn't just a gray bar
+-   08/Mar/2025: Modified html layout of home page so it is congrouent with how it is displayed in the grid
