@@ -13,7 +13,7 @@ Params:
 
 includeTOC: true
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Hey guess what!
