@@ -6,6 +6,7 @@ summary: It's raining.
 tags:
     - Right Now
     - Written Too Quickly
+    - Wheather Update
 
 Params:
     Stylesheets:
