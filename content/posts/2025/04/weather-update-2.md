@@ -28,7 +28,7 @@ Thankfully tempetures lower after 2pm, and surprisingly tonight is relatively co
 
 ---
 
-Hi! Welcome to the third entry of [Weather Update!]({{< ref "tags/wheather-update" >}}) I've decided to formalize these types of posts into posts where I share the thoughts I've had over the week, that _could_ be shared with something like `status.cafe` but I'm too lazy to setup an account so you're recieving all of these in a single entry. How convinient!
+Hi! Welcome to the third entry of [Weather Update!](/tags/wheather-update) I've decided to formalize these types of posts into posts where I share the thoughts I've had over the week, that _could_ be shared with something like `status.cafe` but I'm too lazy to setup an account so you're recieving all of these in a single entry. How convinient!
 
 Anyway, first stuff on the list: I got new glasses!
 
