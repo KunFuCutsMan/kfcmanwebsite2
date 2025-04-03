@@ -1,5 +1,5 @@
 ---
-title: Wheather Update
+title: Weather Update
 ---
 
 Posts which generally follow the format of scattered thoughts separed by line breaks.

@@ -6,7 +6,7 @@ summary: I got whitened. Also I have a LOT to write about.
 tags:
     - Personal
     - Right Now
-    - Wheather Update
+    - Weather Update
 
 Params:
     Stylesheets:
