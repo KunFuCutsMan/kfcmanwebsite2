@@ -35,6 +35,12 @@
 {{- end }}
 {{- end }}
 
+{{- range $script := .Page.Params.BigScripts }}
+{{ with resources.Get $script | js.Build -}}
+<script src="{{.RelPermalink}}" defer></script>
+{{- end }}
+{{- end }}
+
 {{- with resources.Get "/assets/js/events.js" -}}
 <script src="{{.RelPermalink}}" defer></script>
 {{- end }}
