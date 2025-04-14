@@ -6,6 +6,7 @@
     "dev": "hugo server --noHTTPCache -D",
     "preview": "hugo server",
     "new:post": "hugo new content content/posts/%npm_config_path%/index.md",
+    "new:quick-post": "hugo new content content/posts/%npm_config_path%.md",
     "new:series": "hugo new content --kind series content/posts/%npm_config_path%/index.md",
     "new:writing": "hugo new content --kind writing content/fun/%npm_config_path%/chapter-%npm_config_chapter%.md"
   }

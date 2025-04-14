@@ -60,12 +60,31 @@
         },
         {
             "link": "https://angelnetcast.neocities.org/",
+            "image": "angelnetcast.gif",
             "site": "AngelNetCast"
         },
         {
             "link": "https://16bitlemonade.neocities.org/",
             "image": "lem_button.gif",
             "site": "16BitLemonade"
+        },
+        {
+            "link": "https://aistes.neocities.org/",
+            "site": "Aistes"
+        },
+        {
+            "link": "https://nicegirlslumber.neocities.org/",
+            "image": "nicegirlslumberbutton.png",
+            "site": "Nice Girl Slumber"
+        },
+        {
+            "link": "https://a-rainy-mess.neocities.org/",
+            "site": "A Rainy Mess"
+        },
+        {
+            "link": "https://tofutush.neocities.org/",
+            "site": "The Iron Ragdoll",
+            "image": "tofutush.gif"
         }
     ],
     "sites": [
@@ -123,6 +142,11 @@
             "link": "https://doritochan001.neocities.org/",
             "image": "doritochan001coolbuttonhehe.gif",
             "site": "DoritoChan001"
+        },
+        {
+            "link": "https://compactbunker.org",
+            "image": "computerbunker.gif",
+            "site": "Computer Bunker"
         }
     ]
 }

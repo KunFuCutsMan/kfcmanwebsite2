@@ -16,8 +16,6 @@ This is my website!
 
 Also...
 
-**CHECK OUT THE NEW FUN SECTION! YOU CAN FIND RIGHT [HERE](/fun)** (temporary link)
-
 ## Now what.
 
 I don't know what to put in here. I suppose I can give you some things about myself:

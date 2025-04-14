@@ -12,4 +12,4 @@ Welcome to my blog posts! Here I write anything I want, whenever I want, because
 
 This page includes everything arranged in a nice column, but you can also search by [tags](/tags) or by any [series](/series) I've written.
 
-![KFCMan doing CRUD operations](./kfcman-crud-operations.png)
+![](./kfcman-crud-operations.png)

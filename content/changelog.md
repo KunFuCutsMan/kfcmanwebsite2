@@ -55,3 +55,10 @@ ExcludeArticleData: true
 -   26/Dic/2024: Moved all assets to a `/assets` folder where everything can sit there nicely
 -   7/Jan/2025: Removed christmas decorations & music player
 -   14/Jan/2025: Fixed rendering error in the about me page after I upgrated hugo. Should be fine now
+-   21/Jan/2025: Added a [fun](/fun) section where I add anything that is not related to a post
+-   21/Jan/2025: Added old stories I made for a roblox library on the fun section
+-   24/Jan/2025: Modified nav to include fun section
+-   15/Feb/2025: Changed images from content boxes to figures
+-   20/Feb/2025: Home page no longer breaks since I used container queries. Home page layout changes.
+-   08/Mar/2025: Changed navbar so it isn't just a gray bar
+-   08/Mar/2025: Modified html layout of home page so it is congrouent with how it is displayed in the grid

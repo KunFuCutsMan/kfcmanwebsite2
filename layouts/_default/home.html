@@ -6,7 +6,7 @@
                 <h1>{{ .Params.LandingTitle }}</h1>
                 <small>{{ .Params.LandingSubtitle }}</small>
             </div>
-            <div class="image-holder">
+            <div>
                 <img src="/assets/images/kfcman wave.png" alt="">
             </div>
         </header>
@@ -32,6 +32,11 @@
         </div>
     </aside>
 
+    <section data-area="latest-post" class="frame">
+        <h2>Latest Blog Post!</h2>
+        {{ partial "home/latest-post.html" . }}
+    </section>
+
     <aside data-area="link-me" class="frame column-with-space">
         <h2>Link me!</h2>
 
@@ -44,10 +49,5 @@
         <h2>CBox!</h2>
         {{ partial "cbox.html" . }}
     </aside>
-
-    <section data-area="latest-post" class="frame">
-        <h2>Latest Blog Post!</h2>
-        {{ partial "home/latest-post.html" . }}
-    </section>
 </div>
 {{end}}
