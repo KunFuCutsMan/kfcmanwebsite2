@@ -30,13 +30,7 @@
 {{- end }}
 
 {{ range $script := .Page.Params.Scripts }}
-{{ with resources.Get (printf "/assets/js/%s" $script) -}}
-<script src="{{.RelPermalink}}" defer></script>
-{{- end }}
-{{- end }}
-
-{{- range $script := .Page.Params.BigScripts }}
-{{ with resources.Get $script | js.Build -}}
+{{ with resources.Get (printf "/assets/js/%s" $script) | js.Build -}}
 <script src="{{.RelPermalink}}" defer></script>
 {{- end }}
 {{- end }}
