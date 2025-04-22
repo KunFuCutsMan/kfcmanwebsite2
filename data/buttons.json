@@ -147,6 +147,15 @@
             "link": "https://compactbunker.org",
             "image": "computerbunker.gif",
             "site": "Computer Bunker"
+        },
+        {
+            "site": "Astra Per Writes",
+            "link": "https://per-astra-writes.neocities.org/"
+        },
+        {
+            "site": "VanillaMilkShake",
+            "link": "https://vanillamilkshake.neocities.org/",
+            "image": "vanillamilkshake.png"
         }
     ]
 }
