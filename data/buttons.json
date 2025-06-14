@@ -93,6 +93,11 @@
         {
             "link": "https://thelesserword.neocities.org/",
             "site": "The Lesser Word"
+        },
+        {
+            "site": "Saturn Serkel",
+            "image": "saturnserkel.png",
+            "link": "https://saturnserkel.neocities.org/"
         }
     ],
     "sites": [
