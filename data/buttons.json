@@ -98,6 +98,11 @@
             "site": "Saturn Serkel",
             "image": "saturnserkel.png",
             "link": "https://saturnserkel.neocities.org/"
+        },
+        {
+            "site": "VanillaMilkShake",
+            "link": "https://vanillamilkshake.neocities.org/",
+            "image": "vanillamilkshake.png"
         }
     ],
     "sites": [
@@ -165,11 +170,6 @@
             "site": "Astra Per Writes",
             "link": "https://per-astra-writes.neocities.org/",
             "image": "perwrites.png"
-        },
-        {
-            "site": "VanillaMilkShake",
-            "link": "https://vanillamilkshake.neocities.org/",
-            "image": "vanillamilkshake.png"
         }
     ]
 }
