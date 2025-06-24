@@ -1,12 +1,16 @@
 {
   "name": "kfcmanwebsite2",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "dev": "hugo server --noHTTPCache -D",
+    "preview": "hugo server",
     "new:post": "hugo new content content/posts/%npm_config_path%/index.md",
     "new:quick-post": "hugo new content content/posts/%npm_config_path%.md",
     "new:series": "hugo new content --kind series content/posts/%npm_config_path%/index.md",
-    "new:writing": "hugo new content --kind writing content/fun/%npm_config_path%/chapter-%npm_config_chapter%.md",
-    "preview": "hugo server"
+    "new:writing": "hugo new content --kind writing content/fun/%npm_config_path%/chapter-%npm_config_chapter%.md"
   },
-  "version": "1.0.0"
+  "dependencies": {
+    "robot-master-maker": "^1.0.0"
+  }
 }

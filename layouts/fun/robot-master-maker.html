@@ -6,4 +6,14 @@
 
     <div class="div" id="robot-master-maker"></div>
 </main>
+
+
+
+{{- $externals := slice "robot-master-maker" -}}
+{{- $opts := dict "externals" $externals "minify" false }}
+{{- with resources.Get "/assets/js/rmm.js" | js.Build $opts -}}
+<script type="module" src="{{.RelPermalink}}" defer></script>
+{{- end }}
+
+
 {{end}}

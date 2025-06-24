@@ -9,8 +9,7 @@ Params:
     thumbnailDesc: asasasa
     Stylesheets:
         - content.css
-    Scripts:
-        - /rmm/index.js
+        - robot-master-maker.css
 
 draft: false
 ---
@@ -37,20 +36,14 @@ As my schemes will be undenyingly successful, I, in my gracious mercy, have this
 The deal is simple.
 
 1. Utilize my patented **Digital Robot Master Maker™** of your own liking that will ~~secretly inject some code in to your website~~ _guard_ your website agaisnt any unwanted visitors
-2. Once done, click the copy button below to gain access to a script tag that YOU can place ANYWHERE on your website
+2. Once done, click the copy button below to gain access to an HTML snippet that YOU can place ANYWHERE on your website
     - Preferably on the home page so everyone can see MY GLORIOUS INGENIOUS
-3. Place the script tag somewhere inside your body, and let my code handle everything for you!
+3. Insert the image of your Digital Robot Master on the snippet, and done!
 
 Don't like it? **_Too bad!_** Soon all the internet will BE MINE! Surrender now, or else...
 
 {{% small %}}You may not wanna now...{{% /small %}}
 
 ## This is Dr. Wily, signing out!
-
-{{% details "Actual instructions" %}}
-
-???
-
-{{% /details %}}
 
 ---
