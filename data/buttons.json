@@ -103,6 +103,16 @@
             "site": "VanillaMilkShake",
             "link": "https://vanillamilkshake.neocities.org/",
             "image": "vanillamilkshake.png"
+        },
+        {
+            "site": "Maguro Caravan",
+            "link": "https://maguro-caravan.neocities.org/",
+            "image": "maguro-button.gif"
+        },
+        {
+            "site": "Kyu Channel",
+            "link": "https://kyu.channel",
+            "image": "kyuchannel.gif"
         }
     ],
     "sites": [
