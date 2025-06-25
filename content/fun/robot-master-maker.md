@@ -3,6 +3,7 @@ title: Robot Master Maker
 layout: robot-master-maker
 
 Summary: Make your own Robot Master to guard your Website ~~and secretely take over it too~~
+publishDate: "2025-06-26"
 
 Params:
     thumbnail: robot-master-icon.png

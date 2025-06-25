@@ -16,9 +16,13 @@ This is my website!
 
 Also...
 
-## Now what.
+# IT'S MY WEBSITE'S 1 YEAR ANNIVERSARY!!!
 
-I don't know what to put in here. I suppose I can give you some things about myself:
+![](https://media1.tenor.com/m/2p58EvPRdN8AAAAC/robot-master-boss.gif)
+
+I made this thingy for it, [be sure to check it out!](/fun/robot-master-maker)
+
+Also, I suppose I can give you some things about myself:
 
 ### TLDR:
 
