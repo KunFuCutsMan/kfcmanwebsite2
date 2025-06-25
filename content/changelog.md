@@ -62,3 +62,4 @@ ExcludeArticleData: true
 -   20/Feb/2025: Home page no longer breaks since I used container queries. Home page layout changes.
 -   08/Mar/2025: Changed navbar so it isn't just a gray bar
 -   08/Mar/2025: Modified html layout of home page so it is congrouent with how it is displayed in the grid
+-   24/Jun/2025: Added [Robot Master Maker](/fun/robot-master-maker)
