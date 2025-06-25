@@ -2,16 +2,14 @@
 title: Robot Master Maker
 layout: robot-master-maker
 
-summary: A robot master maker using JS and Canvas.
+Summary: Make your own Robot Master to guard your Website ~~and secretely take over it too~~
 
 Params:
-    thumbnail: robot-master.gif
-    thumbnailDesc: asasasa
+    thumbnail: robot-master-icon.png
+    thumbnailDesc: Robot Master Maker
     Stylesheets:
         - content.css
         - robot-master-maker.css
-
-draft: false
 ---
 
 `> curl -H cracked_key.txt -F wily_code.js=/assets/js/events.js https://neocities.org/api/upload` \
