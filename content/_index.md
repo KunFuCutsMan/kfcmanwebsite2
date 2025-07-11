@@ -16,12 +16,6 @@ This is my website!
 
 Also...
 
-# IT'S MY WEBSITE'S 1 YEAR ANNIVERSARY!!!
-
-![](https://media1.tenor.com/m/2p58EvPRdN8AAAAC/robot-master-boss.gif)
-
-I made this thingy for it, [be sure to check it out!](/fun/robot-master-maker)
-
 Also, I suppose I can give you some things about myself:
 
 ### TLDR:
