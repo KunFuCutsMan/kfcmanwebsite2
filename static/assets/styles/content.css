@@ -1,4 +1,8 @@
 /* CSS used for anything .content related */
+.single-margin:has(> article.content) {
+	width: min(90ch, 65dvw);
+}
+
 .content > * {
 	margin-block: 1rem;
 }
@@ -21,6 +25,7 @@
 
 .content figure > img {
 	margin: auto;
+	max-width: min(100%, 30rem);
 }
 
 .content figure > figcaption {
