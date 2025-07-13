@@ -19420,7 +19420,8 @@ class CanvasController {
     ];
   }
   async cropRobotMaster() {
-    return await (await Jimp.fromBitmap(this.ctx.getImageData(0, 0, this.canvasWidth, this.canvasHeight))).autocrop({ leaveBorder: 1 });
+    const g = await (await Jimp.fromBitmap(this.ctx.getImageData(0, 0, this.canvasWidth, this.canvasHeight))).autocrop({ leaveBorder: 1 });
+    return g.scale({ f: 2, mode: ResizeStrategy.NEAREST_NEIGHBOR }), g;
   }
 }
 Ue = new WeakMap(), Ze = new WeakMap(), $e = new WeakMap();
@@ -19473,31 +19474,31 @@ function ColorChangerModal(d, m) {
   append(d, g), pop();
 }
 delegate(["click"]);
-var on_click$3 = (d, m) => m.close(), root_1$4 = /* @__PURE__ */ template(`<div role="dialog" class="modal svelte-1aqyc36"><section class="surface-0 svelte-1aqyc36"><div class="content svelte-1aqyc36"><h1 class="svelte-1aqyc36">What is this?</h1> <p class="svelte-1aqyc36">Hello! KFCMan here! For my one year anniversary I decided to
+var on_click$3 = (d, m) => m.close(), root_1$4 = /* @__PURE__ */ template(`<div role="dialog" class="modal svelte-1pr3m0v"><section class="surface-0 svelte-1pr3m0v"><div class="content svelte-1pr3m0v"><h1 class="svelte-1pr3m0v">What is this?</h1> <p class="svelte-1pr3m0v">Hello! KFCMan here! For my one year anniversary I decided to
                     make a widget for you to place on your server. Seeing as
                     there are no mega-man themed stuff (at least from what I
-                    research), I thought to myself, why not make something?</p> <p class="svelte-1aqyc36">And here we are! It took me months to develop this, hope you
-                    like it!</p> <h2 class="svelte-1aqyc36">How do I use this?</h2> <p class="svelte-1aqyc36">There are two sections in this widget:</p> <ol class="svelte-1aqyc36"><li>Robot Master Panel</li> <li>Parts Modifier</li></ol> <p class="svelte-1aqyc36">The <b>Robot Master Panel</b> is a 64x64 canvas, showing the
-                    constructed robot master that you made. Simple as that.</p> <p class="svelte-1aqyc36">The <b>Parts Modifier</b>, meanwhile, are where you edit
+                    research), I thought to myself, why not make something?</p> <p class="svelte-1pr3m0v">And here we are! It took me months to develop this, hope you
+                    like it!</p> <h2 class="svelte-1pr3m0v">How do I use this?</h2> <p class="svelte-1pr3m0v">There are two sections in this widget:</p> <ol class="svelte-1pr3m0v"><li>Robot Master Panel</li> <li>Parts Modifier</li></ol> <p class="svelte-1pr3m0v">The <b>Robot Master Panel</b> is a 64x64 canvas, showing the
+                    constructed robot master that you made. Simple as that.</p> <p class="svelte-1pr3m0v">The <b>Parts Modifier</b>, meanwhile, are where you edit
                     every part of your Robot Master. Each one modifies the type,
                     position, and color of each part of your Robot Master, and
-                    they're displayed on the Robot Master Panel.</p> <p class="svelte-1aqyc36">The Robot Master Parts were <del>stolen</del> borrowed from Robot
+                    they're displayed on the Robot Master Panel.</p> <p class="svelte-1pr3m0v">The Robot Master Parts were <del>stolen</del> borrowed from Robot
                     Masters from the classic saga, so mix and match whatever you
-                    feel fits best.</p> <p class="svelte-1aqyc36">Keep in mind that the order they're showed in, also
+                    feel fits best.</p> <p class="svelte-1pr3m0v">Keep in mind that the order they're showed in, also
                     represents where their "layer" is located relative to the
                     other parts. The head is the top layer, then the arms,
                     chest, pants, and finally the legs. Also, some parts may be
                     missing as they were not located on the original Robot
-                    Master designs.</p> <p class="svelte-1aqyc36">Once you're done, click the Export button download the Robot
+                    Master designs.</p> <p class="svelte-1pr3m0v">Once you're done, click the Export button download the Robot
                     Master you created, along with a widget for you to copy
-                    somewhere on your site.</p> <p class="svelte-1aqyc36"></p></div> <button aria-label="Close Dialog" class="surface-1 svelte-1aqyc36">X</button></section></div>`);
+                    somewhere on your site.</p> <p class="svelte-1pr3m0v"></p> <h2 class="svelte-1pr3m0v">Changelog</h2> <ul class="svelte-1pr3m0v"><li><b>1.0.0:</b> Initial launch</li> <li><b>1.0.1:</b> Doubled size of export Robot Master</li></ul></div> <button aria-label="Close Dialog" class="surface-1 svelte-1pr3m0v">X</button></section></div>`);
 function InformationModal(d, m) {
   push(m, !0);
   var g = comment(), w = first_child(g);
   {
     var I = (P) => {
       var F = root_1$4(), D = child(F), U = child(D), Z = sibling(child(U), 22);
-      Z.textContent = "V1.0.0";
+      Z.textContent = "V1.0.1";
       var $ = sibling(U, 2);
       $.__click = [on_click$3, m], append(P, F);
     };
