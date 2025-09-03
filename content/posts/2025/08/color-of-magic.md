@@ -1,6 +1,6 @@
 ---
 title: "The book that talks about the color of Magic"
-date: "2025-18-02T21:34:35-06:00"
+date: "2025-08-22T21:00:00-06:00"
 summary: AKA KFMan gives his opinion about Terry Pratchet's Discworld 01
 
 tags:
@@ -131,6 +131,8 @@ Somewhere along these events we get introduced to my favorite chapter of the boo
 > Hrun was one of the Circle Sea’s more durable heroes: a fighter of dragons, a despoiler of temples, a hired sword, the kingpost
 > of every street brawl. He could even—and unlike many heroes of Rincewind’s acquaintance—speak words of more than two syllables,
 > if given time and maybe a hint or two.
+>
+> \- The Color of Magic (Chapter 2: The Sending of Eight)
 
 Hrun is the ultimate expression of a sword-and-spell adventurer, has gone through dozens of dungeons, is _absolutely covered_ in
 gold, only wears a stolen liepard, and has a talking sword named **Kring**, who is my _second_ favorite character from the book.
@@ -150,7 +152,9 @@ acts almost like a Wheatley, without the betray stuff, and is overall a pretty n
 
 Very funny
 
-[1]: During Chapter 3 we will notice that Rincewind is more cowardly
-[2]: Death also appeared during Twoflower's kidnapping last chapter, but I didn't mention him. According to Discworld lore,
-he must collect any wizards' souls directly. That's the price of learning magic.
-[3]: See Chapter 3
+[^1]: During Chapter 3 we will notice that Rincewind is more cowardly
+[^2]:
+    Death also appeared during Twoflower's kidnapping last chapter, but I didn't mention him. According to Discworld lore,
+    he must collect any wizards' souls directly. That's the price of learning magic.
+
+[^3]: See Chapter 3

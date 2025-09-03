@@ -32,6 +32,7 @@ disableKinds = ['sitemap']
 
 [markup.goldmark.extensions]
     strikethrough = false
+    footnote = true
 
 [markup.goldmark.extensions.extras.delete]
     enable = true
