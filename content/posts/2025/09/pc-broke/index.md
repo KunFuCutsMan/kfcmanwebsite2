@@ -1,7 +1,7 @@
 ---
 title: My PC broke
 summary: I'm mobile-only now
-date: "2025-09-11T10:16:22-06-00"
+date: "2025-09-11T10:16:00-06:00"
 
 tags:
     - Right Now
