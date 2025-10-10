@@ -20,7 +20,7 @@ Also, I suppose I can give you some things about myself:
 
 ### TLDR:
 
--   As of **[[Oct 5th, 2024]]**, I am 19 years old
+-   As of **[[Oct 5th, 2025]]**, I am 20 years old
 -   I'm from Mexico and proud to be a [jarocho](<https://en.wikipedia.org/wiki/Veracruz_(city)>)
 -   I learnt English from _way too many_ Minecraft parody songs
     -   I do mean, _way too many_
