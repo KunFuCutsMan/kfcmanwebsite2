@@ -5,6 +5,7 @@ summary: Some cool photos I collected over last week
 
 tags:
     - Right Now
+    - No tags I guess
 
 Params:
     Stylesheets:
