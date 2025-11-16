@@ -12,7 +12,7 @@ Params:
 
 includeTOC: false
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 That summary got you into clicking, right? ~Right?~
