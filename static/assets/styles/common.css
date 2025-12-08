@@ -107,8 +107,8 @@ small {
 }
 
 @media (max-width: 720px) {
-	h1 {font-size: 3rem; }
-	h2 {font-size: 2.369rem; }
+	h1 {font-size: 2.5rem; }
+	h2 {font-size: 2.1rem; }
 	h3 {font-size: 1.777rem; }
 	h4 {font-size: 1.333rem; }
 	h5 {font-size: 1.111rem; }
@@ -376,7 +376,7 @@ a:is( :hover, :focus ) { color: var(--blue-600); }
 .single-margin {
 	margin-block: 4rem;
 	margin-inline: auto;
-	width: max(10rem, 80dvw);
+	width: max(10rem, 90dvw);
 }
 
 .inline-list {

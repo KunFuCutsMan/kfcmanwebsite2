@@ -1,6 +1,8 @@
 /* CSS used for anything .content related */
-.single-margin:has(> article.content) {
-	width: min(90ch, 65dvw);
+@media (min-width: 720px) {
+	.single-margin:has(> article.content) {
+		width: min(90ch, 65dvw);
+	}
 }
 
 .content > * {
