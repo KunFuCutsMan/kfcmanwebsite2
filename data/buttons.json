@@ -1,3 +1,4 @@
+
 {
     "neighbors": [
         {
@@ -56,7 +57,7 @@
         },
         {
             "link": "https://flying-with-quills.neocities.org/",
-            "site": "Flying With Quills"
+            "site": "Kyrie Yaerenzo"
         },
         {
             "link": "https://angelnetcast.neocities.org/",
@@ -87,9 +88,9 @@
             "image": "tofutush.gif"
         },
         {
-            "link": "https://phelah.neocities.org/",
-            "image": "PhelahRetroButton.png",
-            "site": "Phelah"
+            "site": "Phelah",
+            "link": "https://phelah.nekoweb.org/",
+            "image": "PhelahRetroButton.png"
         },
         {
             "link": "https://thelesserword.neocities.org/",
@@ -124,6 +125,20 @@
             "site": "Corvus Nidum",
             "link": "https://corvus-nidum.neocities.org/",
             "image": "corvus-nidum.png"
+        },
+        {
+            "site": "Devhank",
+            "link": "https://devhank.neocities.org/",
+            "image": "devHANkButton.png"
+        },
+        {
+            "site": "VHSManorite",
+            "link": "https://vhsmaronite.neocities.org/",
+            "image": "vhsmaronbutton1.gif"
+        },
+        {
+            "site": "Java08",
+            "link": "https://java08.neocities.org/"
         }
     ],
     "sites": [
@@ -195,6 +210,39 @@
         {
             "site": "Pokemon Safari Center",
             "link": "https://pokemonsafaricenter.neocities.org"
+        },
+
+        {
+            "site": "Cosmic Calamari",
+            "link": "https://cosmic-calamari.neocities.org/",
+            "image": "cosmic_88_31.gif"
+        },{
+            "site": "Starry Knight",
+            "link": "https://starry-knight.neocities.org/",
+            "image": "button-starrys-grove.png"
+        },{
+            "site": "Elswhere",
+            "link": "https://elswhere.neocities.org/",
+            "image": "elswhere-button.gif"
+        },{
+            "site": "Wiwy",
+            "link": "https://wiwy.neocities.org/",
+            "image": "wiwy.gif"
+        },
+        {
+            "site": "Joner Nation",
+            "link": "https://j0ner.neocities.org/",
+            "image": "jonerButton.gif"
+        },
+        {
+            "site": "Soul Maze",
+            "link": "https://soulmaze.neocities.org/",
+            "image": "soulmazebanner.gif"
+        },
+        {
+            "site": "Gold Hill Mall",
+            "link": "https://goldhillmall.neocities.org//",
+            "image": "goldhillmallbanner.gif"
         }
     ]
 }
