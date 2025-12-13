@@ -33,7 +33,12 @@ Then the waiter brought the Croassant Cubos to our table and I was both surprise
 
 ![Pistachio "Croassant Cubo"](quaso.png)
 
-That's right. **It's a cube.**
+{{< figure
+    src="./quaso.png"
+    alt="Pictachio Crosssant Cubo"
+    title="Pistachio Croassant Cubo"
+    caption="As it turns out, a 'Cubo' is what it says on the label."
+>}}
 
 The "cubo" part of "Croassant Cubo" is simply "Cube", as in, the shape of the bread.
 
@@ -52,4 +57,4 @@ It also means I got like 30+ hours for free, around 15% of the hours I need to f
 
 It was a great choice to join PADIEER.
 
-That should be everything for now. Good morning, good evening and _good night!_
+That should be everything for now. Good morning, good evening and _good night!
