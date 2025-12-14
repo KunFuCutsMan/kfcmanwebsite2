@@ -31,11 +31,9 @@ Anyway, my sister ordered a hot cocoa and a "Croassant Cubo", and I ordered the 
 
 Then the waiter brought the Croassant Cubos to our table and I was both surprised and dissapointed. The following is the one my sister ordered.
 
-![Pistachio "Croassant Cubo"](quaso.png)
-
 {{< figure
     src="./quaso.png"
-    alt="Pictachio Crosssant Cubo"
+    alt="Pistachio Crosssant Cubo"
     title="Pistachio Croassant Cubo"
     caption="As it turns out, a 'Cubo' is what it says on the label."
 >}}

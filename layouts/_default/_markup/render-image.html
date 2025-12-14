@@ -1,6 +1,0 @@
-<figure>
-    <img src="{{ .Destination | safeURL }}"
-    {{- with .Text }} alt= "{{ . }}"{{ end -}}
-    {{- with .Title }} title="{{ . }}"{{ end -}}>
-    <figcaption>{{ default .Text .Title }}</figcaption>
-</figure>
