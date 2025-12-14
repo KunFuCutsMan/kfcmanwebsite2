@@ -36,6 +36,7 @@ Then the waiter brought the Croassant Cubos to our table and I was both surprise
     alt="Pistachio Crosssant Cubo"
     title="Pistachio Croassant Cubo"
     caption="As it turns out, a 'Cubo' is what it says on the label."
+    hint="picture"
 >}}
 
 The "cubo" part of "Croassant Cubo" is simply "Cube", as in, the shape of the bread.
