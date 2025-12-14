@@ -2,8 +2,6 @@
   FIGURE SHORTCODE - See https://gohugo.io/shortcodes/figure/#arguments
   - src: The src attribute of the argument. Just link the image as normal
   - alt: Attribute of the img element
-  - width: Attribute of the img element
-  - height: Attribute of the img element
   - loading: Attribute of the img element
   - class: Attribute of the figure element
   - link: Href of hyperlink wrapping the img element
@@ -36,7 +34,8 @@
 
     {{- with $img := (or (.Page.Resources.Get $u.Path) (resources.Get $u.Path)) -}}
       {{- $reduceHeight := "" -}}
-      {{- if true -}}
+      <!-- If it's a tall image then shorten it -->
+      {{- if ge $img.Height ( math.Mul $img.Width 1.5 ) -}}
         {{- $reduceHeight = "resize x500" -}}
       {{- end -}}
 
@@ -49,8 +48,6 @@
     {{- if or (.Get "alt") (.Get "caption") }}
     alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
     {{- end -}}
-    {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
   ><!-- Closing img tag -->
   {{- if .Get "link" }}</a>{{ end -}}
