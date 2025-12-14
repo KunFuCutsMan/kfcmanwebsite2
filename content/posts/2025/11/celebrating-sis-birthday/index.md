@@ -33,7 +33,6 @@ Then the waiter brought the Croassant Cubos to our table and I was both surprise
 
 {{< figure
     src="./quaso.png"
-    alt="Pistachio Crosssant Cubo"
     title="Pistachio Croassant Cubo"
     caption="As it turns out, a 'Cubo' is what it says on the label."
     hint="picture"

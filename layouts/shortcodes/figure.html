@@ -30,12 +30,18 @@
   {{- $u := urls.Parse (.Get "src") -}}
   {{- $src := $u.String -}}
   {{- if not $u.IsAbs -}}
+    <!-- If its a local image target to webp. Gotta save resources man. -->
     {{- $hint := "photo" -}}
     {{- with .Get "hint" -}}{{- $hint = . -}}{{- end -}}
-    {{- $filter := images.Process "webp" -}}
-    {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
-      {{- $filtered := . | images.Filter $filter -}}
-      {{- $src = $filtered.RelPermalink -}}
+
+    {{- with $img := (or (.Page.Resources.Get $u.Path) (resources.Get $u.Path)) -}}
+      {{- $reduceHeight := "" -}}
+      {{- if true -}}
+        {{- $reduceHeight = "resize x500" -}}
+      {{- end -}}
+
+      {{- $img = $img.Process (println $reduceHeight "webp" $hint) -}}
+      {{- $src = $img.RelPermalink -}}
     {{- end -}}
   {{- end -}}
 
