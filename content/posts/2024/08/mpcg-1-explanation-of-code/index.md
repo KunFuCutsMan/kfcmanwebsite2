@@ -17,7 +17,7 @@ includeTOC: true
 draft: false
 ---
 
-<small>(Oh boy this is going to be a big article that's not going to take me 10 minutes to write)</small>
+~(Oh boy this is going to be a big article that's not going to take me 10 minutes to write)~
 
 Greetings! During my summer vacations I participated in building a Pai Sho fangame into something playable. After finishing it I wanted to share my knowledge for any other people who have their own games of their own.
 
@@ -31,23 +31,22 @@ One of the best iterations of Pai Sho I've ever seen its [Skud Pai Sho](https://
 
 Other variants which have spawned from Skud's works include:
 
--   Fire Pai Sho: A quicker version of Skud where tiles are drawn randomly
--   Vagabond Pai Sho: A capture game where tiles are progressively arranged in to an arena in order to capture the opponent's lotus. Inspired by the fan fiction [Gambler and Vagabond](https://skudpaisho.com/site/more/fanfiction-recommendations/)
--   Adevar Pai Sho: Through cunning, discover your opponent's secret objective without letting them know about yours!
--   Gingseng Pai Sho: Advance your lotus tile through the board with the help of your tiles' abilities.
--   Spirit Pai Sho: A simple capture game that is actually a rework of another variant called Capture Pai Sho.
+- Fire Pai Sho: A quicker version of Skud where tiles are drawn randomly
+- Vagabond Pai Sho: A capture game where tiles are progressively arranged in to an arena in order to capture the opponent's lotus. Inspired by the fan fiction [Gambler and Vagabond](https://skudpaisho.com/site/more/fanfiction-recommendations/)
+- Adevar Pai Sho: Through cunning, discover your opponent's secret objective without letting them know about yours!
+- Gingseng Pai Sho: Advance your lotus tile through the board with the help of your tiles' abilities.
+- Spirit Pai Sho: A simple capture game that is actually a rework of another variant called Capture Pai Sho.
 
 And of course all the other variants that have been developed over the years in the community's discord!
 
-One of these games is called **Wuxing Pai Sho**, made by discord member IndigoGollum (original rule set can be found [here](https://cryptpad.fr/pad/#/2/pad/view/FEjm1WEWn9Sqex9hBOxzBLWcUa0Gb+cLHwAOOY+3-Mg/)) and later continued and refined by Leaves113. Later I took on the challenge of try to code the game in to skudpaisho.com and three months later we're already here!
+One of these games is called **Wuxing Pai Sho**, made by discord member IndigoGollum (original rule set can be [found here](https://cryptpad.fr/pad/#/2/pad/view/FEjm1WEWn9Sqex9hBOxzBLWcUa0Gb+cLHwAOOY+3-Mg/)) and later continued and refined by Leaves113. Later I took on the challenge of try to code the game in to skudpaisho.com and three months later we're already here!
 
 Due to Indigo's fork policy, I had to rename Leaves' variant to **Godai Pai Sho**, as suggested by another discord member Awyrlas. Godai is the japanese name for the 5-element chinese system called Wuxing.
 
 Here are some relevant links:
 
-> **Godai Pai Sho Ruleset:** [Click here](https://docs.google.com/document/d/1wxZP9MV1EUS8_nWkqGfuPItE225ued1y-fFrFNw6dXU/edit?usp=sharing)
-
-> **Godai Pai Sho Code:** [Click here](https://github.com/KunFuCutsMan/SkudPaiSho/tree/wuxing-pai-sho)
+- Godai Pai Sho [Ruleset here](https://docs.google.com/document/d/1wxZP9MV1EUS8_nWkqGfuPItE225ued1y-fFrFNw6dXU/edit?usp=sharing)
+- Godai Pai Sho Code: [Code here](https://github.com/KunFuCutsMan/SkudPaiSho/tree/wuxing-pai-sho)
 
 In this article we're only going to cover the explanation of the code, and a general overview of what everything does. Starting with:
 
@@ -361,7 +360,7 @@ namespace PaiShoCommon {
 
 ## Classes
 
-Do note that generally, all the classes are actually called [Variant Name][Class Name], for example `Controller` in Vagabond is called `VagabondController`. I will refering to the classes are their class name excluding the variant, to make it easier for everybody. Make sure to name your classes with your variant's name prefixed to them.
+Do note that generally, all the classes are actually called \[Variant Name]\[Class Name], for example `Controller` in Vagabond is called `VagabondController`. I will refering to the classes are their class name excluding the variant, to make it easier for everybody. Make sure to name your classes with your variant's name prefixed to them.
 
 I have also classified the classes in to what they do; despite what the diagram may indicate, all of the classes (aside the ones labeled inside `PaiShoCommon`) are in the same directory and are not seperated into packages.
 
@@ -379,9 +378,9 @@ Within the main code, the current `Controller` is saved in a global variable tha
 
 These are the methods that I find most important for you to understand:
 
--   **`unplayedTileClicked(tileDiv)`:** This method is called when you click on a tile that is located in a player's library, and sets the game's status to a deploy tile state through `NotationBuilder` and `GameManager`.
--   **`pointClicked(htmlPoint)`:** This method is called when any point on the board is clicked. After parsing the data of the point (as it is a div with its coordinates as its name), it either calls the `GameManager` to show the possible movements of a tile (if there's any on that point), or plays a move on the board based on the movements shown previously, and submits the move made.
--   **`Controller.getHostTilesContainerDivs() & Controller.getGuestTilesContainerDivs()`**: Despite being static methods only returning a string, they actually hold the structure of the tile libraries.
+- **`unplayedTileClicked(tileDiv)`:** This method is called when you click on a tile that is located in a player's library, and sets the game's status to a deploy tile state through `NotationBuilder` and `GameManager`.
+- **`pointClicked(htmlPoint)`:** This method is called when any point on the board is clicked. After parsing the data of the point (as it is a div with its coordinates as its name), it either calls the `GameManager` to show the possible movements of a tile (if there's any on that point), or plays a move on the board based on the movements shown previously, and submits the move made.
+- **`Controller.getHostTilesContainerDivs() & Controller.getGuestTilesContainerDivs()`**: Despite being static methods only returning a string, they actually hold the structure of the tile libraries.
 
 This is what host's tile library looks like, for example:
 

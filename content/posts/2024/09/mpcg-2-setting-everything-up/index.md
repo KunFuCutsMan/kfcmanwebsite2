@@ -47,7 +47,10 @@ Now, the process is relatively simple, which because I'm lazy I'll just link Git
 
 The end result should give you a fork like the following:
 
-![Forked repo](./forked-repo.png)
+{{<figure
+    src="./forked-repo.png"
+    alt="Forked repo"
+>}}
 
 You also need to get a local copy in your computer so you can test everything, so that by copying the repository on your computer using git. That is also on the guide I referenced earlier.
 
@@ -159,9 +162,12 @@ npm run start
 
 And watch as your browser of preference greets you with...
 
-## Behold! A forked website!
+## Behold! A forked website
 
-![A forked site!](./skud-paisho-site.png)
+{{<figure
+    src="./skud-paisho-site.png"
+    caption="A forked website!"
+>}}
 
 **A 1 IN 5 CHANCE OF YOUR SITE BREAKING BECAUSE IT STARTED WITH GINSENG PAI SHO!**
 
@@ -172,9 +178,11 @@ I also have some things to clarify here:
     - When in doubt, stop the server and run `npm run build` then `npm run start`.
 2. You're also going to get a lot errors that will break the site. For some reason Parcel does not identify global commands from HTML tags that are introduced as strings; which in the codebase is around 50% of them.
     - You may need to add some lines that are like the following in `js/PaiShoMain.js`
+
     ```js
     window.someFunction = someFunction;
     ```
+
     - DO NOT ADD THOSE LINES IN ANY COMMITS. They will only be there for development porpuses and should be deleted when you're done coding.
 3. You'll be working almost exclusively in a directory called `js/pai-sho-variant` ("Variant" being the kebab of your variant, of course). You'll also modify some parts of `js/PaiShoMain.js` and `js/GameOptions.js`. But we'll get there when we get there.
 4. Commit every advancement you make and upload it to your upstream on github. Not only will this keep a history of your work, but it will also give others the chance to colaborate with you

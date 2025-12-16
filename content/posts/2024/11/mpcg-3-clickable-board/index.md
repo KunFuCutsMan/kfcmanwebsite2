@@ -320,13 +320,13 @@ This is around 50% of the code you'll need to run a pai sho variant, be sure to 
 
 {{% tabs/titles Name="Skeleton Classes" %}}
 
--   [Variant]Actuator.js
--   [Variant]GameManager.js
--   [Variant]Notation.js
--   [Variant]Board.js
--   [Variant]BoardPoint.js
--   [Variant]TileManager.js
--   [Variant]Tile.js
+- [Variant]Actuator.js
+- [Variant]GameManager.js
+- [Variant]Notation.js
+- [Variant]Board.js
+- [Variant]BoardPoint.js
+- [Variant]TileManager.js
+- [Variant]Tile.js
 
 {{% /tabs/titles %}}
 
@@ -1767,7 +1767,10 @@ At last, if you coded everything correctly, when you click play new game and you
 
 The div elements now appear and contain their coordenates. Also, if you hover over them you can see that while the intersection is displayed, nothing changes on the sidebar. That's because we haven't defined any behaviour in the `Controller.RmbDown()`, `Controller.RmbUp()`, `Controller.PointClicked()` and `Controller.getPointMessage()` methods. Those will be taken care of in a future time, but if you've opened up your devtools you may have noticed the following error:
 
-![Uncaught error because there is no tile library](./uncaught-error.png)
+{{<figure
+    src="./uncaught-error.png"
+    caption="Uncaught error because there is no tile library"
+>}}
 
 Let's fix that uncaught error first. Go to line 127 of your actuator class and you'll see the following snippet of code:
 
@@ -1821,13 +1824,13 @@ static getGuestTilesContainerDivs() {
 
 And after you've implemented those tags, everything should be running smoothly and without errors. Here's what the HTML does:
 
--   **\<span\>** tags are used for titles of the sections.
--   **<br>** tags are used to create a new line
--   The **\<div\>** tags with classes after the first br are used for later use for showing the amount of tiles each player has of a certain type. The class they have is the same as the code of that tile.
-    -   For Godai that means there are five divs for the five elemental tiles, then another div below them to signify the optional empty Tile. If a match is played without an empty tile then it is left empty and doesn't occupy any space.
-    -   These divs will align their tiles in a column, so keep that in mind if you want a specific layout.
--   The **\<span\>** with the `tileLibrary` class is being used for displaying captured tiles.
-    -   Span tags will display the tiles they contain in a row, making a new line when necesary.
+- **\<span\>** tags are used for titles of the sections.
+- **<br>** tags are used to create a new line
+- The **\<div\>** tags with classes after the first br are used for later use for showing the amount of tiles each player has of a certain type. The class they have is the same as the code of that tile.
+  - For Godai that means there are five divs for the five elemental tiles, then another div below them to signify the optional empty Tile. If a match is played without an empty tile then it is left empty and doesn't occupy any space.
+    - These divs will align their tiles in a column, so keep that in mind if you want a specific layout.
+- The **\<span\>** with the `tileLibrary` class is being used for displaying captured tiles.
+  - Span tags will display the tiles they contain in a row, making a new line when necesary.
 
 You should check out what other layouts other variants use, and If you cannot find a static method in the controller class, then the HTML may be hardcoded in the `Actuator.htmlify()` method like it is in Fire Pai Sho.
 
@@ -1883,7 +1886,7 @@ pointClicked(htmlPoint) {
 
 The `Controller.pointClicked()` method will grow on later, but right now that's everything we need to do there.
 
-## That's everything, folks!
+## That's everything, folks
 
 I originally wanted to publish this part of the series in october, but thanks to homework I had to deal with in real life I couldn't work on writing this at the time. Also have you noticed I basically had to give you like 9 skeleton classes first beforing going over _the actual contents of this part of this guide?_
 

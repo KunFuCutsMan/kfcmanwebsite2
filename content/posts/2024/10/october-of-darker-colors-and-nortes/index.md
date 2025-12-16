@@ -40,7 +40,11 @@ I've just remembered now that my electromagnetism professor, Mr. Castro Valdés,
 
 Another thing I've noticed thanks to nortes is that we eat a lot more pastries and sweet breads than we would normally do on other months. Mexico enjoys cold days at home eating a bread and a cup of coffee, and my town is no exception; there are bakeries everywhere and this year I've found more bakeries have shown up, and they seem to be having a decent time.
 
-![Sweet Breads](https://upload.wikimedia.org/wikipedia/commons/4/4c/PAN_EN_MEXICO.jpg "Wikipedia image for Pan Dulce")
+{{<figure
+    src="https://upload.wikimedia.org/wikipedia/commons/4/4c/PAN_EN_MEXICO.jpg"
+    alt="Pan Dulce"
+    caption="Wikipedia image for pan dulce"
+>}}
 
 > **Fun fact!**
 >

@@ -118,8 +118,8 @@ For those who know something about programming you see that I have two dependenc
 
 The most important piece of code is the creation of the `fileData` variable you can see in the `for await` loop, which is an object with two properties:
 
--   `name`: The name of the file that will be uploaded and how it will show up in neocities. Since I'm taking from the root level of the project, I first need to remove the `public` prefix from the path first.
--   `path`: The path of the file to upload, relative to the JS file.
+- `name`: The name of the file that will be uploaded and how it will show up in neocities. Since I'm taking from the root level of the project, I first need to remove the `public` prefix from the path first.
+- `path`: The path of the file to upload, relative to the JS file.
 
 This is the `package.json` that I have as of writing this post:
 

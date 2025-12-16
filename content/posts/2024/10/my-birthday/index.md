@@ -39,7 +39,11 @@ That's right! Nothing!
 
 Actually there's more to it. As a university student I get a lot homework; see my post regarding what [my current semester is like]({{< ref "posts/2024/09/third-semester-is-about-vectors" >}}); and THIS exact weekend I need to deliver a total of 39 statics excersises in a folder, so as I'm writing this I'm passing them on clean sheets of paper.
 
-![My desk](./my-desk-atm.jpg "My desk at the moment. Also desk reveal I guess")
+{{<figure
+    src="./my-desk-atm.jpg"
+    alt="My desk"
+    caption="My desk at the moment. Also desk reveal I guess"
+>}}
 
 Thankfully I had all of them finished a week ago, so I'm only transcribing them whilst looking for errors I made on my first run.
 

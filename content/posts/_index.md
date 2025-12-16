@@ -15,4 +15,5 @@ This page includes everything arranged in a nice column, but you can also search
 {{<figure
     src="./kfcman-crud-operations.png"
     alt="KFCMan doing CRUD operations"
+    hint="icon"
 >}}
