@@ -22,11 +22,10 @@ Granted, they aren't the best since they were taken on a Samsung A6, but I wante
 
 The first one is this one, which I took while waiting for an order:
 
-{{% details "Lake seen from restaurant window" %}}
-
-![Lake watched over a window](./mariscos-el-pulpo.jpg)
-
-{{% /details %}}
+{{<figure
+    src="./mariscos-el-pulpo.jpg"
+    alt="Lake watched over a window"
+>}}
 
 Now aside from the censored license plate for obvious reasons, the restaurant pictured is called **"Restaurante y Mariscos El Pulpo"** (Seafood Restaurant The Octopus), which is located right in front of an inverse archipelago that is located in Veracruz.
 
@@ -36,11 +35,11 @@ I've always enjoyed the view the restaurant has, add to this the fresh air that 
 
 The second picture is this one, which was taken five days ago during my mom's birthday:
 
-{{% details "Full Moon over a ship" %}}
-
-![Moon over a ship](./moon-over-ship.jpg)
-
-{{% /details %}}
+{{<figure
+    src="./moon-over-ship.jpg"
+    alt="Moon over a ship"
+    caption="Full moon over a ship"
+>}}
 
 Is the photo shaky? Yes. Is the photo taken with a 4X zoom? Also yes. Was the view beatiful to look at? Absolutely.
 

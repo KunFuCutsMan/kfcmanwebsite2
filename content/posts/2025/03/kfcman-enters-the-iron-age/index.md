@@ -18,7 +18,7 @@ draft: false
 
 Hey guess what!
 
-## I'm still playing Minecraft!
+## I'm still playing Minecraft
 
 And I have died. A lot. Mainly because I needed iron to pass to the next stage of the game, but the caves that were nearby needed shields and armor for me to get to them.
 
@@ -26,26 +26,37 @@ So a lot has happened.
 
 ## TLDR
 
--   I have a big cave next door (the type that was added in the Mountains Update)
--   Tried to explore it but couldn't because it was filled with mobs and I was only armed with a stone axe.
--   Only got some coal before I book it and go home
--   Try again
--   Die because of falling damage.
--   Lose all of my stuff because I didn't place it in a chest
+- I have a big cave next door (the type that was added in the Mountains Update)
+- Tried to explore it but couldn't because it was filled with mobs and I was only armed with a stone axe.
+- Only got some coal before I book it and go home
+- Try again
+- Die because of falling damage.
+- Lose all of my stuff because I didn't place it in a chest
 
-![That big cave which I talked about](./that%20big%20cave.png)
+{{<figure
+  src="./that big cave.png"
+  caption="That big cave which I talked about"
+>}}
 
--   Explore a bit
+- Explore a bit
+- Find another cave nearby which leads to a **SPIDER SPAWNER ON THE SURFACE** and a broken nether portal
 
-*   Find another cave nearby which leads to a **SPIDER SPAWNER ON THE SURFACE** and a broken nether portal
+{{<figure
+  src="./broken portal.png"
+  caption="The broken nether portal"
+>}}
 
-![Broken nether portal](./broken%20portal.png)
-
-![Spider Spawner, excavated and illuminated for later use](./spider%20spawner.png)
+{{<figure
+  src="./spider spawner.png"
+  caption="The spider spawner, excavated and illumated for later use"
+>}}
 
 On the portal I found a clock which I later lost in another mining session, but its presence will be remembered. On the way there I also found some iron.
 
-![The first iron vein I found](./first%20iron.png)
+{{<figure
+  src="./first iron.png"
+  caption="The first iron vein I found"
+>}}
 
 Which I then used for a pickaxe. Which I lost in a mining session.
 
@@ -55,7 +66,7 @@ Fun fact: All the times I had lost my stuff was because of skeletons. Thank Moja
 
 So after loosing all my stuff like three times I decided I had to take a break from mining and focus on another stuff, like...
 
-### Building my base!
+### Building my base
 
 From my previous [minecraft adventure post]({{< ref "posts/2025/02/how-do-i-craft-this-again#temporal-cave-shelters" >}}), I've been living under a rock, litterally. So I decided to do some base building in the mean time.
 
@@ -63,9 +74,9 @@ From my previous [minecraft adventure post]({{< ref "posts/2025/02/how-do-i-craf
 
 {{% tabs/titles Name="base-improvements" %}}
 
--   Chicken pens
--   Chinampas and Pumpkin pies
--   \.\.\.bees?
+- Chicken pens
+- Chinampas and Pumpkin pies
+- \.\.\.bees?
 
 {{% /tabs/titles %}}
 
@@ -73,11 +84,17 @@ From my previous [minecraft adventure post]({{< ref "posts/2025/02/how-do-i-craf
 
 From the nearby savannah (which is actually just the next biome over, I can access it easily by paddiling on the river) I had found another mine and other stuff.
 
-![The savannah biome had this crack thing, and behind me a mountain which has a hole that leads underground](./savanna.png)
+{{<figure
+  src="./savanna.png"
+  caption="The savannah biome had this crack thing, and behind me a mountain which has a hole that leads underground"
+>}}
 
 I brought some chickens from there and made myself a pen for them.
 
-![The chickens in question and their new born son](./chickens.png)
+{{<figure
+  src="./chickens.png"
+  caption="The chickens in question and their new born son"
+>}}
 
 Right now their children are supplying me with tons of eggs, feathers for arrows and meat.
 
@@ -89,6 +106,11 @@ Since I needed food, I made some [chinampas](https://www.gob.mx/agricultura/es/a
 
 ![A pumpkin pie lying on the grass, and some chalumpas in the background](./pumkin%20pie.png)
 
+{{<figure
+  src="./pumkin pie.png"
+  caption="A pumpkin pie lying on the grass, and sume chalumpas in the background"
+>}}
+
 It took a while for the stuff to grow, since I had only started with whatever I had found from the spider spawner from earlier, but now I have a nice supply of food.
 
 Collecting some sugar cane from the river and conbining it with the pumpkin & melon chinampa I also have a steady supply of pumkin pies on my base.
@@ -97,7 +119,10 @@ Collecting some sugar cane from the river and conbining it with the pumpkin & me
 
 {{% tabs/tab title="\.\.\.bees?" %}}
 
-![Not the bees!](bees.png)
+{{<figure
+  src="./bees.png"
+  caption="Not the bees!"
+>}}
 
 And because I had a plantation of trees in my backyard, _and_ a bed of flowers next to it, one of the trees decided to grow with a honeycomb next to it.
 

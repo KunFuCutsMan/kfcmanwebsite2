@@ -28,7 +28,7 @@ You may have noticed that in the other games, the images aren't being loaded, so
 
 Normally parcel does not copy static files like images on to the `dist` folder, so we'll need have to configure it so it does so. First, check if `package.json` has the following devDependency:
 
-```
+```json
 "parcel-reporter-static-files-copy": "^1.5.3",
 ```
 
@@ -59,33 +59,32 @@ During the building process, whenever parcel reaches a static file (like an imag
 
 There's one thing I have to mention, though. When I working with the reporter, sometimes it would copy the images as _txt files_ instead of their proper format, therefore when the browser requested the images it couldn't display them because _tecnically they were not images._ Keep that in mind, and if it does happen, it's better for you copy the images yourself and remove any cache you may have.
 
-{{% small %}}Now that that's out of the way...{{% /small %}}
+~Now that that's out of the way...~
 
 ## My tiles are unique, right?
 
 TODO:
 
--   How to setup the images for the tiles
--   How to name them
--   Where to put them
+- How to setup the images for the tiles
+- How to name them
+- Where to put them
 
 ## In the code
 
 TODO:
 
--   GodaiActuator:
+- GodaiActuator:
+  - modify getTileImageSourceDir() so it gets the localstorage name of the folder
+    - under the name of some key
+  - setup that key somewhere
 
-    -   modify getTileImageSourceDir() so it gets the localstorage name of the folder
-        -   under the name of some key
-    -   setup that key somewhere
-
--   Add tile IDs in `Tile.js`
-    -   Modify `getImageName()`
-    -   Modify `Tile.getTileName()`
--   Add the tileset in `TileManager.js`
-    -   Clarify that if tiles are already located on board, stuff may change
-        -   See SpiritGameManager.runNotationMove(), SpiritBoard.placeInitialTiles() & SpiritTile.getStartingPoint()
-        -   See GinsengGameManager.doBoardSetup(),
+- Add tile IDs in `Tile.js`
+  - Modify `getImageName()`
+  - Modify `Tile.getTileName()`
+- Add the tileset in `TileManager.js`
+  - Clarify that if tiles are already located on board, stuff may change
+    - See SpiritGameManager.runNotationMove(), SpiritBoard.placeInitialTiles() & SpiritTile.getStartingPoint()
+    - See GinsengGameManager.doBoardSetup(),
 
 ## They'll now show up on the board, right?
 

@@ -53,7 +53,7 @@ Yeah the induction oven wasn't going to work.
 
 Thankfully our teacher guided us into making a coal furnace, which is much simpler: just a big concrete bucket with a hole on its side. After a month of gathering materials we gathered in my house and started working.
 
-I was in charge of buying the concrete powder and sand needed to make the concrete, so I bought 6kg of powder {{< small >}}(foreshadowing){{< /small >}} and a sack of sand and called it a day. A clasmate brought a cut barrel of 40cm in diameter while another brought some tools, and then we went walked to the supermarket and buy a plastic bucked of the correct size for the inner side of the furnace.
+I was in charge of buying the concrete powder and sand needed to make the concrete, so I bought 6kg of powder ~(foreshadowing)~ and a sack of sand and called it a day. A clasmate brought a cut barrel of 40cm in diameter while another brought some tools, and then we went walked to the supermarket and buy a plastic bucked of the correct size for the inner side of the furnace.
 
 The rest of my teammates came and so we made our concrete mix, and fun fact! You cannot fill a 40cm cut barrel with only 6kg of concrete. **Panic ensues.**
 

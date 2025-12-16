@@ -18,7 +18,7 @@ excludeArticleData: false
 draft: false
 ---
 
-{{% small %}}AKA I rant about cool things that happen when temperatures drop{{% /small %}}
+~AKA I rant about cool things that happen when temperatures drop~
 
 Ello I just wanted to write some thoughts I've had starting this month.
 
@@ -40,7 +40,11 @@ I've just remembered now that my electromagnetism professor, Mr. Castro Valdés,
 
 Another thing I've noticed thanks to nortes is that we eat a lot more pastries and sweet breads than we would normally do on other months. Mexico enjoys cold days at home eating a bread and a cup of coffee, and my town is no exception; there are bakeries everywhere and this year I've found more bakeries have shown up, and they seem to be having a decent time.
 
-![Sweet Breads](https://upload.wikimedia.org/wikipedia/commons/4/4c/PAN_EN_MEXICO.jpg "Wikipedia image for Pan Dulce")
+{{<figure
+    src="https://upload.wikimedia.org/wikipedia/commons/4/4c/PAN_EN_MEXICO.jpg"
+    alt="Pan Dulce"
+    caption="Wikipedia image for pan dulce"
+>}}
 
 > **Fun fact!**
 >
@@ -52,9 +56,9 @@ You can learn more about Pan Dulce via [Wikipedia's entry regarding these breads
 
 ---
 
-Which leaves me to another topic which is tangentally related: **Veracruz has a cookie factory near my university!** The mexican company _Cuétara_ has a factory in my town, where on windy days the smell of the cookies they make is carried to the rest of town, including to my home; It may not have been intentional, but it certainly aids in subdly influencing people in to eating more bread, {{% small %}}_myself included..._{{% /small %}}
+Which leaves me to another topic which is tangentally related: **Veracruz has a cookie factory near my university!** The mexican company _Cuétara_ has a factory in my town, where on windy days the smell of the cookies they make is carried to the rest of town, including to my home; It may not have been intentional, but it certainly aids in subdly influencing people in to eating more bread, ~_myself included..._~
 
-Whenever I sense that smell on my nostrills, it fills me with nostalgia and the relaxed feeling of being at home eating a sweet bread and dipping it on milk {{% small %}}(I was too small to drink coffee){{% /small %}}
+Whenever I sense that smell on my nostrills, it fills me with nostalgia and the relaxed feeling of being at home eating a sweet bread and dipping it on milk ~(I was too small to drink coffee)~
 
 I know I can no longer go back to those simpler times, but I can now experience the same sensation with more understanding of what chill days bring, and know I'll be getting more of them the following 4 months.
 

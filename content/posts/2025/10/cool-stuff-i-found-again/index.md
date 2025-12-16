@@ -23,9 +23,12 @@ It contains what it says on the label.
 
 Moving on, this entry is dedicated to stuff I found during this month, or anything really.
 
-## A hotel with a historical building in the middle.
+## A hotel with a historical building in the middle
 
-![Weirdly shaped hotel](./hotel.png)
+{{<figure
+    src="./hotel.png"
+    alt="Weirdly shaped hotel"
+>}}
 
 This hotel can be found in Veracruz' hotel area near the pier, especifically just inside the historical borders of the city. As such, due to its age, the little shack you see right there is considered historical, and cannot be torn down. Funny hotel shape ensues.
 
@@ -39,7 +42,10 @@ What it says on the label. Enjoy.
 
 ## Casio F-91W Easter Egg
 
-![Casio Easter Egg](./casio.png)
+{{<figure
+    src="./casio.png"
+    alt="Casio easter egg"
+>}}
 
 Fun fact! If you have a F-91W Casio Clock, you can hold the bottom right button for the clock to display the company's name!
 
@@ -59,7 +65,7 @@ It's where we like to sleep :)
 
 When going to college a few days ago, I decided to walk a bit whilst going in my usual bus route to college, so I took a bus that stops at the `$` symbol I placed on the map below this paragraph. Usually, buses that take Cuautemoc Av. cross the bridge and go on with their day. The bus I took that day takes a turn below the bridge, and goes between the train rails and a parking lot. That meant I had to walk.
 
-```
+```txt
 ### #### |  2  |######### | ////// | ######
 ### #### '-----'######### | ////// | ######
    !                   ================ $ <-- Cuautemoc Av.
@@ -94,7 +100,10 @@ When going to college a few days ago, I decided to walk a bit whilst going in my
 
 Cuautemoc Av.'s bridge also has a bridge for walking, which is where I took this photo:
 
-![Train and Truck](./train-and-truck.png)
+{{<figure
+    src="./train-and-truck.png"
+    alt="Train and truck"
+>}}
 
 Once I did, I continued walking around the IMSS Hospital until I reached Miguel de Quevedo Av. I then continued straight until I reached ITVer's side entrance. It was a nice walk.
 

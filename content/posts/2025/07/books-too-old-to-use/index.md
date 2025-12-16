@@ -26,11 +26,15 @@ It's normal blog post time.
 
 Today I helped my mom move her stuff from one classroom to another. That took us the whole morning. Because my mother is a elementary school teacher, she gets assigned new grades every year, and because of that she needs to move all of her stuff to the new classroom and save all of her stuff in a closet; and every year I help her out moving. Usual teacher's son stuff :)
 
-Something that did interest me was the amount of books she held, and how many she wouldn't use ever again. {{% small %}}(Even if she's retiring this year and won't be using them soon){{% /small %}} Same thing happens with ALL of the teachers, all of them have materials they won't be using this year.
+Something that did interest me was the amount of books she held, and how many she wouldn't use ever again. ~(Even if she's retiring this year and won't be using them soon)~ Same thing happens with ALL of the teachers, all of them have materials they won't be using this year.
 
 So what did I found during my six hours of work! Many things! Including this map of Mexico with something off...
 
-![Mapa Mundi with wrong borders between Guatemala and Belize](./mapa-mundi.JPG)
+{{<figure
+    src="./mapa-mundi.JPG"
+    alt="Mapa Mundi"
+    caption="Mapa Mundi with wrong borders between Guatemala and Belize"
+>}}
 
 Notice something? No? Let me give you a hint: **The border between Belize and Guatemala are wrong!**
 
@@ -48,19 +52,26 @@ I'll be listing these along with the dates they had printed along their copyrigh
 
 {{% tabs/titles Name="Spanish 2013 Books" %}}
 
--   Teacher 1st Grade Spanish Book
--   Student 1st Grade Spanish Book
+- Teacher 1st Grade Spanish Book
+- Student 1st Grade Spanish Book
 
 {{% /tabs/titles %}}
 
 {{% tabs/tab title="Teacher 1st Grade Spanish Book" %}}
 
-![Spanish 1 Teacher's Book from 2013](./spanish-1-unused.JPG)
+{{<figure
+    src="./spanish-1-unused.JPG"
+    caption="Spanish 1 Teacher's book from 2013"
+>}}
+
 {{% /tabs/tab %}}
 
 {{% tabs/tab title="Student 1st Grade Spanish Book" %}}
 
-![Spanish 1 Student's Book from 2013](./spanish-1-used.JPG)
+{{<figure
+    src="./spanish-1-used.jpg"
+    caption="Spanish 1 Student's book from 2013"
+>}}
 
 {{% /tabs/tab %}}
 
@@ -70,23 +81,35 @@ What I find interesting is the difference is the amount of wear the student book
 
 ### Cartografía de México y el mundo - 2023
 
-![Cartografía de México y el mundo](./cartografia-mexico.jpg)
+{{<figure
+    src="./cartografia-mexico.jpg"
+    caption="Cartografía de México y el mundo"
+>}}
 
 ### Maravillas de México - 2002
 
 I didn't check out the content inside, simply looked at the reference date and moved on. I was busy.
 
-![Maravillas de México](./maravillas-de-mexico.jpg)
+{{<figure
+    src="./maravillas-de-mexico.jpg"
+    caption="Maravillas de México"
+>}}
 
 ### Ciencias Naturales 6th Grade - 1997
 
-![Ciencias Natueales y Desarollo Humano](./ciencias-naturales.jpg)
+{{<figure
+    src="./ciencias-naturales.jpg"
+    caption="Ciencias Naturales y Desarrollo Humano"
+>}}
 
 ### Veracruz Monograph - 1992
 
 This is the most ancient book I found, actually! It probably describes everything in the state.
 
-![Veracruz pródiga naturaleza de cara al mar](./veracruz-monografia.jpg)
+{{<figure
+    src="./veracruz-monografia.jpg"
+    caption="Veracruz pródiga naturaleza de cara al mar"
+>}}
 
 ## ...And
 
@@ -108,4 +131,7 @@ Can **YOU** date this map?
 
 Share your findings either on neocities' comments or Cbox, whatever seems better for you
 
-![Map to date](./planisferio.jpg)
+{{<figure
+    src="./planisferio.jpg"
+    caption="Map to date"
+>}}

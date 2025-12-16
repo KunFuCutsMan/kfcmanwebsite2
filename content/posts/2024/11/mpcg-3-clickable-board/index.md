@@ -310,7 +310,7 @@ export class GodaiController {
 
 ## Spooky Scary Skeleton Files
 
-If you copied the code for the controller class, then you realised that there are some imports you need to handle, and _those_ classes _also_ need their own imports {{% small %}}(see [MPGC-1]({{< ref "posts/2024/08/mpcg-1-explanation-of-code/#class-diagram-of-a-pai-sho-game" >}}) for reference){{% /small %}}, so let's get those out of the way.
+If you copied the code for the controller class, then you realised that there are some imports you need to handle, and _those_ classes _also_ need their own imports ~(see [MPGC-1]({{< ref "posts/2024/08/mpcg-1-explanation-of-code/#class-diagram-of-a-pai-sho-game" >}}) for reference)~, so let's get those out of the way.
 
 This is around 50% of the code you'll need to run a pai sho variant, be sure to copy these files on the same folder as your controller:
 
@@ -320,13 +320,13 @@ This is around 50% of the code you'll need to run a pai sho variant, be sure to 
 
 {{% tabs/titles Name="Skeleton Classes" %}}
 
--   [Variant]Actuator.js
--   [Variant]GameManager.js
--   [Variant]Notation.js
--   [Variant]Board.js
--   [Variant]BoardPoint.js
--   [Variant]TileManager.js
--   [Variant]Tile.js
+- [Variant]Actuator.js
+- [Variant]GameManager.js
+- [Variant]Notation.js
+- [Variant]Board.js
+- [Variant]BoardPoint.js
+- [Variant]TileManager.js
+- [Variant]Tile.js
 
 {{% /tabs/titles %}}
 
@@ -1446,7 +1446,7 @@ export class GodaiTile {
 
 {{< /tabs/wrapper >}}
 
-{{< small >}}Now that files are out of the way, we can continue{{< /small >}}
+~Now that files are out of the way, we can continue~
 
 ## There's a board on your lawn
 
@@ -1460,7 +1460,7 @@ And if somehow cannot see the video, then this is what's happening:
 2. When the code reaches for the parts of the side board and help tab, it returns undefined since we haven't really defined those stuff yet. We'll fix that later.
 3. The board image and the HTML used for clicking the intersections are different! If you inspect the board then you'll notice its a background image made with CSS, and that the div with class `.pointContainer` is empty.
 
-Of course we cannot work on our game if _there is no board to play it on_, so lets {{< small >}}(finally){{< /small >}} add a board to our variant.
+Of course we cannot work on our game if _there is no board to play it on_, so lets ~(finally)~ add a board to our variant.
 
 > NOTE: Since this guide is using a game that plays on intersections as an example, I won't provide the steps if you want to play on intersections _yet_. You can check out how its done in the Adevar and Key board classes if you want, the process should be similar to the one I'll describe.
 
@@ -1586,7 +1586,7 @@ Index                this.newRow( numColumns, points )
 
 For each row, starting from the top, you assign the row using the `newRow()` method as shown, you first insert the number of points you're going to insert, then in the next argument the board points in question in the order they appear in from left to right. It's quite simple, isn't?
 
-Surprisingly, it is, but we won't be personally making a new board point especifically for our board points {{< small >}}because that would be tedious{{< /small >}}, instead we'll make some constructors for our different types of board points.
+Surprisingly, it is, but we won't be personally making a new board point especifically for our board points ~because that would be tedious~, instead we'll make some constructors for our different types of board points.
 
 Remember the note I left on `[Variant]BoardPoint.js`? The one located above some static methods? Those are our board point constructors! Here's again the ones ones I used in Godai:
 
@@ -1767,7 +1767,10 @@ At last, if you coded everything correctly, when you click play new game and you
 
 The div elements now appear and contain their coordenates. Also, if you hover over them you can see that while the intersection is displayed, nothing changes on the sidebar. That's because we haven't defined any behaviour in the `Controller.RmbDown()`, `Controller.RmbUp()`, `Controller.PointClicked()` and `Controller.getPointMessage()` methods. Those will be taken care of in a future time, but if you've opened up your devtools you may have noticed the following error:
 
-![Uncaught error because there is no tile library](./uncaught-error.png)
+{{<figure
+    src="./uncaught-error.png"
+    caption="Uncaught error because there is no tile library"
+>}}
 
 Let's fix that uncaught error first. Go to line 127 of your actuator class and you'll see the following snippet of code:
 
@@ -1821,13 +1824,13 @@ static getGuestTilesContainerDivs() {
 
 And after you've implemented those tags, everything should be running smoothly and without errors. Here's what the HTML does:
 
--   **\<span\>** tags are used for titles of the sections.
--   **<br>** tags are used to create a new line
--   The **\<div\>** tags with classes after the first br are used for later use for showing the amount of tiles each player has of a certain type. The class they have is the same as the code of that tile.
-    -   For Godai that means there are five divs for the five elemental tiles, then another div below them to signify the optional empty Tile. If a match is played without an empty tile then it is left empty and doesn't occupy any space.
-    -   These divs will align their tiles in a column, so keep that in mind if you want a specific layout.
--   The **\<span\>** with the `tileLibrary` class is being used for displaying captured tiles.
-    -   Span tags will display the tiles they contain in a row, making a new line when necesary.
+- **\<span\>** tags are used for titles of the sections.
+- **<br>** tags are used to create a new line
+- The **\<div\>** tags with classes after the first br are used for later use for showing the amount of tiles each player has of a certain type. The class they have is the same as the code of that tile.
+  - For Godai that means there are five divs for the five elemental tiles, then another div below them to signify the optional empty Tile. If a match is played without an empty tile then it is left empty and doesn't occupy any space.
+    - These divs will align their tiles in a column, so keep that in mind if you want a specific layout.
+- The **\<span\>** with the `tileLibrary` class is being used for displaying captured tiles.
+  - Span tags will display the tiles they contain in a row, making a new line when necesary.
 
 You should check out what other layouts other variants use, and If you cannot find a static method in the controller class, then the HTML may be hardcoded in the `Actuator.htmlify()` method like it is in Fire Pai Sho.
 
@@ -1883,7 +1886,7 @@ pointClicked(htmlPoint) {
 
 The `Controller.pointClicked()` method will grow on later, but right now that's everything we need to do there.
 
-## That's everything, folks!
+## That's everything, folks
 
 I originally wanted to publish this part of the series in october, but thanks to homework I had to deal with in real life I couldn't work on writing this at the time. Also have you noticed I basically had to give you like 9 skeleton classes first beforing going over _the actual contents of this part of this guide?_
 

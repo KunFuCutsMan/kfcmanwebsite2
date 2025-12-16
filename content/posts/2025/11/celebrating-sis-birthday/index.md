@@ -31,9 +31,11 @@ Anyway, my sister ordered a hot cocoa and a "Croassant Cubo", and I ordered the 
 
 Then the waiter brought the Croassant Cubos to our table and I was both surprised and dissapointed. The following is the one my sister ordered.
 
-![Pistachio "Croassant Cubo"](quaso.png)
-
-That's right. **It's a cube.**
+{{<figure
+    src="./quaso.png"
+    caption="As it turns out, a 'Cubo' is what it says on the label."
+    hint="picture"
+>}}
 
 The "cubo" part of "Croassant Cubo" is simply "Cube", as in, the shape of the bread.
 
@@ -52,4 +54,4 @@ It also means I got like 30+ hours for free, around 15% of the hours I need to f
 
 It was a great choice to join PADIEER.
 
-That should be everything for now. Good morning, good evening and _good night!_
+That should be everything for now. Good morning, good evening and _good night!

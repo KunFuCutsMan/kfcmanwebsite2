@@ -1,0 +1,69 @@
+<!--
+  FIGURE SHORTCODE - See https://gohugo.io/shortcodes/figure/#arguments
+  - src: The src attribute of the argument. Just link the image as normal
+  - alt: Attribute of the img element
+  - loading: Attribute of the img element
+  - class: Attribute of the figure element
+  - link: Href of hyperlink wrapping the img element
+  - target: Attribute of the hyperlink wrapper
+  - rel: Attribute of the hyperlink wrapper
+  - title: Title of the figurecaption element
+  - caption: Caption of the figureaction element
+  - attr: Attribution of the image
+  - attrlink: Href that wraps the attribution
+
+  NEW:
+  - hint: Way of targeting to webp:
+    * drawing: Hand or line drawing with high-contrast details
+    * icon: small images
+    * photo: Outdoor photograph with natural lighting (default)
+    * picture: Indoor photograph such as a portrait
+    * text: Image that is primarily text
+-->
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+  {{- if .Get "link" -}}
+    <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+  {{- end -}}
+
+  {{- $u := urls.Parse (.Get "src") -}}
+  {{- $src := $u.String -}}
+  {{- if not $u.IsAbs -}}
+    <!-- If its a local image target to webp. Gotta save resources man. -->
+    {{- $hint := "photo" -}}
+    {{- with .Get "hint" -}}{{- $hint = . -}}{{- end -}}
+
+    {{- with $img := (or (.Page.Resources.Get $u.Path) (resources.Get $u.Path)) -}}
+      {{- $reduceHeight := "" -}}
+      <!-- If it's a tall image then shorten it -->
+      {{- if ge $img.Height ( math.Mul $img.Width 1.5 ) -}}
+        {{- $reduceHeight = "resize x500" -}}
+      {{- end -}}
+
+      {{- $img = $img.Process (println $reduceHeight "webp" $hint) -}}
+      {{- $src = $img.RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+
+  <img src="{{ $src }}"
+    {{- if or (.Get "alt") (.Get "caption") }}
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+    {{- end -}}
+    {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+  ><!-- Closing img tag -->
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+    <figcaption>
+      {{ with (.Get "title") -}}
+        <h4>{{ . }}</h4>
+      {{- end -}}
+      {{- if or (.Get "caption") (.Get "attr") -}}<p>
+        {{- .Get "caption" | markdownify -}}
+        {{- with .Get "attrlink" }}
+          <a href="{{ . }}">
+        {{- end -}}
+        {{- .Get "attr" | markdownify -}}
+        {{- if .Get "attrlink" }}</a>{{ end }}</p>
+      {{- end }}
+    </figcaption>
+  {{- end }}
+</figure>

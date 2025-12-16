@@ -17,11 +17,14 @@ excludeArticleData: false
 draft: false
 ---
 
-![Weather Update](https://media1.tenor.com/m/9iIWE93A0qgAAAAC/bill-wurtz-weather-update.gif)
+{{<figure
+    src="https://media1.tenor.com/m/9iIWE93A0qgAAAAC/bill-wurtz-weather-update.gif"
+    alt="Weather Update"
+>}}
 
 That's right.
 
-## It's raining in Veracruz.
+## It's raining in Veracruz
 
 It has rained non stop since yesterday and we've reached the 26 hour mark.
 

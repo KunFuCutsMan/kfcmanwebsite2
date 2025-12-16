@@ -19,7 +19,7 @@ draft: false
 
 Greetings! Haven't seen you since last year! I know it's a terrible joke, but I like its simplicity. It's even funnier when it is said after two weeks of New Year's Eve.
 
-And I haven't written a full entry in (almost) two months, last one was in [november](/posts/2024/11/resting-finally) and it was also a "weather update" type of post {{< small >}}(Should I turn that into it's own tag? IDK){{< /small >}}. I had two other posts I wanted to publish but I didn't have the energy to finish them.
+And I haven't written a full entry in (almost) two months, last one was in [november](/posts/2024/11/resting-finally) and it was also a "weather update" type of post ~(Should I turn that into it's own tag? IDK)~. I had two other posts I wanted to publish but I didn't have the energy to finish them.
 
 The first one was the fourth entry on the [Making a Pai Sho Capture Game series](/series/making-a-pai-sho-capture-game), where I was supposed to explain how to add tiles and their images, but documenting code is hard, and the simple task of "just place these images here and call it a day" gets conveluted once you have to figure out what code is relevant to that section. So that post has been sitting on the `/posts/2024/11` folder for a while now, untouched. Maybe I should review it again.
 
@@ -27,7 +27,7 @@ The other post, which was supposed to be posted in december, talked about how my
 
 ---
 
-{{% small %}}\*Takes a lunch break\*{{% /small %}}
+~\*Takes a lunch break\*~
 
 Now, where was I?
 

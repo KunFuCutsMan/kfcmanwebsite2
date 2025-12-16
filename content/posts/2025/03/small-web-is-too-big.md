@@ -16,7 +16,7 @@ excludeArticleData: false
 draft: false
 ---
 
-{{%small%}}Haven't used the neocities tag in a while...{{%/small%}}
+~Haven't used the neocities tag in a while...~
 
 > The small web is too big because I have realized "small" is just 0.1% of the internet.
 
@@ -82,7 +82,7 @@ Everything would seem fine until you notice the way information is delivered to 
 
 On the indie web if you don't like a site you simply... don't follow them. Simple really.
 
-Mind you, the argument I made chooses to generalize the scenario of the avarage social media user, and it will vary from platform to platform {{%small%}}(cough, cough, twitter){{%/small%}}, and my position isn't a "uugh social media bad". Those platforms can be good tools for information with the local community, and your experience with them can be excelent if you follow good internet manners and are responsible for the content you consume and publish. I use my university's facebook page and student group to know about events I need to know about, and any questions I have can usually be found in the comments of those publications.
+Mind you, the argument I made chooses to generalize the scenario of the avarage social media user, and it will vary from platform to platform ~(cough, cough, twitter)~, and my position isn't a "uugh social media bad". Those platforms can be good tools for information with the local community, and your experience with them can be excelent if you follow good internet manners and are responsible for the content you consume and publish. I use my university's facebook page and student group to know about events I need to know about, and any questions I have can usually be found in the comments of those publications.
 
 Unlike social media, the web in general will put you in contact with people you will (probably) never meet in real life. But that means you can find new perspectives of life, and maybe even find a spot where you can enjoy your favorite things with other people. I can't thank enough the day I found about [Skud Pai Sho](https://skudpaisho.com) and the discord community there; we play pai sho and sip digital tea every day while discussing very imporant topics like the fact uncle Iroh upside down looks like a frog with a well kept mustache[^3].
 
@@ -92,14 +92,12 @@ TLDR: Good internet manners are important
 
 Before I go, I do have some pet peeves I want to share:
 
--   I don't like sites that are really messy and hard to navigate. I know you love those 90s gifs, but could you let me have space to breathe and find out what you have stored on your html files?
--   It feels off when people's about me pages are comprised mostly of tags they've labeled themselves as. You're more than the categorization you've trapped yourself in.
-
-    -   This also applies with neo pronouns/identity lists so large it borders on having to wrap.
-
--   I like to visit your sites from my phone, as such, a little phone accesibility is apreciated. I understand CSS is hard, and I thank all the folks who put a "best viewed on desktop" sign before you enter their domain.
-    -   Sites who use exclusively `position: relative` or `float` to build their layout could problably take a look at your browser's devtools to see if it looks good on a thin screen.
--   Speaking of accesibility, I don't like when I have to zoom out to see the site. This isn't really a pet peeve at all because screen resolutions can make your site appear normal on your end. It's just a matter of remembering not everyone uses a 1366x768px screen.
+- I don't like sites that are really messy and hard to navigate. I know you love those 90s gifs, but could you let me have space to breathe and find out what you have stored on your html files?
+- It feels off when people's about me pages are comprised mostly of tags they've labeled themselves as. You're more than the categorization you've trapped yourself in.
+  - This also applies with neo pronouns/identity lists so large it borders on having to wrap.
+  - I like to visit your sites from my phone, as such, a little phone accesibility is apreciated. I understand CSS is hard, and I thank all the folks who put a "best viewed on desktop" sign before you enter their domain.
+  - Sites who use exclusively `position: relative` or `float` to build their layout could problably take a look at your browser's devtools to see if it looks good on a thin screen.
+- Speaking of accesibility, I don't like when I have to zoom out to see the site. This isn't really a pet peeve at all because screen resolutions can make your site appear normal on your end. It's just a matter of remembering not everyone uses a 1366x768px screen.
 
 ---
 
