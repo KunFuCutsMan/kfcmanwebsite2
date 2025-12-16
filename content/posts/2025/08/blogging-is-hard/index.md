@@ -23,7 +23,7 @@ sister gave me, so this is a lot more scattered than what I would normally write
 
 One year of blogging in this website, huh.
 
-# AND ONLY PUBLISHED 20 POSTS?!??
+## AND ONLY PUBLISHED 20 POSTS?!??
 
 ## Huh????
 
@@ -33,7 +33,10 @@ That's around 0.6 posts published every months.
 
 How much is that? Well...
 
-![My current working directory for posts](./cwd-of-posts-directory.png)
+{{<figure
+    src="./cwd-of-posts-directory.png"
+    caption="My current working directory for posts"
+>}}
 
 This all are my posts, grouped by months, grouped by year. While in 2024 I did
 write some stuff (usually 3 posts a month), I started slowing down this year
@@ -69,4 +72,4 @@ Neat :)
 
 Also the USB I was talking about hasn't finished analyzing.
 
-# -.-"
+-.-"

@@ -20,7 +20,7 @@ It's currently 4am and I can't sleep so lets write something quickly before I sl
 
 So as it turns my DSi is like what, how many years old? Let me check
 
-{{% small %}}(One wikipedia check later...){{% /small %}}
+~(One wikipedia check later...)~
 
 ## **_[IT CAME OUT IN 2010?!?](https://en.wikipedia.org/wiki/Nintendo_DSi)_**
 
@@ -36,18 +36,21 @@ Mine has a red case celebrating Mario's 25th anniversary, and it originally belo
 
 I used to play so much MKDS in my youth and have used several nicknames throught my karting career, some of the highlights include: [^1]
 
--   :3😀
--   /😀⏰Leo⏰😀\
--   Bag pigies
--   [Undeciphrable arrangement of characters]
--   CPU0
--   KFCMan (currently using this one, obvously)
+- :3😀
+- /😀⏰Leo⏰😀\
+- Bag pigies
+- [Undeciphrable arrangement of characters]
+- CPU0
+- KFCMan (currently using this one, obvously)
 
 And I've even managed to get the secret title screen:
 
-![Alternative title screen, which display all 12 characters in Mario Kart DS](https://www.giantbomb.com/a/uploads/original/14/143167/2063004-mario_kart_ds_title_screen__alternate_.png)
+{{<figure
+    src="https://www.giantbomb.com/a/uploads/original/14/143167/2063004-mario_kart_ds_title_screen__alternate_.png"
+    caption="Alternative title screen, which displays all 12 characters in Mario Kart DS"
+>}}
 
-And if you're wondering, no, I haven't 3-star'd all the missions. {{< small >}}Yet...{{< /small >}}
+And if you're wondering, no, I haven't 3-star'd all the missions. ~Yet...~
 
 ## There's one thing missing tho
 

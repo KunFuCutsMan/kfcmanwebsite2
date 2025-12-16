@@ -24,7 +24,10 @@ right, speaking of which.
 
 ## My laptop broke
 
-![Broken laptop](broke-pc.jpg)
+{{<figure
+    src="./broke-pc.jpg"
+    alt="Broken laptop"
+>}}
 
 As you can see from the image above, my laptop's left hinge disconnected completely last friday. It was already broken, but it was manageable because nothing else had broke when using it. Until now.
 
@@ -44,7 +47,7 @@ I remember that during the pandemic, one of the biggest issues with students was
 
 I can now empathize with those who had to work exclusively with their phones.
 
-### It's horrible experience.
+### It's horrible experience
 
 Remember those logs I talked about in [my previous post?](/posts/2025/09/weather-update-3) Yeah, I have to write them using Microsoft Word for mobile now. It's horrible.
 

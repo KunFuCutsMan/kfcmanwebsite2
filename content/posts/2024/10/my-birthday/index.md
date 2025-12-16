@@ -43,7 +43,7 @@ Actually there's more to it. As a university student I get a lot homework; see m
 
 Thankfully I had all of them finished a week ago, so I'm only transcribing them whilst looking for errors I made on my first run.
 
-Later in the night my family is going to share a moka chocolate cake with me that we bought at noon, nothing too fancy since I had homework to do. My mom also bought me a pair shirts and new shoes on the way there, so that's nice. {{% small %}}(They're not books but _eh_ beggers can't be choosers){{% /small %}}
+Later in the night my family is going to share a moka chocolate cake with me that we bought at noon, nothing too fancy since I had homework to do. My mom also bought me a pair shirts and new shoes on the way there, so that's nice. ~(They're not books but _eh_ beggers can't be choosers)~
 
 Tomorrow after our church service we're going to a shrimp buffet, where the real party will start. Hence why I'm doing my best to finish transcribing these excersises before tomorrow; because _I still_ need to finish writing a document for vectorial calculus and I plan to do it in the afternoon before going to sleep.
 

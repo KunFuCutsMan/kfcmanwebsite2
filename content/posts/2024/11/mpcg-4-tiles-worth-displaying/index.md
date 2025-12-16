@@ -59,7 +59,7 @@ During the building process, whenever parcel reaches a static file (like an imag
 
 There's one thing I have to mention, though. When I working with the reporter, sometimes it would copy the images as _txt files_ instead of their proper format, therefore when the browser requested the images it couldn't display them because _tecnically they were not images._ Keep that in mind, and if it does happen, it's better for you copy the images yourself and remove any cache you may have.
 
-{{% small %}}Now that that's out of the way...{{% /small %}}
+~Now that that's out of the way...~
 
 ## My tiles are unique, right?
 

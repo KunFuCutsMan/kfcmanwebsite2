@@ -28,9 +28,9 @@ How do I craft this again? (Oh oh oh oh) \
 I wanna know... How do I craft this again?!
 {{% /cite %}}
 
-## Fun fact!
+## Fun fact
 
-I was a minecraft kid! {{%small%}}_Shockers!_{{%/small%}}
+I was a minecraft kid! ~_Shockers!_~
 
 Yesterday I downloaded TLauncher. Why? Because I wanted to.
 
@@ -66,7 +66,7 @@ I spawned on a birch tree next to this cool waterfall which you will now see in 
     caption="A cool waterfall"
 >}}
 
-Thank Mojang they added the recipe book, it's probably the best feature they've added {{%small%}}(even though it was in consoles first but who cares){{%/small%}}
+Thank Mojang they added the recipe book, it's probably the best feature they've added ~(even though it was in consoles first but who cares)~
 
 I gathered some basic materials, made a wood pickaxe and axe, and found a nearby cave where I mined my first coals. It didn't have many things, it was half flooded and my axe broke when fighting two zombies which spawned there.
 

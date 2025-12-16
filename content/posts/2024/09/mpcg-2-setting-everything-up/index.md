@@ -39,7 +39,7 @@ Also here's a crash course on git:
 
 {{< youtube -iWaarLI7zI >}}
 
-{{< small >}}You got everything installed? Good, next up...{{< /small >}}
+~You got everything installed? Good, next up...~
 
 ## Getting a copy of the code
 
@@ -130,7 +130,7 @@ what you get should be something like:
   parcel-update
 ```
 
-{{% small %}}The branches listed may vary because of time, but the `master` and `parcel-update` branches will always be there.{{% /small %}}
+~The branches listed may vary because of time, but the `master` and `parcel-update` branches will always be there.~
 
 You'll be working in a branched version of `parcel-update`, so first run `git switch parcel-update` and the result should get a message similar to this one:
 

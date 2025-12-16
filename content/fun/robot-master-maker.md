@@ -20,13 +20,16 @@ Params:
 `> Website has been successfully taken over.` \
 `> Welcome new administrator, Dr. Albert W. Wily`
 
-# Incoming Message!
+## Incoming Message
 
-Ladies and Gentlemen, may I have your whole attention? {{% small %}}Not that you can ignore me now...{{% /small %}}
+Ladies and Gentlemen, may I have your whole attention? ~Not that you can ignore me now...~
 
-## It is I! The Great Doctor Albert W. Wily!
+## It is I! The Great Doctor Albert W. Wily
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTc4YTkzYTk3bTVmbXBiYjIwOTZkN3k1MnMya2g3b3M0b3Q4bWluYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qdDMdsUgLRV6pUNUsc/giphy.gif)
+{{<figure
+    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTc4YTkzYTk3bTVmbXBiYjIwOTZkN3k1MnMya2g3b3M0b3Q4bWluYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qdDMdsUgLRV6pUNUsc/giphy.gif"
+    alt="Dr. Wily UFO"
+>}}
 
 Using the power **THE INTERNET** I have taken control of this website as my first step to **TAKE OVER THE WORLD!!!**
 
@@ -41,8 +44,8 @@ The deal is simple.
 
 Don't like it? **_Too bad!_** Soon all the internet will BE MINE! Surrender now, or else...
 
-{{% small %}}You may not wanna now...{{% /small %}}
+~You may not wanna now...~
 
-## This is Dr. Wily, signing out!
+## This is Dr. Wily, signing out
 
 ---

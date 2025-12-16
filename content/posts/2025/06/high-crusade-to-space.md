@@ -29,7 +29,7 @@ I heard of this novel through a video talking about cool christian representatio
 
 > What would happen if medieval crusaders took to outer space and defeated an atheist alien empire?
 
-{{% small %}}Sold on it yet? Good :){{%/ small %}}
+~Sold on it yet? Good :)~
 
 ## The plot summary
 
@@ -43,9 +43,9 @@ This ship is a scout from the Wersgorix Empire, in charge of investigating the l
 
 Spoiler alert: They did not make it back for hay harvest.
 
-After killing the majority of the populace in charge of the ship, minus a Wersgorian named Branithar who Sir Roger and company intented to use him as navigator to take the entire town to do crusader stuff, instead pressed the emergency button to the planet of Tharixan {{%small%}}(Big mistake, if you ask me){{%/small%}}. The crusader crew end up capturing one of three fortresses on the planet using _their own ship as a ram_ and hand-to-hand combat.
+After killing the majority of the populace in charge of the ship, minus a Wersgorian named Branithar who Sir Roger and company intented to use him as navigator to take the entire town to do crusader stuff, instead pressed the emergency button to the planet of Tharixan ~(Big mistake, if you ask me)~. The crusader crew end up capturing one of three fortresses on the planet using _their own ship as a ram_ and hand-to-hand combat.
 
-As it turns out, using your own spaceship as a ram ends up destroying the navigation system which contained the coordinates to planet Earth. {{%small%}}Oops.{{%/small%}}
+As it turns out, using your own spaceship as a ram ends up destroying the navigation system which contained the coordinates to planet Earth. ~Oops.~
 
 So it is now up for everyone to survive and find a way home, right? For now the objective is to defeat the local Wersgiorian to so the English aren't kiled on first sight.
 
