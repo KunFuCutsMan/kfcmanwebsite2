@@ -6,6 +6,9 @@ Params:
         - content.css
         - taxonomy.css
         - posts.css
+
+build:
+    publishResources: false
 ---
 
 Welcome to my blog posts! Here I write anything I want, whenever I want, because I can.

@@ -13,6 +13,9 @@ Params:
     Stylesheets:
         - content.css
 
+build:
+    publishResources: false
+
 includeTOC: true
 excludeArticleData: false
 draft: true

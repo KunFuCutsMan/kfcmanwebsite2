@@ -10,6 +10,9 @@ Params:
     Stylesheets:
         - content.css
 
+build:
+    publishResources: false
+
 includeTOC: true
 draft: false
 ---
