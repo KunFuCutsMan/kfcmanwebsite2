@@ -1,0 +1,30 @@
+<!-- layouts/shortcodes/tabs.html -->
+<!--
+A shortcode to create tabbed content sections.
+ARGUMENTS:
+- dir: name of directory containing tab content files
+-->
+{{- $dir := .Get "dir" -}}
+{{- $tabsSection := .Page.GetPage $dir -}}
+{{ with $tabsSection }}
+<section class="tab-wrapper">
+    {{- $tabs := $tabsSection.RegularPages }}
+    <ul class="tab-titles inline-list">
+        {{- range $index, $tab := $tabs }}
+            <li>
+                <label>
+                <input type="radio" name="tabs-{{ $dir }}" value="{{ $index }}" {{ if eq $index 0 }}checked{{end}}>
+                <span>{{ $tab.Title }}</span>
+                </label>
+            </li>
+        {{- end }}
+    </ul>
+    {{- range $index, $tab := $tabs }}
+    <article class="tab content" tabindex="0" data-tab="{{ $index }}">
+        {{ $tab.Content | safeHTML }}
+    </article>
+    {{ end }}
+</section>
+{{ else }}
+    <p>Error: Tab directory <b>"{{ $dir }}"</b> not found.</p>
+{{ end }}
