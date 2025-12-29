@@ -10,29 +10,6 @@
     align-items: start;
 }
 
-/* Medium Screens */
-@media (max-width: 1200px) {
-	.grid-posts {
-        grid-template-columns: auto 35%;
-        grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'header header'
-            'posts aside';
-	}
-}
-
-/* Small Screens */
-@media (max-width: 720px) {
-	.grid-posts {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-		grid-template-areas:
-			'header'
-            'aside'
-            'posts';
-	}
-}
-
 .grid-posts > [data-area="header"] { grid-area: header; }
 .grid-posts > [data-area="posts"] { grid-area: posts; }
 .grid-posts > [data-area="aside"] { grid-area: aside; }
@@ -44,11 +21,20 @@
 }
 
 /* Calendar Grid Styles */
+.calendar {
+    margin-bottom: 2rem;
+}
+
+.calendar header {
+    text-align: center;
+}
+
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
+
 .calendar-month {
     display: block;
     background-color: var(--gray-300);
@@ -60,6 +46,19 @@
     position: relative;
 }
 
+.calendar-month input[type="radio"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+.calendar-month:has(input[type="radio"]:checked) {
+    outline: auto;
+    outline-color: var(--blue-500);
+    outline-offset: 4px;
+}
+
 .calendar-month:has(input[type="radio"]:disabled) {
     cursor: not-allowed;
     opacity: 0.5;
@@ -67,6 +66,7 @@
 
 .calendar-posts {
     position: relative;
+    margin-top: 2rem;
 }
 
 .calendar-posts > .posts-of-month {
@@ -115,5 +115,32 @@
         height: 0;
         opacity: 0;
         display: none;
+    }
+}
+
+/* Medium Screens */
+@media (max-width: 1200px) {
+	.grid-posts {
+        grid-template-columns: auto 35%;
+        grid-template-rows: auto 1fr;
+		grid-template-areas:
+			'header header'
+            'posts aside';
+	}
+}
+
+/* Small Screens */
+@media (max-width: 720px) {
+	.grid-posts {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+		grid-template-areas:
+			'header'
+            'aside'
+            'posts';
+	}
+
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

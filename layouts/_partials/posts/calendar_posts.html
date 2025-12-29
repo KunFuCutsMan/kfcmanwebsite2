@@ -1,5 +1,5 @@
-{{ $ := . }}
-<section>
+{{- $ := . -}}
+<section class="calendar">
     <header>
         <h2>{{ .Title }}</h2>
     </header>
@@ -7,9 +7,11 @@
     {{ range 12 }}
     {{- $number := math.Add . 1 -}}
     {{- $postsOfMonth := where $.RegularPages "Date.Month" $number -}}
+    {{- $calendarNumber := $.Store.Get "calendar-posts" -}}
     <label class="calendar-month">
         <input type="radio" value="{{$number}}" name="calendar" {{- if eq $postsOfMonth.Len 0 }} disabled{{end}}>
-        <span>{{ printf "%02d" $number }}</span>
+        <p>{{ printf "%02d" $number }}</p>
+        {{ with $postsOfMonth }}<p>POSTS: {{ $postsOfMonth.Len }}</p>{{ end -}}
     </label>
     {{ end }}
     </div>
