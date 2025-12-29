@@ -65,10 +65,14 @@
     opacity: 0.5;
 }
 
+.calendar-posts {
+    position: relative;
+}
+
 .calendar-posts > .posts-of-month {
     opacity: 0;
     display: none;
-    animation: fade-out 500ms forwards;
+    animation: fade-out 100ms forwards;
 }
 
 .calendar-grid:has( input[value="1"]:checked ) + .calendar-posts > .posts-of-month[data-month="1"],
@@ -84,7 +88,7 @@
 .calendar-grid:has( input[value="11"]:checked ) + .calendar-posts > .posts-of-month[data-month="11"],
 .calendar-grid:has( input[value="12"]:checked ) + .calendar-posts > .posts-of-month[data-month="12"] {
     display: block;
-    animation: fade-in 500ms forwards 500ms;
+    animation: fade-in 100ms forwards;
 }
 
 @keyframes fade-in {
