@@ -46,7 +46,7 @@
 /* Calendar Grid Styles */
 .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 .calendar-month {
@@ -55,4 +55,61 @@
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
+
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-month:has(input[type="radio"]:disabled) {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.calendar-posts > .posts-of-month {
+    opacity: 0;
+    display: none;
+    animation: fade-out 500ms forwards;
+}
+
+.calendar-grid:has( input[value="1"]:checked ) + .calendar-posts > .posts-of-month[data-month="1"],
+.calendar-grid:has( input[value="2"]:checked ) + .calendar-posts > .posts-of-month[data-month="2"],
+.calendar-grid:has( input[value="3"]:checked ) + .calendar-posts > .posts-of-month[data-month="3"],
+.calendar-grid:has( input[value="4"]:checked ) + .calendar-posts > .posts-of-month[data-month="4"],
+.calendar-grid:has( input[value="5"]:checked ) + .calendar-posts > .posts-of-month[data-month="5"],
+.calendar-grid:has( input[value="6"]:checked ) + .calendar-posts > .posts-of-month[data-month="6"],
+.calendar-grid:has( input[value="7"]:checked ) + .calendar-posts > .posts-of-month[data-month="7"],
+.calendar-grid:has( input[value="8"]:checked ) + .calendar-posts > .posts-of-month[data-month="8"],
+.calendar-grid:has( input[value="9"]:checked ) + .calendar-posts > .posts-of-month[data-month="9"],
+.calendar-grid:has( input[value="10"]:checked ) + .calendar-posts > .posts-of-month[data-month="10"],
+.calendar-grid:has( input[value="11"]:checked ) + .calendar-posts > .posts-of-month[data-month="11"],
+.calendar-grid:has( input[value="12"]:checked ) + .calendar-posts > .posts-of-month[data-month="12"] {
+    display: block;
+    animation: fade-in 500ms forwards 500ms;
+}
+
+@keyframes fade-in {
+    from {
+        height: 0;
+        opacity: 0;
+        display: block;
+    }
+    to {
+        height: auto;
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        height: auto;
+        opacity: 1;
+        display: block;
+    }
+
+    to {
+        height: 0;
+        opacity: 0;
+        display: none;
+    }
 }
