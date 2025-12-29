@@ -1,10 +1,28 @@
+{{ $ := . }}
 <section>
-    <details>
-        <summary>{{ .Title }}</summary>
-        <ul>
-            {{ range .Pages.ByPublishDate }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <header>
+        <h2>{{ .Title }}</h2>
+    </header>
+    <div class="calendar-grid">
+    {{ range 12 }}
+    {{- $number := math.Add . 1 -}}
+    {{- $postsOfMonth := where $.RegularPages "Date.Month" $number -}}
+    <label class="calendar-month" data-month="{{ $number }}">
+        <input type="radio" name="calendar">
+        <span>{{ printf "%02d" $number }}</span>
+    </label>
+        {{ with $postsOfMonth }}
+        <ul class="posts-list">
+            {{ range . }}
+            <li class="post-item">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            </li>
             {{ end }}
         </ul>
-    </details>
+        {{ else }}
+        <div class="no-posts">No posts</div>
+        {{end}}
+    {{ end }}
+    </div>
 </section>

@@ -43,3 +43,16 @@
     }
 }
 
+/* Calendar Grid Styles */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.calendar-month {
+    display: block;
+    background-color: var(--gray-300);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
