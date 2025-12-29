@@ -6,11 +6,9 @@
         {{partial "rssFeedButton.html" .}}
     </header>
 
-    <main data-area="posts" class="article-list">
-        {{range $p := .Pages}}
-        {{ partial "posts/article-card" $p }}
-        {{end}}
-    </main>
+    <main data-area="posts">{{ range .Sections.Reverse }}
+        {{ partial "posts/calendar_posts.html" . -}}
+    {{end -}}</main>
 
     <aside data-area="aside" class="sticky frame content">
         {{.Content}}
