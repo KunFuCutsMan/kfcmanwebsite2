@@ -22,18 +22,19 @@
 
 /* Calendar Grid Styles */
 .calendar {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .calendar > header {
     text-align: center;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .calendar-month {

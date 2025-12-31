@@ -2,7 +2,7 @@
 <section class="calendar">
     <header>
         <h2>{{ .Title }}</h2>
-        <p>Posts: {{ len $.RegularPages }}</p>
+        <p>{{ $.RegularPages.Len }}{{ if gt $.RegularPages.Len 1 }} POSTS{{else}} POST{{end}} AVAILABLE</p>
     </header>
     <div class="calendar-grid">
     {{ range 12 }}
@@ -11,8 +11,8 @@
     {{- $calendarNumber := $.Store.Get "calendar-posts" -}}
     <label class="calendar-month">
         <input type="radio" value="{{$number}}" name="calendar-{{ $.Store.Get "calendar-number" }}" {{- if eq $postsOfMonth.Len 0 }} disabled{{end}}>
-        <p>{{ printf "%02d" $number }}</p>
-        {{ with $postsOfMonth }}<p>POSTS: {{ $postsOfMonth.Len }}</p>{{ end -}}
+        <p>{{ printf "%03d" $number }}</p>
+        {{ with $postsOfMonth }}<p>{{ printf "%02dP" $postsOfMonth.Len }}</p>{{ end -}}
     </label>
     {{ end }}
     </div>
