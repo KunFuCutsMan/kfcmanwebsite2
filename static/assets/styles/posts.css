@@ -32,18 +32,27 @@
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2.5rem;
+    margin-top: 1rem;
 }
 
 .calendar-month {
     display: block;
-    background-color: var(--gray-300);
-    padding: 1rem;
-    border-radius: 0.5rem;
+    background-color: var(--blue-900);
+    padding-block: 0.5rem;
+    padding-inline: 0.1rem;
     text-align: center;
+    font-family: 'JetBrains Mono', monospace;
 
     cursor: pointer;
     position: relative;
+
+    transition: 200ms;
+    border-image-source: url('/assets/images/select-frame-normal.png');
+    border-image-slice: calc( 1/5 * 100% ) calc( 10/40 * 100% ) fill;
+    border-image-width: 16px;
+    border-image-outset: 16px;
+    border-image-repeat: round;
 }
 
 .calendar-month input[type="radio"] {
@@ -54,14 +63,13 @@
 }
 
 .calendar-month:has(input[type="radio"]:checked) {
-    outline: auto;
-    outline-color: var(--blue-500);
-    outline-offset: 4px;
+    border-image-source: url('/assets/images/select-frame-active.png');
 }
 
 .calendar-month:has(input[type="radio"]:disabled) {
     cursor: not-allowed;
     opacity: 0.5;
+    border-image-source: url('/assets/images/select-frame-disabled.png') !important;
 }
 
 .calendar-posts {
