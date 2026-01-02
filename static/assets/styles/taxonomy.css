@@ -80,3 +80,9 @@ article.article-card li {
 	width: 2rem;
 	height: 2rem;
 }
+
+@media ( max-width: 720px) {
+	article.article-card > header h2 {
+		font-size: x-large;
+	}
+}
