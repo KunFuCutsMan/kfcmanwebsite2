@@ -12,6 +12,9 @@ disableKinds = ['sitemap']
   taxonomy = ['html', 'rss']
   term = ['html']
 
+[frontmatter]
+    date = ['publishDate', 'date', 'lastmod']
+
 [taxonomies]
     tag = 'tags'
     series = 'series'
