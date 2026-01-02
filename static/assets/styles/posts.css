@@ -78,10 +78,18 @@
     margin-top: 2rem;
 }
 
+.posts-of-month {
+    margin-block: 3rem;
+}
+
 .calendar-posts > .posts-of-month {
     opacity: 0;
     display: none;
     animation: fade-out 100ms forwards;
+}
+
+.posts-of-month > article.article-card {
+    margin-block: 2rem;
 }
 
 .calendar-grid:has( input[value="1"]:checked ) + .calendar-posts > .posts-of-month[data-month="1"],
