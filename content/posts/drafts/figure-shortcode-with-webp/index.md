@@ -2,6 +2,7 @@
 title: 'Figure Shortcode With Webp'
 date: "2025-12-27T23:04:14Z"
 summary: My figure shortcode that transforms images into webp
+publishDate: "2026-01-03T17:38:00-00:06"
 
 tags:
     - Hugo
@@ -160,7 +161,7 @@ Going back to the structure I presented earlier, suppose this is the content ins
 
 ```md
 ---
-title: 'My first post
+title: 'My first post'
 ---
 
 Hello! This is my first post!
@@ -193,4 +194,35 @@ Oh, so are you interested in how this shortcode works?
 
 Well, you're in luck!
 
-...
+I want you to focus your attention on this snippet of code:
+
+```txt
+{{- $u := urls.Parse (.Get "src") -}}
+{{- $src := $u.String -}}
+{{- if not $u.IsAbs -}}
+  <!-- If its a local image target to webp. Gotta save resources man. -->
+  {{- $hint := "photo" -}}
+  {{- with .Get "hint" -}}{{- $hint = . -}}{{- end -}}
+
+  {{- with $img := (or (.Page.Resources.Get $u.Path) (resources.Get $u.Path)) -}}
+    {{- $reduceHeight := "" -}}
+    <!-- If it's a tall image then shorten it -->
+    {{- if ge $img.Height ( math.Mul $img.Width 1.5 ) -}}
+      {{- $reduceHeight = "resize x500" -}}
+    {{- end -}}
+
+    {{- $img = $img.Process (println $reduceHeight "webp" $hint) -}}
+    {{- $src = $img.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+```
+
+The argument `$u` is an URL object to refer to whatever is displayed on the shortcode. If it's an absolute URL (i. e. has a protocol, domain, etc.) then it is simply linked to the image via the `$img` variable. But if it's not, then it's has a to be a relative URL, and something inside your repository, and where the fun begins.
+
+Assuming this image resource can be converted to webp, first we get the type of encoding for our image, with a default being of photo. I already explained what each type of encoding did. If the resource _does_ exist, then we can convert it to webp using the `$img.Process` method. This method accepts a string that holds the instructions to process the resource, the most important being `webp [hint]`, which tells Hugo to do the processing thing.
+
+But because we want to reduce the size of tall images, I added one final filter that only triggers if the **resource's height is 1.5 bigger than its width**, then the shortcode will reduce the images' height to 500px. All of these options are given with the `println` function in the parenthesis, as its the only way to add multiple parameters to `$img.Process`. We don't have to worry about extra spaces since the function handles that, and empty strings are ignored.
+
+Either way you handle the image resource, its URL is saved to `$src` and placed on the HTML following this snippet, along with the rest of the parameters.
+
+If you want to add other filters, then do so inside the `with` block I described previously, and the documentation of what [the process method can do to an image can do](https://gohugo.io/methods/resource/process/).
