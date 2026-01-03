@@ -64,3 +64,4 @@ ExcludeArticleData: true
 - 08/Mar/2025: Modified html layout of home page so it is congrouent with how it is displayed in the grid
 - 24/Jun/2025: Added [Robot Master Maker](/fun/robot-master-maker)
 - 15/Dec/2025: Added a `figure` shortcode that transforms images to webp, and added on all posts
+- 03/Jan/2026: Changed the [posts](/posts) page design to something more Mega-Man-esque.
