@@ -1,0 +1,8 @@
+{{- $ := .Site -}}
+{{- $postPage := $.GetPage "/posts/" -}}
+{{- $pages := slice -}}
+{{- range $postPage.Sections -}}
+    {{- $pages = $pages | append .Pages -}}
+{{- end -}}
+{{- $sortedPages := collections.Sort $pages "Date" "desc" -}}
+{{- return $sortedPages -}}

@@ -1,19 +1,24 @@
 {{define "main"}}
+{{- $pages := slice -}}
+{{- range .Sections -}}
+    {{- $pages = $pages | append .Pages -}}
+{{- end -}}
+{{- .Store.Set "allPosts" $pages -}}
+{{- .Store.Set "totalPosts" (len $pages) -}}
 <div class="single-margin grid-posts">
     <header data-area="header" class="frame">
         <h1>{{.Title}}</h1>
-        <p><b>Count:</b> {{.Pages.Len}} posts</p>
+        <p><b>Count:</b> {{.Store.Get "totalPosts"}} posts</p>
         {{partial "rssFeedButton.html" .}}
     </header>
-
-    <main data-area="posts" class="article-list">
-        {{range $p := .Pages}}
-        {{ partial "posts/article-card" $p }}
-        {{end}}
-    </main>
 
     <aside data-area="aside" class="sticky frame content">
         {{.Content}}
     </aside>
+
+    <main data-area="posts">{{ range $k, $s := .Sections.Reverse }}
+        {{- $s.Store.Set "calendar-number" (math.Add $k 1) -}}
+        {{ partial "posts/calendar_posts.html" $s -}}
+    {{end -}}</main>
 </div>
 {{end}}

@@ -4,7 +4,11 @@ article.article-card {
 	padding: 1rem;
 	border-radius: 0.5rem;
 
-	box-shadow: 0.5rem 0.5rem var(--blue-900);
+	border-image-source: url('/assets/images/article-frame.png');
+	border-image-width: 24px;
+	border-image-outset: 16px;
+	border-image-repeat: round;
+	border-image-slice: calc( 1/4 * 100% );
 }
 
 article.article-card > header h2 {
@@ -79,4 +83,10 @@ article.article-card li {
 .taxonomy-header .rss-button img {
 	width: 2rem;
 	height: 2rem;
+}
+
+@media ( max-width: 720px) {
+	article.article-card > header h2 {
+		font-size: x-large;
+	}
 }

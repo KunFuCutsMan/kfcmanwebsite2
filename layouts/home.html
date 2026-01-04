@@ -34,7 +34,8 @@
 
     <section data-area="latest-post" class="frame">
         <h2>Latest Blog Post!</h2>
-        {{ partial "home/latest-post.html" . }}
+        {{- $p := index (partial "posts/latest.html" .) 0 -}}
+        {{ partial "posts/article-card.html" $p }}
     </section>
 
     <aside data-area="link-me" class="frame column-with-space">

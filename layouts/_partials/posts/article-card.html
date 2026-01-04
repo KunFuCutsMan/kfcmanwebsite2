@@ -11,22 +11,14 @@
     {{- with .GetTerms "series" -}}
     <div>
         <b>Series:</b>
-        <ul class="inline-list">
-            {{- range .}}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{ end -}}
-        </ul>
+        {{ partial "posts/inline-list-links.html" . }}
     </div>
     {{- end -}}
 
     {{- with .GetTerms "tags" -}}
     <div>
         <b>Tags:</b>
-        <ul class="inline-list">
-            {{- range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{ end -}}
-        </ul>
+        {{ partial "posts/inline-list-links.html" . }}
     </div>
     {{- end -}}
 
