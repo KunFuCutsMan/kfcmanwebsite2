@@ -17,7 +17,7 @@ build:
 
 includeTOC: true
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Howdy folks!
