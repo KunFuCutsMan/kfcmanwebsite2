@@ -4,19 +4,21 @@ A shortcode to create tabbed content sections.
 ARGUMENTS:
 - dir: name of directory containing tab content files
 -->
+{{- $ := .Page -}}
 {{- $dir := .Get "dir" -}}
-{{- $tabsSection := .Page.GetPage $dir -}}
+{{- $tabRef := urls.JoinPath $.RelPermalink $dir -}}
+{{- $tabsSection := $.GetPage $tabRef -}}
 {{ with $tabsSection }}
 <section class="tab-wrapper">
     {{- $tabs := $tabsSection.RegularPages }}
     <ul class="tab-titles inline-list">
         {{- range $index, $tab := $tabs }}
-            <li>
-                <label>
+        <li>
+            <label>
                 <input type="radio" name="tabs-{{ $dir }}" value="{{ $index }}" {{ if eq $index 0 }}checked{{end}}>
                 <span>{{ $tab.Title }}</span>
-                </label>
-            </li>
+            </label>
+        </li>
         {{- end }}
     </ul>
     {{- range $index, $tab := $tabs }}
@@ -26,5 +28,5 @@ ARGUMENTS:
     {{ end }}
 </section>
 {{ else }}
-    <p>Error: Tab directory <b>"{{ $dir }}"</b> not found.</p>
+<p>Error: Tab directory <b>"{{ $tabRef }}"</b> not found.</p>
 {{ end }}
