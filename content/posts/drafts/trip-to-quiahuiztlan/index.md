@@ -32,19 +32,19 @@ All information was provided the **Instituto Nacional de Antropología e Histori
 >
 > In Quiahuiztlan, mausoleum style tombs were found. These tombs have the shape of miniature temples and they were unique in ancient Mexico. The tombs are distributed in three main cemeteries. Some members of the nobility were buried in these tombs together with beautifully fashioned ceramic offerings.
 >
-> Quiahuiztlan is also famous due to the fact that during the journey of Cortés, a church and a fortified enclosure were built in the nearby lowlands and small hills. This place was called "Villa Rica de la Vera Cruz", and it is considered the first Spanish settlement in Mexico. In this place an alliance with the Europeans and 30 Totonacan towns were established. This fact facilitated, one way or another, the Conquest of Mexico.
+> Quiahuiztlan is also famous due to the fact that during the journey of Cortés, a church and a fortified enclosure were built in the nearby lowlands and small hills. This place was called "Villa Rica de la Vera Cruz", and it is considered the first Spanish settlement in Mexico. In this place an alliance with the Europeans and 30 Totonacan towns was established. This fact facilitated, one way or another, the Conquest of Mexico.
 >
 > You are in an unique site. Besides the exceptional tombs and the astounding architecture in the middle of the hill, historical events of vital significance ocurred in this place. We invite you to experience this place, enjoy the natural environment, and help us protect it. This Cultural Heritage site belongs to all of us.
 
 {{<figure
     src="./Bernal-hill-1.jpg"
-    alt="Bernall hill, as seen from the parking lot"
+    alt="Bernall Hill, as seen from the parking lot"
     caption="Bernall Hill, also known as _Cerro de los Metates_, seen from the parking lot of Quiahuiztlan Heritage site"
 >}}
 
 {{<figure
     src="./Bernal-hill-2.jpg"
-    alt="Bernall , as seen from one of the cementaries"
+    alt="Bernall Hill, as seen from one of the cementaries"
     caption="Bernall Hill, seen from one of the three cementaries of Quiahuiztlan"
 >}}
 
