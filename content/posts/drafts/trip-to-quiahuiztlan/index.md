@@ -52,7 +52,7 @@ All information was provided the **Instituto Nacional de Antropología e Histori
 
 Because I have many images here, I'll split them in topical tabs for your convinience. Keep in mind any information I add here was from second-hand guides and complemented from the internet.
 
-{{< tabs dir="./quiahuiztlan/" >}}
+{{< tabs dir="/quiahuiztlan" >}}
 
 ## The beach of Villa Rica
 

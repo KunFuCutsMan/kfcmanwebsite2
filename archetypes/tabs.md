@@ -6,7 +6,7 @@ cascade:
     render: never
 
 build:
-    list: never
+    list: local
     render: never
 ---
 
