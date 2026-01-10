@@ -6,7 +6,7 @@ weight: 1
 As mentioned on the information board, there are a lot of tombs here. What's unique about them is the fact they are shaped in the style of little houses or mausoleums. Currently there are no signs that indicate who each tomb belonged to, but I like to think they all belonged to a special someone of a family that lieved in Quiahuiztlan. Take a look at this row of tombs, for example.
 
 {{<figure
-    src="./quiahuiztlan/rows-of-tombs.jpg"
+    src="./quiahuiztlan/row-of-tombs.jpg"
     alt="A row of mausoleum style tombs"
     caption="One of the mausoleum tombs that are in Quiahuiztlan. Their size vary, but all hold the same shape. Also sister jumpscare."
     hint="photo"
