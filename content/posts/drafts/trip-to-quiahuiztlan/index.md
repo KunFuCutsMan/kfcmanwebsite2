@@ -56,4 +56,59 @@ Because I have many images here, I'll split them in topical tabs for your convin
 
 ## The beach of Villa Rica
 
-asasa
+We also visited Villa Rica, which is just right next to Quiahuiztlan. We went to the beach, and had the excelent idea of _walking to La Quebrada._ It took us like 20 minutes to get there, and my sister got tired after all that walking. I don't think she had in mind just how much we had to walk.
+
+From what I heard from tour guides, La Quebrada was the place Hernán Cortés took the sailors who did mutiny on him and wanted to return to Spain instead. Their punishments depended on their ranking, which included hanging, and mutilation of fingers and other parts. After he did this, he asked if any other members wanted to return home. No one wanted to return after that incident.
+
+{{<figure
+    src="./la-quebrada.jpg"
+    alt="La Quebrada as seen from La Villa Rica beach"
+    caption="La Quebrada, as seen from La Villa Rica beach. The hut you can see on the background is where the path to getting up the mount starts."
+>}}
+
+{{<figure
+    src="./tunas.jpg"
+    caption="Some tunas!"
+>}}
+
+Now, you may be wondering why _La Quebrada_ is named like that. It's because of the rock formations that can be seen when you climb it. It's _broken,_ like if you split in two a geode and found its crystals inside. Look for yourself.
+
+{{<figure
+    src="./la-quebrada-inside.jpg"
+    alt="The inside of La Quebrada, with a plant that grows on the mount in the foreground."
+>}}
+
+Also, the nuclear power plant Laguna Verde can be seen from the top. I didn't knew it was so close to Quiahuiztlan!
+
+{{<figure
+    src="./laguna-verde.jpg"
+    alt="Laguna Verde"
+>}}
+
+At the top, a stairway was made for you to descend to the formation itself. They were steep, so only I managed to climb down. Here's some of the pictures I took on my journey there.
+
+{{<figure
+    src="./stairway-1.jpg"
+    caption="The top of La Quebrada. Laguna Verde can be seen on the background, and below some huge steps I need to climb down."
+    hint="photo"
+>}}
+
+{{<figure
+    src="./stairway-2.jpg"
+    caption="I was at the middle of my track when I took this photo, and the formation of La Quebrada is best seen here."
+    hint="photo"
+>}}
+
+{{<figure
+    src="./stairway-3.jpg"
+    caption="At the bottom of the stairs you can step down to the coast. Just be careful and whatever you do, _don't drown._"
+>}}
+
+Finally, huge shoutouts to this stick we found on the beach. It helped a LOT with walking, especially when climbing up and down _La Quebrada_.
+
+{{<figure
+    src="./rod.jpg"
+    caption="A beautiful walking stick."
+>}}
+
+That should be everything for today. Toodles!
