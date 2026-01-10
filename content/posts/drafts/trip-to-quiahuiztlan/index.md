@@ -40,17 +40,19 @@ All information was provided the **Instituto Nacional de Antropología e Histori
     src="./Bernal-hill-1.jpg"
     alt="Bernall Hill, as seen from the parking lot"
     caption="Bernall Hill, also known as _Cerro de los Metates_, seen from the parking lot of Quiahuiztlan Heritage site"
+    hint="photo"
 >}}
 
 {{<figure
     src="./Bernal-hill-2.jpg"
     alt="Bernall Hill, as seen from one of the cementaries"
     caption="Bernall Hill, seen from one of the three cementaries of Quiahuiztlan"
+    hint="photo"
 >}}
 
 Because I have many images here, I'll split them in topical tabs for your convinience. Keep in mind any information I add here was from second-hand guides and complemented from the internet.
 
-{{< tabs dir="./quiahuiztlan" >}}
+{{< tabs dir="./quiahuiztlan/" >}}
 
 ## The beach of Villa Rica
 
