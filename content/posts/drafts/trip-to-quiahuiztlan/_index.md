@@ -13,6 +13,8 @@ Params:
 build:
     publishResources: false
 
+type: page
+
 includeTOC: true
 excludeArticleData: false
 draft: true

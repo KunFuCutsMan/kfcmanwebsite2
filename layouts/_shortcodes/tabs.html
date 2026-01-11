@@ -3,15 +3,12 @@
 A shortcode to create tabbed content sections.
 ARGUMENTS:
 -->
-{{- $section := .Page.CurrentSection -}}
-{{ .Page.Kind }}
 {{- $tabName := .Get "tab" -}}
-{{- $section.Pages -}}
-{{- $tabsPages := where $section.RegularPagesRecursive "Params.tab" $tabName -}}
+{{- $tabsPages := .Page.GetPage $tabName -}}
 {{- with $tabsPages -}}
 <section class="tab-wrapper">
     <ul class="tab-titles inline-list">
-        {{- range $index, $tab := $tabsPages }}
+        {{- range $index, $tab := $tabsPages.RegularPages }}
         <li>
             <label>
                 <input type="radio" name="tabs-{{ $tabName }}" value="{{ $index }}" {{ if eq $index 0 }}checked{{end}}>
@@ -20,7 +17,7 @@ ARGUMENTS:
         </li>
         {{- end }}
     </ul>
-    {{- range $index, $tab := $tabsPages }}
+    {{- range $index, $tab := $tabsPages.RegularPages }}
     <article class="tab content" tabindex="0" data-tab="{{ $index }}">
         {{ $tab.Content | safeHTML }}
     </article>
