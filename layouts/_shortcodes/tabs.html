@@ -2,31 +2,30 @@
 <!--
 A shortcode to create tabbed content sections.
 ARGUMENTS:
-- dir: name of directory containing tab content files
 -->
-{{- $ := .Page -}}
-{{- $dir := .Get "dir" -}}
-{{- $tabRef := urls.JoinPath $.RelPermalink $dir -}}
-{{- $tabsSection := $.GetPage $tabRef -}}
-{{ with $tabsSection }}
+{{- $section := .Page.CurrentSection -}}
+{{ .Page.Kind }}
+{{- $tabName := .Get "tab" -}}
+{{- $section.Pages -}}
+{{- $tabsPages := where $section.RegularPagesRecursive "Params.tab" $tabName -}}
+{{- with $tabsPages -}}
 <section class="tab-wrapper">
-    {{- $tabs := $tabsSection.RegularPages }}
     <ul class="tab-titles inline-list">
-        {{- range $index, $tab := $tabs }}
+        {{- range $index, $tab := $tabsPages }}
         <li>
             <label>
-                <input type="radio" name="tabs-{{ $dir }}" value="{{ $index }}" {{ if eq $index 0 }}checked{{end}}>
+                <input type="radio" name="tabs-{{ $tabName }}" value="{{ $index }}" {{ if eq $index 0 }}checked{{end}}>
                 <span>{{ $tab.Title }}</span>
             </label>
         </li>
         {{- end }}
     </ul>
-    {{- range $index, $tab := $tabs }}
+    {{- range $index, $tab := $tabsPages }}
     <article class="tab content" tabindex="0" data-tab="{{ $index }}">
         {{ $tab.Content | safeHTML }}
     </article>
     {{ end }}
 </section>
 {{ else }}
-<p>Error: Tab directory <b>"{{ $tabRef }}"</b> not found.</p>
+<p>Error: Couldn't find pages labeled as <b>"{{ $tabName }}".</b></p>
 {{ end }}
