@@ -4,7 +4,7 @@ weight: 2
 ---
 
 {{<figure
-    src="./quiahuiztlan/petates-board.jpg"
+    src="./petates-board.jpg"
     alt="An improvised display of molcajetes"
     caption="An improvised display of molcajetes on a rock."
 >}}

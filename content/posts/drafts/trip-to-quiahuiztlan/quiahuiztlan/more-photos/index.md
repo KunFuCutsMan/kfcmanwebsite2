@@ -6,27 +6,27 @@ weight: 4
 Its not just tombs though, there are some other interesting spaces, like the ones I'll show in these pictures. ~Also because I want to include them but don't know where~
 
 {{<figure
-    src="./quiahuiztlan/step-up.jpg"
+    src="./step-up.jpg"
     alt="A seperation for one of the cementeries"
     caption="A seperation for one of the cementeries. Isn't it weird that one of the tombs sits _just next to the stairs?_"
     hint="photo"
 >}}
 
 {{<figure
-    src="./quiahuiztlan/structure-layout-1.jpg"
+    src="./structure-layout-1.jpg"
     alt="A foundation for a structure long gone"
     caption="A foundation for a structure long gone. Maybe they sold picadas there?"
     hint="photo"
 >}}
 
 {{<figure
-    src="./quiahuiztlan/structure-layout-2.jpg"
+    src="./structure-layout-2.jpg"
     caption="Another foundation, a bit more preserved. Who lived here?"
     hint="photo"
 >}}
 
 {{<figure
-    src="./quiahuiztlan/noble-tombs.jpg"
+    src="./noble-tombs.jpg"
     caption="Two tombs that are actually pyramids. Most likely belonged to nobles."
     hint="photo"
 >}}
