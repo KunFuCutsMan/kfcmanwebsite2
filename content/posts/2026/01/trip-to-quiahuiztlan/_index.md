@@ -16,6 +16,7 @@ build:
     publishResources: false
 
 type: page
+layout: single
 
 includeTOC: true
 excludeArticleData: false
