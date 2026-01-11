@@ -1,10 +1,12 @@
 ---
 title: 'My trip to Quiahuiztlan'
 date: "2026-01-05T13:06:00-06:00"
+publishDate: "2026-01-11"
 summary: A trip I took to a National Heritage site
 
 tags:
     - Right Now
+    - Image Heavy
 
 Params:
     Stylesheets:
@@ -17,7 +19,7 @@ type: page
 
 includeTOC: true
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Good morning everyone! Or afternoon, or evening. Whatever your timezone strikes at when you're reading this.
