@@ -16,7 +16,7 @@ build:
 
 includeTOC: false
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Greetings Neticens of the Internets!
