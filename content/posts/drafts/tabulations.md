@@ -6,6 +6,7 @@ summary: Shortcode to make tabbed content inside your page bundles.
 tags:
     - Programming
     - Hugo
+    - Written too quickly
 
 Params:
     Stylesheets:
@@ -51,7 +52,7 @@ Content from tab 3 goes here
 
 Which **is a horrible way to do it.** This approach is ok if the contents from your tabs are small, but if when you need to write more than a few paragraphs? That's where this approach breaks. There's no way I'm writing 5000 lines of content ever again on a single page.
 
-So I changed it. You can see the new approach in my [post about my trip to quiahuiztlan](/posts/2026/01/trip-to-quiahuiztlan)
+So I changed it. You can see the new approach in my [post about my trip to quiahuiztlan.](/posts/2026/01/trip-to-quiahuiztlan)
 
 ## Now
 
@@ -201,4 +202,13 @@ weight: 1 # Especify order of your tabs
 
 The order of your tabs will be decided by the `weight` parameter, which allows you normally to order pages in to any other you want then searching for them via the `.RegularPages` method.
 
-Finally, you may notice that `main-page/_index.md` renders as your site's section content. This is normal, though unexpected behavior, because Hugo thinks that your page is a section because it's a branch bundle, and branches have children, and those children should be accesible inside your page. However,
+Finally, you may notice that `main-page/_index.md` renders as your site's section content. This is normal, though unexpected behavior, because Hugo thinks that your page is a section because it's a branch bundle, and branches have children, and those children should be accesible inside your page. However, the children of `main-page/_index.md` are only used to make the tabs work and will not be rendered; so you should [target the layout of your single page](https://gohugo.io/templates/lookup-order/#target-a-template):
+
+```yaml
+# main-page/_index.md
+# Change as needed
+type: posts
+layout: post
+```
+
+And you should be free to go! Be sure to experiment to find your ideal tabs layout! Toodles!
