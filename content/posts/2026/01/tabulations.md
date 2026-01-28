@@ -1,6 +1,7 @@
 ---
 title: 'Tabulations'
 date: "2026-01-27T22:19:37-06:00"
+pubDate: "2026-01-28T14:49:00-06:00"
 summary: Shortcode to make tabbed content inside your page bundles.
 
 tags:
@@ -17,7 +18,7 @@ build:
 
 includeTOC: true
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Greetings! About a month ago I revamped my previous tab window component to use Hugo's page bundles better, so I'd like to share it with you aswell.
