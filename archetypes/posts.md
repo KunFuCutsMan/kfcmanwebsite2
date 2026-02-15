@@ -21,6 +21,6 @@ draft: true
 
 ## This is post draft
 
-It is se to `draft: true` as default.
+It is set to `draft: true` as default.
 
 Move it to `posts/yyyy/mm` once completed.

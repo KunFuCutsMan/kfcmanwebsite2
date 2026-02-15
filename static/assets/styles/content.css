@@ -6,7 +6,7 @@
 }
 
 .content > * {
-	margin-block: 1rem;
+	margin-block: 2rem;
 }
 
 .content > :is(h1, h2, h3, h4, h5, h6) {
