@@ -1,6 +1,7 @@
 ---
 title: 'Weather Update 4: College Is Busy!'
 date: "2026-02-21T18:45:01-06:00"
+pubDate: "2026-02-22T21:57:00-06:00"
 summary: Obligatory monthly posting
 
 tags:
