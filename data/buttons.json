@@ -1,4 +1,3 @@
-
 {
     "neighbors": [
         {
@@ -25,7 +24,7 @@
             "link": "https://onlytrichromatic.neocities.org",
             "image": "onlytrichromaticbutton.gif",
             "site": "Only Trichromatic Eyes"
-        }, 
+        },
         {
             "link": "https://roboticoperatingbuddy.neocities.org",
             "image": "robbutton.jpeg",
@@ -139,6 +138,15 @@
         {
             "site": "Java08",
             "link": "https://java08.neocities.org/"
+        },
+        {
+            "site": "MAYOLISTIC",
+            "link": "https://mayolistic.neocities.org/",
+            "image": "mayunbutton.png"
+        },
+        {
+            "site": "Benzyne's Warp Zone",
+            "link": "https://retroandreformed.netlify.app/"
         }
     ],
     "sites": [
@@ -211,20 +219,22 @@
             "site": "Pokemon Safari Center",
             "link": "https://pokemonsafaricenter.neocities.org"
         },
-
         {
             "site": "Cosmic Calamari",
             "link": "https://cosmic-calamari.neocities.org/",
             "image": "cosmic_88_31.gif"
-        },{
+        },
+        {
             "site": "Starry Knight",
             "link": "https://starry-knight.neocities.org/",
             "image": "button-starrys-grove.png"
-        },{
+        },
+        {
             "site": "Elswhere",
             "link": "https://elswhere.neocities.org/",
             "image": "elswhere-button.gif"
-        },{
+        },
+        {
             "site": "Wiwy",
             "link": "https://wiwy.neocities.org/",
             "image": "wiwy.gif"
