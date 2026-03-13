@@ -20,7 +20,9 @@ draft: true
 
 Hello! College is still college so I'm busy!
 
-Want to know what I've been learning? This is a summary of the first of my **Digital Electronics** subject.
+Want to know what I've been learning? This is a part of the first of my **Digital Electronics** subject.
+
+I really wanted to write everything down, but seeing as I stop developing blog entries past a certain point, it's better for me to keep it short
 
 ## Why use different bases?
 
@@ -98,19 +100,37 @@ Fractional digits are treated the same as normal, each digit to the left of the 
 (644.6)~8~ = 6x8^2 + 4x8^1 + 4x8^0 + 6x8^-1
 ```
 
-- conversion between systems
-- Operations
-  - sum and subtractions
-  - products and divisions
-- Complementary to base and base-1
-- Representation with sign
-- Binary codes
-  - BCD
-  - XS3
-  - 84-2-1
-  - 2421
-- BCD operations
-  - correction factor
+### How do you convert between systems?
+
+You do something similar to a repeated division by the base, where the remainder is the **equivalent digit**, and the quotient is what you have to divide next. I'll convert `420.69~10` to octal so you can see it:
+
+```txt
+     This 0 indicades our conversion is done
+     |   6 / 8 = 0 + 6 remainder
+     |   |    52 / 8 = 6 + 4 remainder
+     |   |    |     420 / 8 = 52 + 4 remainder
+     |   |    |     |
+     v __v __ v __  v
+     0 | 6 | 52 | 420 . 69
+         6    4     4 . ...
+```
+
+A process similar to this is done when converting fractional parts, but instead of dividing, *we multiply by base*, and whatever number ends up as a whole number is the converted part. The fractional part of this new number is then truncated, and the process repeats.
+
+```txt
+    Most of the time, fractionals aren't converted neatly
+    in any system, unless they can be built with a fraction
+    of the base. I. e. 1/8, 1/64, 1/512, etc.
+                      0.16 * 8 = 1.28  |
+                 0.52 * 8 = 4.16  |    |
+            0.69 * 8 = 5.52  |    |    |
+                        |    |    |    |
+       __  __   __      v__  v__  v__  v__   __   __
+     0 | 6 | 52 | 420 . 69| .52| .16| .28| .24| .92| ...
+         6    4     4 . 5    4    1    2    1   ...
+```
+
+## Operations
 
 [^1]:
     The only counting system actually used to represent numbers. But Octal and Hex are used to simplify binary sequences.
