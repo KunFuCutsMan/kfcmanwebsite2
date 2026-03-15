@@ -16,7 +16,7 @@ build:
 
 includeTOC: true
 excludeArticleData: false
-draft: true
+draft: false
 ---
 
 Hello! College is still college so I'm busy!
