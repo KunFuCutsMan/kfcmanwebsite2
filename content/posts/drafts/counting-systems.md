@@ -2,6 +2,7 @@
 title: 'A summary of counting systems'
 date: "2026-02-14T21:56:08-06:00"
 summary: AKA what KFCMan learnt during the last two weeks
+pubDate: "2026-03-14T22:06:00-06:00"
 
 tags:
     - Programming
@@ -92,7 +93,7 @@ Here's an example of the expanded form of 420, with the digits translated into d
 | 10   |   (420)~10~    | 4x10^2 + 2x10^1               |
 | 2    | (110100100)~2~ | 1x2^8 + 1x2^7 + 1x2^5 + 1x2^2 |
 | 8    |    (644)~8~    | 6x8^2 + 4x8^1 + 4x8^0         |
-| 16   | (1A4)~16~[^2]  | 1x16^2 + 10x16^1 + 4x16^0     |
+| 16   |   (1A4)~16~    | 1x16^2 + 10x16^1 + 4x16^0     |
 
 Fractional digits are treated the same as normal, each digit to the left of the dot represents a sum of weights, starting from -1 all the way to minus infinity. The expanded form of 420.75 in octal is:
 
@@ -131,6 +132,64 @@ A process similar to this is done when converting fractional parts, but instead 
 ```
 
 ## Operations
+
+I'll just cover addtion and subtraction, which fortunately follow the same rules as operations in the decimal system. Sum the digits, starting from the least significant digits, and if their result is longer than a single unit, add the more significant digits over the next column. Just keep in mind we may have different coefficents, for example:
+
+```txt
+Adding (13A.5B) + (4DE.95) in Hex:
+
+      1 1     1 
+      1 3 A . 5 B
+    + 4 D E . 9 5
+    -------------
+      6 1 8 . F 0
+
+Remembering that:
+- (B + 5) = (10) = 16
+- (5 + 9 + 1) = (F) = 15
+- (A + E) = (18) = 24
+- (3 + D + 1) = (11) = 17
+- (1 + 4 + 1) = 6
+```
+
+Don't forget to ask for an the next significant digit to help with subtractions!
+
+```txt
+
+Subtracting (4DE.95) from (13A.5B) in Hex:
+      ,       ,
+      4 D E . 9 5
+    - 1 F A . 5 B
+    -------------
+      2 C 4 . 3 9
+
+Remembering that:
+- (5 < B) so we do (15 - B = 9) instead
+- (D < F) so we do (1D - F = C) instead
+```
+
+I used a colon to represent when we borrowed a digit, so we subtract 1 to that column aswell.
+
+The same mechanism you use to multiply numbers works here too, but you'll probably need to have a multiplication table in hand. Same with division.
+
+## But wait, there's more!
+
+Which unfortunately I can't go over anymore, otherwise this post ends in draft limbo. Feel free to search any digital systems book to help you learn about the topic.
+
+Here's the stuff which I couldn't fit in because of time:
+
+- Complement to base and complement to base - 1
+- Negative numbers represented with sign and complement
+- Numeric codes
+  - BCD
+  - XS3
+  - 84-2-1
+  - 2421
+- Gray Code
+
+All of these topics are useful when designing a system using binary, because we only have to digits to work with. That means we can take shortcuts when performing these operations. For example, the complement of a binary number can be obtained *just by flipping the bits, then adding 1!* Isn't that amazing?
+
+That would be everything for today. I apologize for the lack of PI posting. Good night!
 
 [^1]:
     The only counting system actually used to represent numbers. But Octal and Hex are used to simplify binary sequences.
