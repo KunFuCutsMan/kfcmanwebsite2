@@ -35,11 +35,6 @@
             "site": "AstraLily"
         },
         {
-            "link": "https://nyanfiles.neocities.org/",
-            "image": "nyanfiles.gif",
-            "site": "NyanFiles"
-        },
-        {
             "link": "https://catbyte.site/",
             "image": "catbytebutton.png",
             "site": "SoukWuiro"
@@ -146,7 +141,8 @@
         },
         {
             "site": "Benzyne's Warp Zone",
-            "link": "https://retroandreformed.netlify.app/"
+            "link": "https://retroandreformed.netlify.app/",
+            "image": "retroreformedbanner.gif"
         }
     ],
     "sites": [
@@ -253,6 +249,22 @@
             "site": "Gold Hill Mall",
             "link": "https://goldhillmall.neocities.org//",
             "image": "goldhillmallbanner.gif"
+        },
+        {
+            "site": "C64 Zone Español",
+            "link": "https://c64zone.neocities.org/"
+        },
+        {
+            "site": "LittleWren",
+            "image": "littlewren.png",
+            "link": "https://littlewren.neocities.org/"
+        }
+    ],
+    "rip": [
+        {
+            "link": "https://nyanfiles.neocities.org/",
+            "image": "nyanfiles.gif",
+            "site": "NyanFiles"
         }
     ]
 }
