@@ -1,4 +1,5 @@
 {{define "main" }}
+{{- $tabsPages := .Page.GetPage "info" -}}
 <div class="single-margin grid-about">
     <header class="frame" data-area="header">
         <h1>About Myself</h1>
@@ -8,22 +9,25 @@
 
     <nav data-area="menu">
         <ul>
-        {{- range $i, $entry := .Params.MenuEntries }}
+            {{- range $i, $entry := .Params.MenuEntries }}
             <li class="button-wrapper">
-                <button
-                    type="menu" data-tab="{{$entry.Tab}}"
-                    aria-selected="{{if eq $i 0}}true{{else}}false{{end}}"
+                <button type="menu" data-tab="{{$entry.Tab}}" aria-selected="{{if eq $i 0}}true{{else}}false{{end}}"
                     class="button-chooser ic-{{$entry.Icon}}">
                     {{$entry.Title}}
                 </button>
                 </label>
             </li>
-        {{- end}}
+            {{- end}}
         </ul>
     </nav>
 
     <main class="frame" data-area="tabber">
-        {{.Content}}
+        {{- range $index, $tab := $tabsPages.RegularPages }}
+        <article class="content {{ $tab.Params.Tab }}{{ if eq $index 0 }} active{{ end }}" tabindex="0"
+            data-tab="{{ $index }}">
+            {{ $tab.Content | safeHTML }}
+        </article>
+        {{ end }}
     </main>
 
     <aside class="sticky" data-area="playlist">
@@ -31,4 +35,3 @@
     </aside>
 </div>
 {{end}}
-

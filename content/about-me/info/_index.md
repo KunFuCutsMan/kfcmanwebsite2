@@ -1,8 +1,11 @@
 ---
-title: "Content Placeholder"
-build:
-  render: never
-  list: never
-  publishResources: false
----
+cascade:
+- build:
+    list: local
+    publishResources: false
+    render: never
 
+build:
+    list: local
+    render: never
+---
