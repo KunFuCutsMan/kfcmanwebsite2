@@ -6,6 +6,8 @@ summary: Summarize all of this article in one sentence or two
 Params:
     Images:
         Satellite: ./satellite antenna.gif
+    Scripts:
+        - somewhere-else.js
     Stylesheets:
         - content.css
         - somewhere-else.css

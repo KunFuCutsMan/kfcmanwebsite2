@@ -1,0 +1,31 @@
+/* Somewhere else JS */
+
+window.addEventListener('load', function () {
+    let boxes = "";
+    for (let i = 0; i < 200; i++) {
+        const color = Math.random() < 0.4 ? "cyan" : "white"
+        const x = Math.round(Math.random() * 99) + 1
+        const y = Math.round(i * 1) + (i * 2 % 5) + 1
+        const diffusion = Math.round() < 0.5 ? "3px" : "2px"
+        boxes += `${x}vw ${y}vh ${diffusion} ${color}`
+        if (i < 199)
+            boxes += ", "
+    }
+    document.querySelector(".stars").setAttribute("style", "box-shadow: " + boxes + ";")
+})
+
+window.addEventListener('mouseover', ev => {
+    /** @type HTMLElement */
+    const el = ev.target
+    if (el.classList.contains("icon")) {
+        moveLineToElement(el)
+    }
+})
+
+/**
+ * 
+ * @param {HTMLElement} el 
+ */
+function moveLineToElement(el) {
+    console.log(el.offsetLeft, el.offsetTop)
+}
