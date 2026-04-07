@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="single-margin main">
+    <section>{{ .Content }}</section>
+    {{ with .Resources.Get .Params.Images.Satellite }}
+    <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
+        alt="{{ math.Product .Height 2 }}" alt="Satellite Dish">
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,20 @@
+/* Somewhere else css */
+
+.main {
+    height: 2000px;
+}
+
+.satellite {
+    position: fixed;
+    right: 2rem;
+    bottom: -12rem;
+    image-rendering: pixelated;
+    z-index: -10;
+    pointer-events: none;
+}
+
+@media (max-width: 760px) {
+    .satellite {
+        right: 50%;
+    }
+}

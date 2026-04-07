@@ -4,11 +4,17 @@ date: "2026-04-04T23:00:42-06:00"
 summary: Summarize all of this article in one sentence or two
 
 Params:
+    Images:
+        Satellite: ./satellite antenna.gif
     Stylesheets:
         - content.css
+        - somewhere-else.css
+
+type: about
+layout: somewhere-else
 
 build:
-    publishResources: false
+    publishResources: true
 
 cascade:
 - build:
