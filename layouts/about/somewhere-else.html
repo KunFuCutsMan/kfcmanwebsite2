@@ -1,9 +1,34 @@
 {{ define "main" }}
+<div class="stars"></div>
 <div class="single-margin main">
-    <section>{{ .Content }}</section>
+    <section>
+        <ul class="social-media-list">
+            {{ range $key, $data := (.GetPage "social-media" ).Params.Socials }}
+            <li>
+                <a href="{{ .Link }}" target="_blank">
+                    <div class="icon ic-{{ .Icon }}"></div>
+                </a>
+            </li>
+            {{end}}
+        </ul>
+    </section>
     {{ with .Resources.Get .Params.Images.Satellite }}
     <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
         alt="{{ math.Product .Height 2 }}" alt="Satellite Dish">
     {{ end }}
 </div>
+
+<script async>
+    let boxes = "";
+    for (let i = 0; i < 200; i++) {
+        const color = Math.random() < 0.4 ? "cyan" : "white"
+        const x = Math.round(Math.random() * 99) + 1
+        const y = Math.round(i * 1) + (i * 2 % 5) + 1
+        const diffusion = Math.round() < 0.5 ? "3px" : "2px"
+        boxes += `${x}vw ${y}vh ${diffusion} ${color}`
+        if (i < 199)
+            boxes += ", "
+    }
+    document.querySelector(".stars").setAttribute("style", "box-shadow: " + boxes + ";")
+</script>
 {{ end }}

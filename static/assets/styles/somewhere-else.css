@@ -1,7 +1,7 @@
 /* Somewhere else css */
 
 .main {
-    height: 2000px;
+    height: 1000px
 }
 
 .satellite {
@@ -16,5 +16,63 @@
 @media (max-width: 760px) {
     .satellite {
         right: 50%;
+    }
+}
+
+.social-media-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 40rem;
+}
+
+li {
+    display: inline-block;
+}
+
+li:not( :hover, :focus-within) .icon {
+    filter: brightness(20%);
+}
+
+.icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    image-rendering: pixelated;
+    transition: 200ms;
+}
+
+.ic-discord {
+    background-image: url('/assets/icons/discord.png');
+}
+
+.ic-email {
+    background-image: url('/assets/icons/email.png');
+}
+
+.ic-github {
+    background-image: url('/assets/icons/github.png');
+}
+
+/* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */
+.stars {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    animation: twinkle 8s infinite linear;
+    z-index: -999;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
     }
 }
