@@ -19,7 +19,7 @@
     }
 }
 
-.social-media-list {
+.icon-list {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -54,6 +54,10 @@ li:not( :hover, :focus-within) .icon {
 
 .ic-github {
     background-image: url('/assets/icons/github.png');
+}
+
+.ic-roblox {
+    background-image: url('/assets/icons/roblox.png');
 }
 
 /* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */
