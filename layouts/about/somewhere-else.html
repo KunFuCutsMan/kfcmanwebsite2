@@ -1,9 +1,14 @@
 {{ define "main" }}
 <div class="stars"></div>
 <div class="single-margin main">
-    <section>
+    <section class="socials-section">
+        {{- $socials := .GetPage "social-media" -}}
+        <header class="content">
+            <h2 style="text-align: center;">{{ $socials.Title }}</h2>
+            {{ $socials.Content }}
+        </header>
         <ul class="icon-list">
-            {{ range $key, $data := (.GetPage "social-media" ).Params.Socials }}
+            {{ range $key, $data := $socials.Params.Socials }}
             <li>
                 <a href="{{ .Link }}" target="_blank">
                     <div class="icon ic-{{ .Icon }}"></div>
@@ -11,10 +16,11 @@
             </li>
             {{end}}
         </ul>
+        <canvas width="512" height="512"></canvas>
     </section>
     {{ with .Resources.Get .Params.Images.Satellite }}
     <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
-        alt="{{ math.Product .Height 2 }}" alt="Satellite Dish">
+        height="{{ math.Product .Height 2 }}" alt="Satellite Dish">
     {{ end }}
 </div>
 {{ end }}

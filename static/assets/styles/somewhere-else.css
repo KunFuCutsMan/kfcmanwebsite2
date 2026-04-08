@@ -1,9 +1,5 @@
 /* Somewhere else css */
 
-.main {
-    height: 1000px
-}
-
 .satellite {
     position: fixed;
     right: 2rem;
@@ -13,9 +9,10 @@
     pointer-events: none;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 720px) {
     .satellite {
-        right: 50%;
+        left: 0;
+        right: 0;
     }
 }
 
@@ -23,7 +20,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.socials-section {
+    position: relative;
     max-width: 40rem;
+    isolation: isolate;
+    aspect-ratio: 1;
 }
 
 li {
@@ -58,6 +61,18 @@ li:not( :hover, :focus-within) .icon {
 
 .ic-roblox {
     background-image: url('/assets/icons/roblox.png');
+}
+
+.socials-section canvas {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid red;
+    z-index: -1;
 }
 
 /* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */
