@@ -7,10 +7,27 @@ class CanvasHandler {
         this.canvas = document.getElementById('canvas')
         /** @type {CanvasRenderingContext2D} */
         this.context = this.canvas.getContext("2d")
+        this.hovered = false
     }
 
     get canvasPX() {
         return this.canvas.width / this.canvas.offsetWidth
+    }
+
+    get connectionColor() {
+        return this.hovered
+            ? "#AF102E"
+            : "#550E2B"
+    }
+
+    onmouseover(element) {
+        this.hovered = true
+        this.moveLineToElement(element)
+    }
+
+    onmouseleave(element) {
+        this.hovered = false
+        this.moveLineToElement(element)
     }
 
     /**
@@ -18,16 +35,59 @@ class CanvasHandler {
      * @param {HTMLElement} element
      */
     moveLineToElement(element) {
-        const centerX = element.offsetLeft * this.canvasPX
-        const centerY = element.offsetTop * this.canvasPX
         const offset = element.offsetWidth * this.canvasPX / 2
+        const centerX = element.offsetLeft * this.canvasPX + offset
+        const centerY = element.offsetTop * this.canvasPX + offset
 
+        const portCenterX = this.canvas.width * 0.75
+        const portCenterY = this.canvas.height * 0.9
         this.clear()
+        this.drawIconCircle(centerX, centerY, offset)
+        this.drawPortCircle(portCenterX, portCenterY)
+        this.drawLine(portCenterX, portCenterY, centerX, centerY)
+    }
 
+    /**
+     * @param {number} centerX
+     * @param {number} centerY
+     * @param {number} offset
+     */
+    drawIconCircle(centerX, centerY, offset) {
         this.context.beginPath()
-        this.context.fillStyle = "red"
-        this.context.arc(centerX + offset, centerY + offset, offset / this.canvasPX, 0, 2 * Math.PI)
+        this.context.fillStyle = this.connectionColor
+        this.context.arc(centerX, centerY, offset / this.canvasPX, 0, 2 * Math.PI)
         this.context.fill()
+    }
+
+    drawPortCircle(portCenterX, portCenterY) {
+        this.context.beginPath()
+        this.context.fillStyle = this.connectionColor
+        this.context.arc(portCenterX, portCenterY, 32, 0, 2 * Math.PI)
+        this.context.fill()
+    }
+
+    drawLine(fromX, fromY, toX, toY) {
+        this.context.beginPath()
+        this.context.strokeStyle = this.connectionColor
+        this.context.lineWidth = 20
+        this.context.lineCap = "round"
+        this.context.moveTo(fromX, fromY)
+
+        const vertical = toX < fromX
+            ? fromY + toX - fromX
+            : fromY + fromX - toX
+
+        if (vertical < toY) {
+            const diagonalHeight = Math.min(vertical, Math.abs(fromX - toX))
+            this.context.lineTo(toX + diagonalHeight, fromY)
+            this.context.lineTo(toX, fromY - diagonalHeight)
+        }
+        else {
+            this.context.lineTo(toX, vertical)
+        }
+
+        this.context.lineTo(toX, toY)
+        this.context.stroke()
     }
 
     clear() {
@@ -55,6 +115,14 @@ window.addEventListener('mouseover', ev => {
     /** @type HTMLElement */
     const el = ev.target
     if (el.classList.contains("icon")) {
-        handler.moveLineToElement(el)
+        handler.onmouseover(el)
+    }
+})
+
+window.addEventListener('mouseout', ev => {
+    /** @type HTMLElement */
+    const el = ev.target
+    if (el.classList.contains("icon")) {
+        handler.onmouseleave(el)
     }
 })
