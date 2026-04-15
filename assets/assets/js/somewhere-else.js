@@ -1,5 +1,42 @@
 /* Somewhere else JS */
 
+class CanvasHandler {
+
+    constructor() {
+        /** @type {HTMLCanvasElement} */
+        this.canvas = document.getElementById('canvas')
+        /** @type {CanvasRenderingContext2D} */
+        this.context = this.canvas.getContext("2d")
+    }
+
+    get canvasPX() {
+        return this.canvas.width / this.canvas.offsetWidth
+    }
+
+    /**
+     * 
+     * @param {HTMLElement} element
+     */
+    moveLineToElement(element) {
+        const centerX = element.offsetLeft * this.canvasPX
+        const centerY = element.offsetTop * this.canvasPX
+        const offset = element.offsetWidth * this.canvasPX / 2
+
+        this.clear()
+
+        this.context.beginPath()
+        this.context.fillStyle = "red"
+        this.context.arc(centerX + offset, centerY + offset, offset / this.canvasPX, 0, 2 * Math.PI)
+        this.context.fill()
+    }
+
+    clear() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    }
+}
+
+let handler = new CanvasHandler()
+
 window.addEventListener('load', function () {
     let boxes = "";
     for (let i = 0; i < 200; i++) {
@@ -18,14 +55,6 @@ window.addEventListener('mouseover', ev => {
     /** @type HTMLElement */
     const el = ev.target
     if (el.classList.contains("icon")) {
-        moveLineToElement(el)
+        handler.moveLineToElement(el)
     }
 })
-
-/**
- * 
- * @param {HTMLElement} el 
- */
-function moveLineToElement(el) {
-    console.log(el.offsetLeft, el.offsetTop)
-}

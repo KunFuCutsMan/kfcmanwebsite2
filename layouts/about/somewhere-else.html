@@ -16,7 +16,7 @@
             </li>
             {{end}}
         </ul>
-        <canvas width="512" height="512"></canvas>
+        <canvas id="canvas" width="512" height="512"></canvas>
     </section>
     {{ with .Resources.Get .Params.Images.Satellite }}
     <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
