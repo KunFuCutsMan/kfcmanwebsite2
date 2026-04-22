@@ -74,6 +74,19 @@ li:not( :hover, :focus-within) .icon {
     z-index: -1;
 }
 
+/* People Section */
+.people-section {
+    position: relative;
+    max-width: 40rem;
+    top: -10rem;
+}
+
+@media (max-width: 720px) {
+    .people-section {
+        top: 0;
+    }
+}
+
 /* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */
 .stars {
     width: 2px;

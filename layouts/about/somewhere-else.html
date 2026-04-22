@@ -2,13 +2,13 @@
 <div class="stars"></div>
 <div class="single-margin main">
     <main class="socials-section">
-        {{- $socials := .GetPage "social-media" -}}
+        {{ $socials := .GetPage "social-media" -}}
         <header class="content">
             <h2 style="text-align: center;">{{ $socials.Title }}</h2>
             {{ $socials.Content }}
         </header>
         <ul class="icon-list">
-            {{ range $key, $data := $socials.Params.Socials }}
+            {{ range $key, $data := $socials.Params.Socials -}}
             <li>
                 <a href="{{ .Link }}" target="_blank">
                     <div class="icon ic-{{ .Icon }}">
@@ -18,10 +18,30 @@
             </li>
             {{end}}
         </ul>
-        <section>
-        </section>
         <canvas id="canvas" width="512" height="512"></canvas>
     </main>
+    <section class="people-section">
+        {{- $peeps := .GetPage "./_peeps/" -}}
+        {{- $neighbors := where $peeps.RegularPages "Params.type" "NEIGHBOR" }}
+        <header class="content">
+            <h2 style="text-align: center;">{{- $peeps.Title -}}</h2>
+            {{ $peeps.Content }}
+        </header>
+
+        <h3>Neighbors</h3>
+        <ul>
+            {{ range $key, $site := $neighbors -}}
+            <li>
+                <article>
+                    <h4>{{$site.Title}}</h4>
+                    {{$site.Content}}
+                </article>
+            </li>
+            {{end}}
+        </ul>
+
+        <h3>Cool Sites</h3>
+    </section>
     {{ with .Resources.Get .Params.Images.Satellite }}
     <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
         height="{{ math.Product .Height 2 }}" alt="Satellite Dish">
