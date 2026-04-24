@@ -1,4 +1,8 @@
 /* Somewhere else css */
+.single-margin {
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
 
 .satellite {
     position: fixed;
@@ -79,6 +83,24 @@ li:not( :hover, :focus-within) .icon {
     position: relative;
     max-width: 40rem;
     top: -10rem;
+
+    border-image-source: url('/assets/images/mega_building.png');
+    border-image-slice: 48 16 16 16 fill;
+    border-image-width: 10rem 3rem 1rem;
+    border-image-repeat: stretch round;
+    image-rendering: pixelated;
+
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+}
+
+.people-section>header {
+    margin-inline: 2rem;
+    text-align: center;
+}
+
+.people-section :is(h2, h3) {
+    text-align: center;
 }
 
 @media (max-width: 720px) {
