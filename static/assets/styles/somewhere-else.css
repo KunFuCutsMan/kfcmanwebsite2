@@ -2,6 +2,11 @@
 .single-margin {
     margin-top: 4rem;
     margin-bottom: 0;
+    position: relative;
+}
+
+.single-margin>* {
+    max-width: 40rem;
 }
 
 .satellite {
@@ -28,7 +33,6 @@
 
 .socials-section {
     position: relative;
-    max-width: 40rem;
     isolation: isolate;
     aspect-ratio: 1;
 }
@@ -67,11 +71,11 @@ li:not( :hover, :focus-within) .icon {
     background-image: url('/assets/icons/roblox.png');
 }
 
-.socials-section canvas {
+canvas#canvas {
     position: absolute;
     width: 100%;
     aspect-ratio: 1;
-    top: 0;
+    top: 10rem;
     left: 0;
     right: 0;
     bottom: 0;
@@ -81,17 +85,23 @@ li:not( :hover, :focus-within) .icon {
 /* People Section */
 .people-section {
     position: relative;
-    max-width: 40rem;
-    top: -10rem;
 
     border-image-source: url('/assets/images/mega_building.png');
     border-image-slice: 48 16 16 16 fill;
-    border-image-width: 10rem 3rem 1rem;
+    border-image-width: 12rem 3rem 1rem;
     border-image-repeat: stretch round;
     image-rendering: pixelated;
 
     padding-top: 8rem;
     padding-bottom: 10rem;
+    padding-inline: 2rem;
+}
+
+@media (max-width: 720px) {
+    .people-section {
+        padding-inline: 1rem;
+        border-image-width: 7rem 2rem 1rem;
+    }
 }
 
 .people-section>header {
@@ -101,12 +111,6 @@ li:not( :hover, :focus-within) .icon {
 
 .people-section :is(h2, h3) {
     text-align: center;
-}
-
-@media (max-width: 720px) {
-    .people-section {
-        top: 0;
-    }
 }
 
 /* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */

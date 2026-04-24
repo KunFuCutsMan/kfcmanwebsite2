@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="stars"></div>
 <div class="single-margin">
-    <main class="socials-section">
+    <section class="socials-section">
         {{ $socials := .GetPage "social-media" -}}
         <header class="content">
             <h2 style="text-align: center;">{{ $socials.Title }}</h2>
@@ -18,8 +18,8 @@
             </li>
             {{end}}
         </ul>
-        <canvas id="canvas" width="512" height="512"></canvas>
-    </main>
+    </section>
+    <canvas id="canvas" width="512" height="512"></canvas>
     <section class="people-section content">
         {{- $peeps := .GetPage "./_peeps/" -}}
         {{- $neighbors := where $peeps.RegularPages "Params.type" "NEIGHBOR" }}

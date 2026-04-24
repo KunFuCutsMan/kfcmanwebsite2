@@ -8,11 +8,22 @@ class CanvasHandler {
         /** @type {CanvasRenderingContext2D} */
         this.context = this.canvas.getContext("2d")
         this.hovered = false
+
+        this.drawPortCircle(this.portCenterX, this.portCenterY)
     }
 
     get canvasPX() {
         return this.canvas.width / this.canvas.offsetWidth
     }
+
+    get portCenterX() {
+        return this.canvas.width * 0.75
+    }
+
+    get portCenterY() {
+        return this.canvas.height * 0.95
+    }
+
 
     get connectionColor() {
         return this.hovered
@@ -37,14 +48,12 @@ class CanvasHandler {
     moveLineToElement(element) {
         const offset = element.offsetWidth * this.canvasPX / 2
         const centerX = element.offsetLeft * this.canvasPX + offset
-        const centerY = element.offsetTop * this.canvasPX + offset
+        const centerY = element.offsetTop * this.canvasPX + offset - (8 * 16)
 
-        const portCenterX = this.canvas.width * 0.75
-        const portCenterY = this.canvas.height * 0.9
         this.clear()
         this.drawIconCircle(centerX, centerY, offset)
-        this.drawPortCircle(portCenterX, portCenterY)
-        this.drawLine(portCenterX, portCenterY, centerX, centerY)
+        this.drawPortCircle(this.portCenterX, this.portCenterY)
+        this.drawLine(this.portCenterX, this.portCenterY, centerX, centerY)
     }
 
     /**
