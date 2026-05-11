@@ -31,9 +31,15 @@
         <h3 class="building-title">Neighbors</h3>
         <ul>
             {{ range $key, $site := $neighbors -}}
+            {{- $button := $site.Params.button -}}
             <li>
                 <article class="peeps-card">
-                    <a href="#"><img src="https://placehold.co/88x31" alt="Placeholder"></a>
+                    {{ with $button := $site.Params.Button }}
+                    <a href="{{$site.Params.Site}}" target="_blank">
+                        <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
+                            width="88px" height="31px">
+                        {{ end }}
+                    </a>
                     <div>
                         <h4>{{$site.Title}}</h4>
                         {{$site.Content}}
