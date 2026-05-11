@@ -23,24 +23,27 @@
     <section class="people-section content">
         {{- $peeps := .GetPage "./_peeps/" -}}
         {{- $neighbors := where $peeps.RegularPages "Params.type" "NEIGHBOR" }}
-        <header class="content">
+        <header class="content building-header">
             <h2>{{- $peeps.Title -}}</h2>
             {{ $peeps.Content }}
         </header>
 
-        <h3>Neighbors</h3>
+        <h3 class="building-title">Neighbors</h3>
         <ul>
             {{ range $key, $site := $neighbors -}}
             <li>
-                <article>
-                    <h4>{{$site.Title}}</h4>
-                    {{$site.Content}}
+                <article class="peeps-card">
+                    <a href="#"><img src="https://placehold.co/88x31" alt="Placeholder"></a>
+                    <div>
+                        <h4>{{$site.Title}}</h4>
+                        {{$site.Content}}
+                    </div>
                 </article>
             </li>
             {{end}}
         </ul>
 
-        <h3>Cool Sites</h3>
+        <h3 class="building-title">Cool Sites</h3>
     </section>
     {{ with .Resources.Get .Params.Images.Satellite }}
     <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
