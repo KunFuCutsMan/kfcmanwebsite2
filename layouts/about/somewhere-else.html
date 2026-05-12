@@ -22,6 +22,7 @@
     <canvas id="canvas" width="512" height="512"></canvas>
     <section class="people-section content">
         {{- $peeps := .GetPage "./_peeps/" -}}
+        {{- $coolsites := where $peeps.RegularPages "Params.type" "SITE" -}}
         {{- $neighbors := where $peeps.RegularPages "Params.type" "NEIGHBOR" }}
         <header class="content building-header">
             <h2>{{- $peeps.Title -}}</h2>
@@ -50,6 +51,25 @@
         </ul>
 
         <h3 class="building-title">Cool Sites</h3>
+        <ul>
+            {{ range $key, $site := $coolsites -}}
+            {{- $button := $site.Params.button -}}
+            <li>
+                <article class="peeps-card">
+                    {{ with $button := $site.Params.Button }}
+                    <a href="{{$site.Params.Site}}" target="_blank">
+                        <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
+                            width="88px" height="31px">
+                        {{ end }}
+                    </a>
+                    <div>
+                        <h4>{{$site.Title}}</h4>
+                        {{$site.Content}}
+                    </div>
+                </article>
+            </li>
+            {{end}}
+        </ul>
     </section>
     {{ with .Resources.Get .Params.Images.Satellite }}
     <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
