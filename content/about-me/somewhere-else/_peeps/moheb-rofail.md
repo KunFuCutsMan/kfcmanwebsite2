@@ -8,7 +8,7 @@ Params:
     Mobile: true
 ---
 
-Egyptian programmer that posts on occasions 100 "blogs" about daily life.
+Egyptian programmer that posts on occasions 100 word "blogs" about daily life.
 
 Just don't ask how he got my number.
 

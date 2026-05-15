@@ -36,12 +36,14 @@
             <li>
                 <article class="peeps-card">
                     {{ with $button := $site.Params.Button }}
-                    <a href="{{$site.Params.Site}}" target="_blank">
-                        <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
-                            width="88px" height="31px">
-                        {{ end }}
-                    </a>
                     <div>
+                        <a href="{{$site.Params.Site}}" target="_blank">
+                            <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
+                                width="88px" height="31px">
+                        </a>
+                    </div>
+                    {{ end }}
+                    <div style="flex-grow: 1;">
                         <h4>{{$site.Title}}</h4>
                         {{$site.Content}}
                     </div>
@@ -57,11 +59,13 @@
             <li>
                 <article class="peeps-card">
                     {{ with $button := $site.Params.Button }}
-                    <a href="{{$site.Params.Site}}" target="_blank">
-                        <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
-                            width="88px" height="31px">
-                        {{ end }}
-                    </a>
+                    <div>
+                        <a href="{{$site.Params.Site}}" target="_blank">
+                            <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
+                                width="88px" height="31px">
+                        </a>
+                    </div>
+                    {{ end }}
                     <div>
                         <h4>{{$site.Title}}</h4>
                         {{$site.Content}}

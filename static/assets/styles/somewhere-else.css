@@ -151,13 +151,15 @@ canvas#canvas {
 }
 
 .peeps-card a:has(img) {
-    width: 100%;
+    width: 88px;
     display: block;
     text-align: center;
+    margin-inline: 0.1rem;
 }
 
-.peeps-card a img {
-    margin-inline: auto;
+.peeps-card li {
+    display: list-item;
+    list-style-type: initial;
 }
 
 /* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */
