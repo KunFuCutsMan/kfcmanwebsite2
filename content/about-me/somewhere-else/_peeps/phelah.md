@@ -2,8 +2,8 @@
 title: Phelah
 
 Params:
-    type: "NEIGHBOR"
-    button: "PhelahRetroButton.pn"
+    type: "SITE"
+    button: "PhelahRetroButton.png"
     site: "https://phelah.nekoweb.org/"
     Mobile: false
 ---

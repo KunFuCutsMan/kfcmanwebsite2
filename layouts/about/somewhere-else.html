@@ -32,22 +32,8 @@
         <h3 class="building-title">Neighbors</h3>
         <ul>
             {{ range $key, $site := $neighbors -}}
-            {{- $button := $site.Params.button -}}
             <li>
-                <article class="peeps-card">
-                    {{ with $button := $site.Params.Button }}
-                    <div>
-                        <a href="{{$site.Params.Site}}" target="_blank">
-                            <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
-                                width="88px" height="31px">
-                        </a>
-                    </div>
-                    {{ end }}
-                    <div style="flex-grow: 1;">
-                        <h4>{{$site.Title}}</h4>
-                        {{$site.Content}}
-                    </div>
-                </article>
+                {{ template "peeps-card" $site }}
             </li>
             {{end}}
         </ul>
@@ -55,22 +41,8 @@
         <h3 class="building-title">Cool Sites</h3>
         <ul>
             {{ range $key, $site := $coolsites -}}
-            {{- $button := $site.Params.button -}}
             <li>
-                <article class="peeps-card">
-                    {{ with $button := $site.Params.Button }}
-                    <div>
-                        <a href="{{$site.Params.Site}}" target="_blank">
-                            <img src="/assets/images/buttons/{{$button}}" alt="{{$site.Params.Title}}" loading="lazy"
-                                width="88px" height="31px">
-                        </a>
-                    </div>
-                    {{ end }}
-                    <div>
-                        <h4>{{$site.Title}}</h4>
-                        {{$site.Content}}
-                    </div>
-                </article>
+                {{ template "peeps-card" $site }}
             </li>
             {{end}}
         </ul>
@@ -81,3 +53,25 @@
     {{ end }}
 </div>
 {{ end }}
+
+{{- define "peeps-card" -}}
+{{ $ := . }}
+<article class="peeps-card">
+    <div style="margin-inline-end: 0.5rem;">
+        {{ with $button := $.Params.Button }}
+        <a href="{{$.Params.Site}}" target="_blank">
+            <img src="/assets/images/buttons/{{$button}}" alt="{{$.Params.Title}}" loading="lazy" width="88px"
+                height="31px">
+        </a>
+        {{else}}
+        <a href="{{$.Params.Site}}" target="_blank">
+            Click here to visit site
+        </a>
+        {{ end }}
+    </div>
+    <div>
+        <h4>{{$.Title}}</h4>
+        {{$.Content}}
+    </div>
+</article>
+{{- end -}}

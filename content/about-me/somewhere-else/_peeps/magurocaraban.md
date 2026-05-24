@@ -3,7 +3,7 @@ title: Maguro Caraban
 
 Params:
     type: "NEIGHBOR"
-    button: "saturnserkel.png"
+    button: "maguro-button.gif"
     site: "https://maguro-caravan.neocities.org/"
     Mobile: false
 ---
