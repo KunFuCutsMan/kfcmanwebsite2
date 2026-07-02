@@ -2,31 +2,6 @@
     "neighbors": [],
     "sites": [
         {
-            "link": "https://zelkova.neocities.org/",
-            "image": "aster_banner.gif",
-            "site": "Zelkova"
-        },
-        {
-            "link": "https://nomnomnami.com/",
-            "image": "nomnomnami_button.gif",
-            "site": "NomNomNami"
-        },
-        {
-            "link": "https://marea.neocities.org/",
-            "image": "marea88x31_v1.gif",
-            "site": "Marea"
-        },
-        {
-            "link": "https://mycorrhiza.space/",
-            "image": "mycorrhiza_linkback_button.png",
-            "site": "MyCorriza"
-        },
-        {
-            "link": "https://dinpixels.neocities.org/",
-            "image": "dinbtn0.gif",
-            "site": "DinPixels"
-        },
-        {
             "link": "https://ectobe.ing/",
             "image": "ecto-city.png",
             "site": "EctoBeing"
