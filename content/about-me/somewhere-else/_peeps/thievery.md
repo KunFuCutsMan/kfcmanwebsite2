@@ -1,5 +1,5 @@
 ---
-title: Thievery/Dinky
+title: Thievery
 
 Params:
     type: "NEIGHBOR"

@@ -1,5 +1,5 @@
 ---
-title: VanillaMilkShake
+title: Vanilla Milkshake
 
 Params:
     type: "NEIGHBOR"

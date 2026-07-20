@@ -5,7 +5,7 @@ Params:
     type: "SITE"
     button: "kyuchannel.gif"
     site: "https://kyu.channel"
-    Mobile: false
+    Mobile: true
 ---
 
 Artist that does artist things from time to time.

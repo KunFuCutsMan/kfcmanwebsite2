@@ -1,5 +1,5 @@
 ---
-title: AngelNetCast
+title: Angel Net Cast
 
 Params:
     type: "NEIGHBOR"
