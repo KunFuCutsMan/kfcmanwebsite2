@@ -3,7 +3,7 @@ title: Tofutush
 
 Params:
     type: "NEIGHBOR"
-    button: "tofutush"
+    button: "tofutush.gif"
     site: "https://angelnetcast.com/"
     Mobile: true
 ---

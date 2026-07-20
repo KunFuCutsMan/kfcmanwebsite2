@@ -3,7 +3,7 @@ title: Nicegirl's Slumber
 
 Params:
     type: "SITE"
-    button: "nicegirlsslumberbutton.png"
+    button: "nicegirlslumberbutton.png"
     site: "https://nicegirlslumber.neocities.org/"
     Mobile: false
 ---

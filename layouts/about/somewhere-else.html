@@ -24,6 +24,7 @@
         {{- $peeps := .GetPage "./_peeps/" -}}
         {{- $coolsites := where $peeps.RegularPages "Params.type" "SITE" -}}
         {{- $neighbors := where $peeps.RegularPages "Params.type" "NEIGHBOR" }}
+        {{- $deadLinks := where $peeps.RegularPages "Params.type" "RIP" }}
         <header class="content building-header">
             <h2>{{- $peeps.Title -}}</h2>
             {{ $peeps.Content }}
@@ -41,6 +42,15 @@
         <h3 class="building-title">Cool Sites</h3>
         <ul>
             {{ range $key, $site := $coolsites -}}
+            <li>
+                {{ template "peeps-card" $site }}
+            </li>
+            {{end}}
+        </ul>
+
+        <h3 class="building-title">Dead Links</h3>
+        <ul>
+            {{ range $key, $site := $deadLinks -}}
             <li>
                 {{ template "peeps-card" $site }}
             </li>

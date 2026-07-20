@@ -2,7 +2,7 @@
 title: "Per Astra Writes"
 Params:
     type: "NEIGHBOR"
-    button: "perwrites.gif"
+    button: "perwrites.png"
     site: "https://per-astra-writes.neocities.org/"
     Mobile: true
 ---
