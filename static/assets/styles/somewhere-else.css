@@ -128,9 +128,13 @@ canvas#canvas {
     margin-inline: 4rem;
 }
 
+li:has(.peeps-card) {
+    width: 100%;
+}
+
 .peeps-card {
     background-color: var(--blue-900);
-    margin-inline: 1rem;
+    margin-inline: auto;
     margin-block: 1rem;
     padding-block: 0.5rem;
     padding-left: 1rem;
@@ -148,6 +152,8 @@ canvas#canvas {
     justify-content: space-between;
 
     text-align: justify;
+
+    position: relative;
 }
 
 .peeps-card a:has(img) {
@@ -160,6 +166,19 @@ canvas#canvas {
 .peeps-card li {
     display: list-item;
     list-style-type: initial;
+}
+
+.peeps-card[data-is-mobile-friendly]::after {
+    content: '';
+
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url('/assets/images/mobile-friendly.png');
+
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
 }
 
 /* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */

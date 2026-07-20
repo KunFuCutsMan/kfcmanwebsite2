@@ -66,7 +66,7 @@
 
 {{- define "peeps-card" -}}
 {{ $ := . }}
-<article class="peeps-card">
+<article class="peeps-card" {{ if $.Params.Mobile -}} data-is-mobile-friendly="true" {{- end }}>
     <div style="margin-inline-end: 0.5rem;">
         {{ with $button := $.Params.Button }}
         <a href="{{$.Params.Site}}" target="_blank">
