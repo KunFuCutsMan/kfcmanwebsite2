@@ -1,7 +1,7 @@
 /* CSS used for the homepage */
 .grid-home {
 	display: grid;
-	grid-template-areas: 
+	grid-template-areas:
 		'banner buttons'
 		'content buttons'
 		'content webrings'
@@ -12,17 +12,17 @@
 	grid-auto-rows: minmax(10rem, auto);
 }
 
-.grid-home > * {
+.grid-home>* {
 	margin-inline: 2rem;
 	max-width: 100%;
 }
 
-.grid-home > :not([data-area="content"]) > h2 {
+.grid-home> :not([data-area="content"])>h2 {
 	font-size: xx-large;
 	text-align: center;
 }
 
-body:has( > .grid-home ) {
+body:has(> .grid-home) {
 	container-name: body;
 	container-type: inline-size;
 }
@@ -35,9 +35,13 @@ body:has( > .grid-home ) {
 
 }
 
-.split-content > * { width: clamp(0rem, 100%, 15rem); }
+.split-content>* {
+	width: clamp(0rem, 100%, 15rem);
+}
 
-.split-content h1 {	font-size: clamp(3rem, 100%, 6rem); }
+.split-content h1 {
+	font-size: clamp(3rem, 100%, 6rem);
+}
 
 .split-content img {
 	width: inherit;
@@ -88,15 +92,41 @@ body:has( > .grid-home ) {
 		justify-content: center;
 	}
 
-	.grid-home > * {
+	.grid-home>* {
 		margin-inline: 0;
 		max-width: 100cqw;
 	}
 }
 
-.grid-home > [data-area="banner"] { grid-area: banner; }
-.grid-home > [data-area="webrings"] { grid-area: webrings; }
-.grid-home > [data-area="buttons"] { grid-area: buttons; }
-.grid-home > [data-area="content"] { grid-area: content; }
-.grid-home > [data-area="cbox"] { grid-area: cbox; }
-.grid-home > [data-area="latest-post"] { grid-area: latest-post; }
+.grid-home>[data-area="banner"] {
+	grid-area: banner;
+}
+
+.grid-home>[data-area="webrings"] {
+	grid-area: webrings;
+}
+
+.grid-home>[data-area="buttons"] {
+	grid-area: buttons;
+}
+
+.grid-home>[data-area="content"] {
+	grid-area: content;
+}
+
+.grid-home>[data-area="cbox"] {
+	grid-area: cbox;
+}
+
+.grid-home>[data-area="latest-post"] {
+	grid-area: latest-post;
+}
+
+/* Bible verse */
+
+.bible-verse {
+	padding: 1em;
+	background-color: var(--gray-200);
+	border-radius: 0.5em;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

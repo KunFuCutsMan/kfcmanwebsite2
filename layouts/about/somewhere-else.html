@@ -1,0 +1,87 @@
+{{ define "main" }}
+<div class="stars"></div>
+<div class="single-margin">
+    <section class="socials-section">
+        {{ $socials := .GetPage "social-media" -}}
+        <header class="content">
+            <h2 style="text-align: center;">{{ $socials.Title }}</h2>
+            {{ $socials.Content }}
+        </header>
+        <ul class="icon-list">
+            {{ range $key, $data := $socials.Params.Socials -}}
+            <li>
+                <a href="{{ .Link }}" target="_blank">
+                    <div class="icon ic-{{ .Icon }}">
+                        <p class="sr-only">{{ humanize $key }}</p>
+                    </div>
+                </a>
+            </li>
+            {{end}}
+        </ul>
+    </section>
+    <canvas id="canvas" width="512" height="512"></canvas>
+    <section class="people-section content">
+        {{- $peeps := .GetPage "./_peeps/" -}}
+        {{- $coolsites := where $peeps.RegularPages "Params.type" "SITE" -}}
+        {{- $neighbors := where $peeps.RegularPages "Params.type" "NEIGHBOR" }}
+        {{- $deadLinks := where $peeps.RegularPages "Params.type" "RIP" }}
+        <header class="content building-header">
+            <h2>{{- $peeps.Title -}}</h2>
+            {{ $peeps.Content }}
+        </header>
+
+        <h3 class="building-title">Neighbors</h3>
+        <ul>
+            {{ range $key, $site := $neighbors -}}
+            <li>
+                {{ template "peeps-card" $site }}
+            </li>
+            {{end}}
+        </ul>
+
+        <h3 class="building-title">Cool Sites</h3>
+        <ul>
+            {{ range $key, $site := $coolsites -}}
+            <li>
+                {{ template "peeps-card" $site }}
+            </li>
+            {{end}}
+        </ul>
+
+        <h3 class="building-title">Dead Links</h3>
+        <ul>
+            {{ range $key, $site := $deadLinks -}}
+            <li>
+                {{ template "peeps-card" $site }}
+            </li>
+            {{end}}
+        </ul>
+    </section>
+    {{ with .Resources.Get .Params.Images.Satellite }}
+    <img class="satellite" src="{{ .RelPermalink }}" width="{{ math.Product .Width 2 }}"
+        height="{{ math.Product .Height 2 }}" alt="Satellite Dish">
+    {{ end }}
+</div>
+{{ end }}
+
+{{- define "peeps-card" -}}
+{{ $ := . }}
+<article class="peeps-card" {{ if $.Params.Mobile -}} data-is-mobile-friendly="true" {{- end }}>
+    <div style="margin-inline-end: 0.5rem;">
+        {{ with $button := $.Params.Button }}
+        <a href="{{$.Params.Site}}" target="_blank">
+            <img src="/assets/images/buttons/{{$button}}" alt="{{$.Params.Title}}" loading="lazy" width="88px"
+                height="31px">
+        </a>
+        {{else}}
+        <a href="{{$.Params.Site}}" target="_blank">
+            Click here to visit site
+        </a>
+        {{ end }}
+    </div>
+    <div>
+        <h4>{{$.Title}}</h4>
+        {{$.Content}}
+    </div>
+</article>
+{{- end -}}

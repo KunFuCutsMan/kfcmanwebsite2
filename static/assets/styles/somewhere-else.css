@@ -1,0 +1,215 @@
+/* Somewhere else css */
+.single-margin {
+    margin-top: 4rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.single-margin>* {
+    max-width: 40rem;
+}
+
+.satellite {
+    position: fixed;
+    right: 2rem;
+    bottom: -12rem;
+    image-rendering: pixelated;
+    z-index: -10;
+    pointer-events: none;
+}
+
+@media (max-width: 720px) {
+    .satellite {
+        left: 0;
+        right: 0;
+    }
+}
+
+.icon-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socials-section {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 1;
+}
+
+li {
+    display: inline-block;
+}
+
+li:not( :hover, :focus-within) .icon {
+    filter: brightness(20%);
+}
+
+.icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    image-rendering: pixelated;
+    transition: 200ms;
+}
+
+.ic-discord {
+    background-image: url('/assets/icons/discord.png');
+}
+
+.ic-email {
+    background-image: url('/assets/icons/email.png');
+}
+
+.ic-github {
+    background-image: url('/assets/icons/github.png');
+}
+
+.ic-roblox {
+    background-image: url('/assets/icons/roblox.png');
+}
+
+canvas#canvas {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* People Section */
+.people-section {
+    position: relative;
+
+    border-image-source: url('/assets/images/mega_building.png');
+    border-image-slice: 48 16 16 16 fill;
+    border-image-width: 12rem 3rem 1rem;
+    border-image-repeat: stretch round;
+    image-rendering: pixelated;
+
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    padding-inline: 2rem;
+}
+
+@media (max-width: 720px) {
+    .people-section {
+        padding-inline: 1rem;
+        border-image-width: 7rem 2rem 1rem;
+    }
+}
+
+.people-section>header {
+    margin-inline: 2rem;
+    text-align: center;
+}
+
+.people-section :is(h2, h3) {
+    text-align: center;
+}
+
+.building-header {
+    padding-block: 0.25rem;
+    border-radius: 1rem;
+    background-color: rgba(85, 197, 246, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+.building-title {
+    padding-block: 0.25rem;
+    border-radius: 1rem;
+    background-color: rgba(85, 197, 246, 0.4);
+    backdrop-filter: blur(2px);
+    margin-inline: 4rem;
+}
+
+li:has(.peeps-card) {
+    width: 100%;
+}
+
+.peeps-card {
+    background-color: var(--blue-900);
+    margin-inline: auto;
+    margin-block: 1rem;
+    padding-block: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    border-bottom-left-radius: 1rem;
+
+    border-image-source: url('/assets/images/article-frame.png');
+    border-image-width: 24px;
+    border-image-outset: 16px 8px 16px;
+    border-image-repeat: round;
+    border-image-slice: calc(1/4 * 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: justify;
+
+    position: relative;
+}
+
+.peeps-card a:has(img) {
+    width: 88px;
+    display: block;
+    text-align: center;
+    margin-inline: 0.1rem;
+}
+
+.peeps-card li {
+    display: list-item;
+    list-style-type: initial;
+}
+
+.peeps-card[data-is-mobile-friendly]::after {
+    content: '';
+
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url('/assets/images/mobile-friendly.png');
+
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+}
+
+/* Found the CSS here https://prismic.io/blog/css-background-effects#2-shooting-stars */
+.stars {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    animation: twinkle 8s infinite linear;
+    z-index: -999;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip-path: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}

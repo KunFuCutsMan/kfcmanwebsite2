@@ -16,19 +16,36 @@
         {{ .Content }}
     </main>
 
-    <section  data-area="webrings" class="frame column-with-space">
+    <section data-area="webrings" class="frame column-with-space">
         <h2>Webrings!</h2>
         {{ partial "home/webrings.html" . }}
     </section>
 
-    <aside data-area="buttons" class="frame column-with-space" style="align-items: stretch;">
-        {{ partial "home/cool-buttons.html" . }}
+    <aside data-area="buttons" class="frame column-with-space">
+        <h2>Quote of the Day!</h2>
+        <div class="bible-verse">
+            <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+            <script
+                src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
+            <noscript>
+                <iframe framespacing="0" frameborder="no"
+                    src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
+            </noscript>
+        </div>
+        <div class="bible-verse">
+            <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+            <script
+                src="https://www.biblegateway.com/votd/get/?format=json&version=RVR1960&callback=BG.votdWriteCallback"></script>
+            <noscript>
+                <iframe framespacing="0" frameborder="no"
+                    src="https://www.biblegateway.com/votd/get/?format=html&version=RVR1960">View Verse of the
+                    Day</iframe>
+            </noscript>
+        </div>
 
-        <div>
-            <b>Fanlists:</b>
-            <div class="inline-list" style="justify-content: space-evenly;">
-                {{ partial "home/fanlists.html" . }}
-            </div>
+        <h2>Fanlists!</h2>
+        <div class="inline-list" style="justify-content: space-evenly; gap: 1rem;">
+            {{ partial "home/fanlists.html" . }}
         </div>
     </aside>
 
