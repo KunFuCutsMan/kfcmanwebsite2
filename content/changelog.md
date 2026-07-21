@@ -65,3 +65,5 @@ ExcludeArticleData: true
 - 24/Jun/2025: Added [Robot Master Maker](/fun/robot-master-maker)
 - 15/Dec/2025: Added a `figure` shortcode that transforms images to webp, and added on all posts
 - 03/Jan/2026: Changed the [posts](/posts) page design to something more Mega-Man-esque.
+- 20/Jul/2026: Merged branch that contains [about/somewhere-else](/about/somewhere-else)
+- 20/Jul/2026: Added Verse of the Day in NIV and RVR1960 in the homepage, thanks BibleGateway!
