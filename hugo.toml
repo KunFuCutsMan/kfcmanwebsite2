@@ -7,39 +7,39 @@ enableGitInfo = true
 disableKinds = ['sitemap']
 
 [outputs]
-  home = ['html']
-  section = ['html', 'rss']
-  taxonomy = ['html', 'rss']
-  term = ['html']
+home = ['html']
+section = ['html', 'rss']
+taxonomy = ['html', 'rss']
+term = ['html']
 
 [frontmatter]
-    date = ['publishDate', 'date', 'lastmod']
+date = ['publishDate', 'date', 'lastmod']
 
 [taxonomies]
-    tag = 'tags'
-    series = 'series'
+tag = 'tags'
+series = 'series'
 
 [[redirects]]
-    from = '/**'
-    status = 404
-    to = '/not_found.html'
+from = '/**'
+status = 404
+to = '/not_found.html'
 
 [markup.tableOfContents]
-    endLevel = 6
+endLevel = 6
 
 [markup.highlight]
-    style = 'fruity'
+style = 'fruity'
 
 [markup.goldmark.renderer]
-    unsafe = true
+unsafe = true
 
 [markup.goldmark.extensions]
-    strikethrough = false
-    footnote = true
+strikethrough = false
+footnote = true
 
 [markup.goldmark.extensions.extras.delete]
-    enable = true
+enable = true
 [markup.goldmark.extensions.extras.subscript]
-    enable = true
+enable = true
 [markup.goldmark.extensions.extras.superscript]
-    enable = true
+enable = true

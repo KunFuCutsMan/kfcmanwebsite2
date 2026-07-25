@@ -20,7 +20,7 @@ build:
 
 cascade:
 - build:
-    list: local
+    list: never
     publishResources: false
     render: never
 

@@ -7,7 +7,7 @@ cascade:
     render: link
 
 build:
-    list: local
+    list: never
     render: link
 ---
 
