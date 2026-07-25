@@ -1,4 +1,4 @@
-{{- $playlist := .Site.Data.playlist -}}
+{{- $playlist := hugo.Data.playlist -}}
 
 <div id="playlist-container" class="column-with-space">
 
@@ -15,7 +15,8 @@
 
     <select size="5" id="select-song">
         {{ range $i, $song := $playlist.songs }}
-        <option value="{{$song.ID}}" {{with $song.start}}data-start="{{.}}"{{end}} {{if eq $i 0}} selected{{end}}>{{$song.author}} - {{$song.name}}</option>
+        <option value="{{$song.ID}}" {{with $song.start}}data-start="{{.}}" {{end}} {{if eq $i 0}} selected{{end}}>
+            {{$song.author}} - {{$song.name}}</option>
         {{end}}
     </select>
 </div>
