@@ -6,6 +6,7 @@ summary: AKA KFCMan talks about his personal experience
 tags:
     - Personal
     - Christianity
+    - Something I learnt
 
 Params:
     Stylesheets:

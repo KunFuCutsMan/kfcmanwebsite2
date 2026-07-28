@@ -6,6 +6,7 @@ pubDate: "2026-03-14T22:06:00-06:00"
 
 tags:
     - Programming
+    - Something I learnt
 
 Params:
     Stylesheets:

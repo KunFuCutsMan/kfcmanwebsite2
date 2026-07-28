@@ -7,6 +7,7 @@ tags:
     - Personal
     - Right Now
     - Weather Update
+    - Something I learnt
 
 Params:
     Stylesheets:

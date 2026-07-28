@@ -5,6 +5,7 @@ summary: And tons of cross-knowledge regarding vectorial calculus, statics and e
 
 tags:
     - Right Now
+    - Something I learnt
 
 Params:
     Stylesheets:

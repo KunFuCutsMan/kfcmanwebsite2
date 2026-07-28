@@ -285,3 +285,20 @@ blockquote.cite > cite:last-child {
 	background-color: var(--gray-200);
 	padding: 1rem;
 }
+
+/* SVG container */
+
+.svg-container {
+	margin-inline: auto;
+	max-width: 80%;
+}
+
+.svg-container.small {
+	max-height: 500px;
+}
+
+.svg-container.small > svg {
+	max-width: inherit;
+	max-height: inherit;
+	margin-inline: auto;
+}
