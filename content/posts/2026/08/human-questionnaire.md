@@ -1,7 +1,7 @@
 ---
 title: '21st Century Human Questionnaire'
 date: "2026-08-04T13:24:39-06:00"
-summary: Summarize all of this article in one sentence or two
+summary: Another questionnaire to answer
 pubDate: "2026-08-21"
 
 tags:
