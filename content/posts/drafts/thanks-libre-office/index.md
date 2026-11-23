@@ -13,7 +13,7 @@ Params:
 build:
     publishResources: false
 
-includeTOC: false
+includeTOC: true
 excludeArticleData: false
 draft: true
 ---
@@ -45,7 +45,7 @@ _based on other templates._ How wonderful!
 As such I made a layout called "TecNM"[^2] that I'll be using from now on for
 anything related to my degree, with Arial 12, numbered pages, a front page, and
 two sections reserved for summaries and bibliography lists. And orange tables,
-because I like orange :). Similarly I made another layout specifically for
+because I like orange :). Similarly, I made another layout specifically for
 lab reports which remove the bibliography for titles for everything I need to
 include in them.
 
@@ -66,7 +66,44 @@ liking. This is the only downside I can say about this system, as there are no
 preset layouts for citation styles. I'll have to modify my template when I have
 the time.
 
-[...]
+## Draw and Math
+
+**Draw** is a multipurpose drawing tool that is primarily useful for diagrams,
+as you can only insert basic shapes and lines, and move them around a page. I
+have been using Draw for this exact purpose and have gotten some decent
+results, as shown in the image below. There is an option to hold Draw documents
+inside Writer documents, but its rather wonky to work like that, so I export a
+page as an SVG instead.
+
+{{<figure
+  src="./Practica 9 Diagrama Práctica.svg"
+  caption="SVG diagram of a motor connected to a drum rotor via a flat belt, with a vibration analyzer attached to rotor's axle."
+  hint="none"
+>}}
+
+LibreOffice has its own tool to write mathematical equations creatively named
+**Math**, which draws equations given some plain text. I'd say this tool is
+better than  whatever Word provides solely because you actually see what you're
+writing. You can insert equation objects by pressing `Shift+Alt+E` and press
+`Esc` when you're done. More information about Math can be found in the
+[Getting Started Guide](https://books.libreoffice.org/en/GS262/GS26209-GettingStartedWithMath.html).
+
+* You can wrap anything inside curly brackets `{}` to treat anything as a
+  single object. This is useful when you need to write divisions, like this:
+
+```txt
+tan %phi = { sin %phi } over { cos %phi }
+```
+
+* As you can see from the example above, functions are written plainly, and
+  there are options for writing their versions in other languages.
+* You can introduce symbols by prefixing `%` and the symbol's name. For Greek
+  letters, write its name in lowercase or uppercase if you want that version of
+  the letter.
+* Normally when writing parenthesis or brackets, they will appear as the
+  character itself instead of wrapping around an equation. If you want this
+  behavior you must write `left (` and `right )` before and after whatever you
+  wish to wrap, usually you surround it with curly brackets too.
 
 ## Some tips for using Writer
 
@@ -86,7 +123,9 @@ the time.
   "None" if the frame needs to stand alone, or "Ideal" if you want to move it to
   the side and let the text flow naturally.
 
-[...]
+---
+
+That's pretty much everything. Toodles!
 
 [^1]:
     A version in English and Italian of the book on the site, if you'd like to
