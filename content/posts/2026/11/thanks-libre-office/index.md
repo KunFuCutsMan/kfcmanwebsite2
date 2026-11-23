@@ -1,6 +1,6 @@
 ---
 title: 'Thanks you for the Libre Office!'
-date: "2026-11-21T21:39:08-06:00"
+date: "2026-11-23T11:32:00-06:00"
 summary: "For giving it to me. (AKA finishing this semester)"
 
 tags:
